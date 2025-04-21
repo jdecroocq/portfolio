@@ -1,4 +1,3 @@
-// footer.js
 fetch('footer.html')
   .then(response => response.text())
   .then(html => {
