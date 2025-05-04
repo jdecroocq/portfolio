@@ -1,5 +1,12 @@
 /* === BODY === */
 /* === RESET DE BASE === */
+@font-face {
+  font-family: 'Orkney';
+  src: url('fonts/orkney.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
 html, body {
   margin: 0;                /* Supprime marges par défaut */
   padding: 0;               /* Supprime padding par défaut */
