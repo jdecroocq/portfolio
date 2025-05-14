@@ -39,8 +39,8 @@ body {
 /* === Header === */
   header {
     display: flex;
-    flex-direction: row; /* ✅ tout sur une ligne en desktop */
-    height: 100px;        /* ✅ empêche l’allongement */
+    flex-direction: row; /* tout sur une ligne en desktop */
+    height: 100px;        /* empêche l’allongement */
     align-items: stretch;
     position: fixed;
     top: 0;
@@ -99,16 +99,16 @@ body {
     transition: max-height 0.3s ease;
     overflow: hidden;
     z-index: 1;
-    align-items: center;   /* ✅ centre verticalement les <li> */
+    align-items: center;   /* centre verticalement les <li> */
   }
 
   header nav ul {
     list-style: none;
     display: flex;
     gap: 3rem;
-    justify-content: flex-end;   /* ✅ pousse les liens à droite */
-    align-items: center;         /* ✅ centre verticalement */
-    width: 100%;                 /* ✅ prend toute la largeur du nav */
+    justify-content: flex-end;   /* pousse les liens à droite */
+    align-items: center;         /* centre verticalement */
+    width: 100%;                 /* prend toute la largeur du nav */
     margin: 0;
     padding-right: 5vw;
   }
@@ -990,7 +990,7 @@ body {
 
   }
   header nav ul li a:hover {
-    transform: scale(1.05); /* ✅ grossit sans décaler */
+    transform: scale(1.05); /* grossit sans décaler */
   }
 }
 
