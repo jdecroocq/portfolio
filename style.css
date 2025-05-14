@@ -917,18 +917,14 @@ body {
   }
 
   .footer-build {
+    padding-right: 1vw
     font-size: 13px;
     color: #828282;
-  }
-
-  .footer-build{
-    padding-right: 1vw
   }
 
   /* Centrer le lien 'Legal Information' sans affecter les autres éléments */
   .footer-left {
     padding-left: 1vw;
-    transform: translateX(-50%);  /* Centrer horizontalement par rapport à l'écran */
     font-size: 13px;
     color: #828282;
   }
