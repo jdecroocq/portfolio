@@ -907,28 +907,25 @@ body {
     color: #828282;
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 10px; /* Ajoute le padding-bottom ici */
+    padding-bottom: 10px;
     width: 100%;
     display: flex;
-    justify-content: space-between;  /* Espace les éléments */
-    align-items: center;  /* Centre verticalement les éléments */
-    gap: 20px;  /* Espacement entre les éléments */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
     z-index: 1000;
   }
-
+  
+  .footer-left,
   .footer-build {
-    padding-right: 1vw
     font-size: 13px;
     color: #828282;
   }
-
-  /* Centrer le lien 'Legal Information' sans affecter les autres éléments */
+  
   .footer-left {
     padding-left: 1vw;
-    font-size: 13px;
-    color: #828282;
   }
-
+  
   .footer-left a,
   .footer-left a:visited,
   .footer-left a:active,
@@ -937,9 +934,13 @@ body {
     text-decoration: none;
     transition: color 0.3s ease;
   }
-
-  .footer-center a:hover {
+  
+  .footer-left a:hover {
     color: #AAAAAA;
+  }
+  
+  .footer-build {
+    padding-right: 1vw;
   }
 }
 
