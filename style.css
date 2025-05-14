@@ -916,14 +916,9 @@ body {
     z-index: 1000;
   }
 
-  .footer-left,
   .footer-build {
     font-size: 13px;
     color: #828282;
-  }
-
-  .footer-left{
-    padding-left: 1vw;
   }
 
   .footer-build{
@@ -931,18 +926,17 @@ body {
   }
 
   /* Centrer le lien 'Legal Information' sans affecter les autres éléments */
-  .footer-center {
-    position: absolute;
-    left: 50%;
+  .footer-left {
+    padding-left: 1vw;
     transform: translateX(-50%);  /* Centrer horizontalement par rapport à l'écran */
     font-size: 13px;
     color: #828282;
   }
 
-  .footer-center a,
-  .footer-center a:visited,
-  .footer-center a:active,
-  .footer-center a:focus {
+  .footer-left a,
+  .footer-left a:visited,
+  .footer-left a:active,
+  .footer-left a:focus {
     color: #828282;
     text-decoration: none;
     transition: color 0.3s ease;
