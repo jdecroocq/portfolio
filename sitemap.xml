@@ -8,11 +8,6 @@
     <loc>https://jeandecroocq.github.io/portfolio/about_me.html</loc>
     <priority>0.90</priority>
   </url>
-  <url>
-    <loc>https://jeandecroocq.github.io/portfolio/projects.html</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://jeandecroocq.github.io/portfolio/legal_information.html</loc>
     <priority>0.50</priority>
   </url>
