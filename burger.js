@@ -41,4 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMenu();
     }
   });
+
+  // Ajoutez l'écouteur d'événement pour le redimensionnement de la fenêtre
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 700) {
+      if (burger.classList.contains('open')) {
+        closeMenu();
+      }
+    }
+  });
 });
