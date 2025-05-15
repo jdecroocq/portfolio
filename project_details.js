@@ -121,11 +121,11 @@ async function displayProjectImages() {
   const projectId = getQueryParam('id'); // ID du projet, nécessaire pour récupérer les images
 
   try {
-    // Étape 1: Récupérer l'ID du sous-dossier "images" à partir de l'ID du projet
+    // 1: Récupérer l'ID du sous-dossier "images" à partir de l'ID du projet
     const imagesFolderId = await getImagesFolderId(projectId);
     console.log("Images Folder ID:", imagesFolderId);
 
-    // Étape 2: Récupérer les images du sous-dossier "images"
+    // 2: Récupérer les images du sous-dossier "images"
     const imageFiles = await getImagesFromFolder(imagesFolderId);
     console.log("Image Files:", imageFiles);
 
