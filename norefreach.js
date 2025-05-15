@@ -12,16 +12,16 @@ function initNoRefresh() {
   });
 }
 
-// Appelle la fonction une première fois si les liens sont déjà là
+// Appeller la fonction une première fois si les liens sont déjà là
 document.addEventListener('DOMContentLoaded', () => {
   initNoRefresh();
 
-  // Regarde si le footer est injecté dynamiquement
+  // Regarder si le footer est injecté dynamiquement
   const observer = new MutationObserver(() => {
     initNoRefresh(); // Réattache les events aux nouveaux liens
   });
 
-  // Observe le placeholder du footer
+  // Observer le placeholder du footer
   const footer = document.getElementById('footer-placeholder');
   if (footer) {
     observer.observe(footer, { childList: true, subtree: true });
