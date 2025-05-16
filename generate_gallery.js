@@ -85,7 +85,7 @@ async function generateGallery() {
         hasInsertedAtLeastOne = true;
       }
 
-      // 💡 On ajuste après chaque ajout pour que le texte soit recalculé dynamiquement
+      // On ajuste après chaque ajout pour que le texte soit recalculé dynamiquement
       requestAnimationFrame(() => {
         adjustTextSize();
       });
