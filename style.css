@@ -434,9 +434,7 @@ body {
 
   .project-media {
     height: calc(90vh - 200px); /* Limite la hauteur du conteneur */
-    overflow: hidden;  /* Pour que les coins arrondis soient visibles */
-    aspect-ratio: 16 / 9; /* Ratio 16:9 pour les vidéos */;
-    border-radius: 5px;
+    aspect-ratio: 16 / 9;
   }
 
   /* S'applique à l'image OU à la vidéo */
