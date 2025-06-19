@@ -138,7 +138,7 @@ body {
   /* === BURGER BUTTON === */
   .burger {
     display: none;
-    background: url('icones/bar.png') no-repeat center center;
+    background: url('icons/bar.png') no-repeat center center;
     background-size: contain;
     height: 26px;
     width: 26px;
@@ -150,7 +150,7 @@ body {
   }
 
   .burger.open {
-    background-image: url('icones/crx.png');
+    background-image: url('icons/crx.png');
   }
 
   .burger:hover {
