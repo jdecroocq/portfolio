@@ -47,9 +47,9 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(10, 10, 10, 0.8);
+    background-color: rgba(16, 16, 16, 0.8);
     box-shadow: 0 0 5px rgba(16, 16, 16, 1);
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(20px);
     border-bottom: 2px solid #191919;
     padding: 0;
   }
