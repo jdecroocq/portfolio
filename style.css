@@ -124,25 +124,53 @@ body {
   /* === BURGER BUTTON === */
   .burger {
     display: none;
-    background: url('icons/bar.png') no-repeat center center;
-    background-size: contain;
-    height: 26px;
-    width: 26px;
-    padding-top: 37px;
+    height: 40px;
+    width: 40px;
     border: none;
+    background: none;
     cursor: pointer;
     z-index: 3;
+    position: relative;
     transition: transform 0.2s ease;
   }
 
-  .burger.open {
-    background-image: url('icons/crx.png');
+  .burger .bar {
+    display: block;
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    height: 2.5px;
+    background: #fff;
+    border-radius: 0px;
+    transition: transform 0.26s ease-in-out;
+  }
+
+  /* Positionnement des 3 barres */
+  .burger .bar1 { top: 12px; }
+  .burger .bar2 { top: 18px; }
+  .burger .bar3 { top: 24px; }
+
+  /* Barre du milieu : effet zoom */
+  .burger .bar2 {
+    transform: scaleX(1);
+    transform-origin: center;
+    transition: transform 0.26s ease-in-out;
+  }
+  .burger.open .bar2 {
+    transform: scaleX(0);
+  }
+
+  /* Animation en croix */
+  .burger.open .bar1 {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .burger.open .bar3 {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .burger:hover {
     transform: scale(1.05);
   }
-
   #overlay-blur {
     position: fixed;
     top: 0;
