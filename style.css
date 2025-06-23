@@ -177,8 +177,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(5px);
-    background-color: rgba(10, 10, 10, 0.3);
+    background-color: rgba(10, 10, 10, 0.8);
     z-index: 4;
     opacity: 0;
     transition: opacity 0.3s cubic-bezier(0.21, 0.15, 0.52, 0.69), visibility 0.3s ease;
