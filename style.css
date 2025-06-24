@@ -483,7 +483,7 @@ body {
   #imagesSection {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5vh;
+    gap: 15px;
     justify-items: center;
     width: 100%;
   }
