@@ -321,7 +321,7 @@ body {
   .project-section {
     background-color: #191919;
     color: #828282;
-    border-radius: 5px;
+    border-radius: 15px;
     text-align: justify;
     margin-left: calc(15vw - 50px);
     margin-right: calc(15vw - 50px);
@@ -482,7 +482,7 @@ body {
   #imagesSection {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2vh;
+    gap: 5vh;
     justify-items: center;
     width: 100%;
   }
@@ -503,7 +503,7 @@ body {
   /* L'image elle-même : s'adapte à la largeur ET à la hauteur de la fenêtre */
   .project-img {
     display: block;
-    border-radius: 5px;
+    border-radius: 15px;
     width: auto;
     height: auto;
     max-width: 100%;                /* Jamais plus large que le conteneur */
