@@ -212,46 +212,6 @@ async function updateProjectNavigation() {
   console.log("Next project link:", nextProjectLink);
 }
 
-function observeImagesOnScroll() {
-  const images = document.querySelectorAll('.project-img');
-  const MIN_SCALE = 0.94; // ⬅️ Tu peux changer cette valeur facilement
-
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach(entry => {
-        const ratio = entry.intersectionRatio;
-        const target = entry.target;
-
-        if (target.classList.contains('scaled')) return;
-
-        const min = 0.1;
-        const max = 0.8;
-
-        if (ratio >= max) {
-          target.style.transform = 'scale(1)';
-          target.classList.add('scaled');
-          obs.unobserve(target);
-        } else if (ratio >= min) {
-          const normalized = (ratio - min) / (max - min);
-          const scale = MIN_SCALE + normalized * (1 - MIN_SCALE);
-          target.style.transform = `scale(${scale})`;
-        } else {
-          target.style.transform = `scale(${MIN_SCALE})`;
-        }
-      });
-    },
-    {
-      threshold: Array.from({ length: 71 }, (_, i) => 0.1 + i * 0.01)
-    }
-  );
-
-  images.forEach(img => observer.observe(img));
-}
-
-
-
-
-
 
 // Chargement du contenu
 async function loadProjectContent() {
@@ -296,7 +256,6 @@ async function loadProjectContent() {
     
     // Attendre que les images soient affichées avant de montrer le contenu principal
     await displayProjectImages();  
-    observeImagesOnScroll();
         
     // ✅ Masquer le loading, afficher le vrai contenu
     document.getElementById('loadingMessage').style.display = 'none';
