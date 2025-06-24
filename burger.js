@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('header nav');
   const navLinks = document.querySelector('header nav ul');
-  let overlay = document.getElementById('overlay-blur');
+  let overlay = document.getElementById('overlay-dark');
   const header = document.querySelector('header');
 
   // Crée l’overlay s’il n’existe pas déjà
   if (!overlay) {
     overlay = document.createElement('div');
-    overlay.id = 'overlay-blur';
+    overlay.id = 'overlay-dark';
     document.body.appendChild(overlay);
   }
 
