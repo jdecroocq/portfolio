@@ -321,7 +321,7 @@ body {
   .project-section {
     background-color: #191919;
     color: #828282;
-    border-radius: 15px;
+    border-radius: 5px;
     text-align: justify;
     margin-left: calc(15vw - 50px);
     margin-right: calc(15vw - 50px);
@@ -477,30 +477,43 @@ body {
     width: 100%;
   }
 
+
+  /* Section contenant toutes les images du projet */
+  #imagesSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vh;
+    justify-items: center;
+    width: 100%;
+  }
+
+  /* Wrapper autour de chaque image, n'a qu'un rôle de positionnement */
   .project-image {
     position: relative;
     width: 100%;
-    max-width: 90vw;
-    height: auto;
-    overflow: hidden;
-    max-height: calc(90vh - 200px); /* Limite la hauteur du conteneur */
+    max-width: 90vw;                /* Limite la largeur à la taille du viewport */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Pas de hauteur imposée, l'image gère tout */
+    overflow: visible;
   }
 
+  /* L'image elle-même : s'adapte à la largeur ET à la hauteur de la fenêtre */
   .project-img {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
     display: block;
-    transition: transform 0.1s linear;
-    will-change: transform;
-  }
-  .project-img.scaled {
-    transform: scale(1) !important;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    max-width: 100%;                /* Jamais plus large que le conteneur */
+    max-height: calc(75vh - 40px);  /* Jamais plus haute que la fenêtre - petite marge */
+    margin: 0 auto;
+    object-fit: contain;
+    /* Aucun effet visuel ici */
   }
 
-  /* Cache le bouton par défaut */
+  /* Bouton HQ */
   .hq-button {
     position: absolute;
     bottom: 15px;
@@ -525,15 +538,11 @@ body {
     z-index: 10;
   }
 
-  /* Affiche le bouton quand la souris est sur l'image */
-  .project-image:hover .hq-button {
+  /* Affiche le bouton si on survole l'image ou le bouton lui-même */
+  .project-img:hover + .hq-button,
+  .hq-button:hover {
     opacity: 1;
     pointer-events: auto;
-  }
-
-  /* Zoom uniquement quand la souris est sur le bouton */
-  .hq-button:hover {
-    transform: translateX(-50%) scale(1.05);
   }
 
   .project-navigation {
