@@ -171,7 +171,7 @@ body {
   .burger:hover {
     transform: scale(1.05);
   }
-  #overlay-blur {
+  #overlay-dark {
     position: fixed;
     top: 0;
     left: 0;
@@ -185,7 +185,7 @@ body {
   }
 
 
-  #overlay-blur.active {
+  #overlay-dark.active {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
