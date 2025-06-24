@@ -440,6 +440,7 @@ body {
 
   /* S'applique à l'image OU à la vidéo */
   .media-content {
+    border-radius: 15px;
     width: 100%;       /* L'image occupe toute la largeur de son conteneur */
     height: 100%;      /* L'image occupe toute la hauteur de son conteneur */
     max-width: 100%;   /* Ne dépasse pas la largeur du conteneur */
