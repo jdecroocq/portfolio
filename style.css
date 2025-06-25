@@ -47,7 +47,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(16, 16, 16, 0.9);
+    background-color: rgba(16, 16, 16, 0.8);
     box-shadow: 0 0 5px rgba(16, 16, 16, 1);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid #191919;
@@ -514,7 +514,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(16, 16, 16, 0.9);
+    background-color: rgba(16, 16, 16, 0.8);
     box-shadow: 0 0 5px rgba(16, 16, 16, 0.5);
     backdrop-filter: blur(15px);
     border: 1px solid rgb(25, 25, 25, 1);
@@ -533,7 +533,7 @@ body {
   .hq-button:hover {
     opacity: 1;
     pointer-events: auto;
-    background-color: rgba(25, 25, 25, 0.8);
+    background-color: rgba(25, 25, 25, 0.7);
   }
 
   /* Affiche le bouton si on survole l'image ou le bouton lui-même */
@@ -554,7 +554,7 @@ body {
     display: flex;
     gap: 36px;
     border: 1px solid rgb(25, 25, 25, 1);
-    background: rgba(16,16,16,0.7);
+    background: rgba(16,16,16,0.8);
     border-radius: 15px;
     box-shadow: 0 0 5px rgba(16, 16, 16, 1);
     padding: 10px 10px;
