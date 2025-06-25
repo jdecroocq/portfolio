@@ -891,7 +891,7 @@ body {
   }
 
   .legal-section h3:not(:first-of-type) {
-    margin-top: 25px; /* Espace uniquement entre les blocs, pas le premier */
+    margin-top: 25px;
   }
 
   .legal-section p {
