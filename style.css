@@ -47,7 +47,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(16, 16, 16, 0.8);
+    background-color: rgba(16, 16, 16, 0.9);
     box-shadow: 0 0 5px rgba(16, 16, 16, 1);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid #191919;
@@ -531,9 +531,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(16, 16, 16, 0.8);
+    background-color: rgba(16, 16, 16, 0.9);
     box-shadow: 0 0 5px rgba(16, 16, 16, 0.5);
-    border: 1px solid #191919;
     backdrop-filter: blur(15px);
     color: #FFFFFF;
     font-size: 16px;
