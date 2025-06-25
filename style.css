@@ -593,14 +593,16 @@ body {
     border-left: none;
   }
 
-
-  
   .dock-btn:hover,
   .dock-btn:focus {
     background: rgba(25, 25, 25, 0.7)
   }
 
-
+  @media (max-width: 700px) {
+    .floating-dock {
+      bottom: 30px;
+    }
+  }
  
 /* === About me === */
   /* Appliquer un padding global à toutes les sections */
