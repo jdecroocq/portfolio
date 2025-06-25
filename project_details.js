@@ -175,44 +175,6 @@ async function listProjectFolders(projectsFolderId) {
   return data.files; // [{ id, name, createdTime }]
 }
 
-async function updateProjectNavigation() {
-  const currentProjectId = getQueryParam('id');  // ID du projet actuel
-  const projectsFolderId = await getFolderIdByName(ROOT_FOLDER_ID, 'Projects');
-
-  if (!projectsFolderId) {
-    console.error("Dossier 'Projects' introuvable.");
-    return;
-  }
-
-  // Étape 1 : lister les dossiers de projet
-  const projectFolders = await listProjectFolders(projectsFolderId);
-
-  // Étape 2 : trouver l'index du projet actuel dans la liste des projets
-  const currentIndex = projectFolders.findIndex(project => project.id === currentProjectId);
-  if (currentIndex === -1) {
-    console.error("Le projet spécifié n'a pas été trouvé.");
-    return;
-  }
-
-  // Étape 3 : déterminer les projets précédent et suivant
-  const prevProjectId = projectFolders[currentIndex - 1] ? projectFolders[currentIndex - 1].id : projectFolders[projectFolders.length - 1].id;  // Si c'est le premier projet, va au dernier
-  const nextProjectId = projectFolders[currentIndex + 1] ? projectFolders[currentIndex + 1].id : projectFolders[0].id;  // Si c'est le dernier projet, va au premier
-
-  // Recherche des noms des projets précédent et suivant
-  const prevProjectName = projectFolders[currentIndex - 1] ? projectFolders[currentIndex - 1].name : projectFolders[projectFolders.length - 1].name;
-  const nextProjectName = projectFolders[currentIndex + 1] ? projectFolders[currentIndex + 1].name : projectFolders[0].name;
-
-  // Créer des liens vers les pages de détails des projets suivant et précédent
-  const prevProjectLink = `project_details.html?id=${prevProjectId}&projectName=${encodeURIComponent(prevProjectName)}`;
-  const nextProjectLink = `project_details.html?id=${nextProjectId}&projectName=${encodeURIComponent(nextProjectName)}`;
-
-  // Mettre à jour les liens dans les flèches
-  document.getElementById('prevProject').setAttribute('href', prevProjectLink);
-  document.getElementById('nextProject').setAttribute('href', nextProjectLink);
-
-  console.log("Previous project link:", prevProjectLink);
-  console.log("Next project link:", nextProjectLink);
-}
 
 
 // Chargement du contenu
@@ -222,7 +184,6 @@ async function loadProjectContent() {
   const contentContainer = document.getElementById('projectContent');
   const videoContainer = document.getElementById('videoSection');
 
-  updateProjectNavigation();
   
   if (!projectId || !projectName) {
     contentContainer.innerHTML = '<p>Erreur : ID ou nom du projet manquant.</p>';
@@ -263,6 +224,7 @@ async function loadProjectContent() {
     document.getElementById('loadingMessage').style.display = 'none';
     document.getElementById('mainContent').style.display = 'block';
 
+
   } catch (error) {
     console.error("Error loading project content:", error);
     contentContainer.innerHTML = `<p>Erreur : ${error.message}</p>`;
@@ -275,3 +237,54 @@ window.addEventListener('DOMContentLoaded', async () => {
   console.log("DOM fully loaded and parsed");
   await loadProjectContent();
 });
+
+  // === NAVIGATION DOCK DYNAMIQUE ===
+
+  // Retourne l'ID du dossier "Projects"
+  async function getProjectsFolderId() {
+      return await getFolderIdByName(ROOT_FOLDER_ID, 'Projects');
+  }
+
+  // Liste tous les dossiers projets dans "Projects"
+  async function listProjectFolders(projectsFolderId) {
+      const url = `https://www.googleapis.com/drive/v3/files?q='${projectsFolderId}'+in+parents+and+mimeType='application/vnd.google-apps.folder'&key=${API_KEY}&fields=files(id,name,createdTime)`;
+      const res = await fetch(url);
+      const data = await res.json();
+      // Trie par date de création croissante (ou adapte selon ordre voulu)
+      return data.files.sort((a, b) => new Date(a.createdTime) - new Date(b.createdTime));
+  }
+
+  // Met à jour les liens du dock
+  async function updateDockNavigation() {
+      const currentProjectId = getQueryParam('id');
+      const projectsFolderId = await getProjectsFolderId();
+      if (!projectsFolderId) return;
+
+      const projectFolders = await listProjectFolders(projectsFolderId);
+      if (!projectFolders || !Array.isArray(projectFolders)) return;
+
+      const currentIndex = projectFolders.findIndex(project => project.id === currentProjectId);
+      if (currentIndex === -1) return;
+
+      // Calcul précédent/suivant
+      const prevIndex = (currentIndex - 1 + projectFolders.length) % projectFolders.length;
+      const nextIndex = (currentIndex + 1) % projectFolders.length;
+
+      const prevProject = projectFolders[prevIndex];
+      const nextProject = projectFolders[nextIndex];
+
+      // Construction des liens
+      const prevProjectLink = `project_details.html?id=${prevProject.id}&projectName=${encodeURIComponent(prevProject.name)}`;
+      const nextProjectLink = `project_details.html?id=${nextProject.id}&projectName=${encodeURIComponent(nextProject.name)}`;
+
+      // Mise à jour des href des flèches dock
+      const dockPrev = document.getElementById('dockPrevProject');
+      const dockNext = document.getElementById('dockNextProject');
+      if (dockPrev) dockPrev.setAttribute('href', nextProjectLink);
+      if (dockNext) dockNext.setAttribute('href', prevProjectLink);
+  }
+
+  // Appelle la fonction au chargement
+  window.addEventListener('DOMContentLoaded', async () => {
+      await updateDockNavigation();
+  });
