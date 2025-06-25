@@ -548,20 +548,21 @@ body {
   .floating-dock {
     position: fixed;
     left: 50%;
-    bottom: 30px;
+    bottom: 15px;
     transform: translateX(-50%);
     display: flex;
     gap: 36px;
-    background: rgba(16,16,16,0.92);
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-    padding: 12px 34px;
+    border: 1px solid rgb(25, 25, 25, 1);
+    background: rgba(16,16,16,0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(16, 16, 16, 1);
+    padding: 10px 10px;
     z-index: 1200;
     min-width: 220px;
     max-width: 370px;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(13px);
+    backdrop-filter: blur(15px);
   }
 
   .floating-dock .dock-icon {
