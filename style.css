@@ -10,12 +10,12 @@
 
 
 html, body {
-  margin: 0;                /* Supprime marges par défaut */
-  padding: 0;               /* Supprime padding par défaut */
-  height: 100%;             /* Prend toute la hauteur de la fenêtre */
-  font-family: 'Orkney', sans-serif; /* Police principale */
-  background: #101010;      /* Fond global */
-  color: #828282;           /* Couleur du texte */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Orkney', sans-serif;
+  background: #101010;
+  color: #828282;
 }
 
 
