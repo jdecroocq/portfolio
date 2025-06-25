@@ -514,23 +514,13 @@ body {
     /* Aucun effet visuel ici */
   }
 
-  
-    .img-hq-wrapper {
+  .img-hq-wrapper {
     display: inline-block;
     position: relative;
     width: auto;
     height: auto;
   }
 
-
-  
-  /* Affiche le bouton si on survole l'image ou le bouton lui-même */
-  .project-img:hover + .hq-button,
-  .hq-button:hover {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
   /* Bouton HQ */
   .hq-button {
     position: absolute;
@@ -560,10 +550,16 @@ body {
   .hq-button:hover {
     opacity: 1;
     pointer-events: auto;
-    background-color: rgba(25, 25, 25, 0.8);
+    background-color: rgba(25, 25, 25, 0.8);   /* même transparence, couleur: même que la bordure */
   }
 
-  
+  /* Affiche le bouton si on survole l'image ou le bouton lui-même */
+  .project-img:hover + .hq-button,
+  .hq-button:hover {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .project-navigation {
     position: fixed;
     top: 50%;
