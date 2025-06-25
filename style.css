@@ -549,7 +549,7 @@ body {
   .hq-button:hover {
     opacity: 1;
     pointer-events: auto;
-    background-color: rgba(25, 25, 25, 0.7);
+    background-color: rgba(25, 25, 25, 0.8);
   }
 
   /* Affiche le bouton si on survole l'image ou le bouton lui-même */
