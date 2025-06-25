@@ -49,7 +49,7 @@ body {
     z-index: 1000;
     background-color: rgba(16, 16, 16, 0.8);
     box-shadow: 0 0 5px rgba(16, 16, 16, 1);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid #191919;
     padding: 0;
   }
@@ -524,23 +524,23 @@ body {
   /* Bouton HQ */
   .hq-button {
     position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 44px;      /* carré, adapte la taille si besoin */
-    height: 44px;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(16, 16, 16, 0.8);   /* couleur identique à la top bar */
-    box-shadow: 0 0 5px rgba(16, 16, 16, 1);   /* ombre identique à la top bar */
-    border: 1px solid #191919;                 /* bordure identique à la top bar */
-    backdrop-filter: blur(20px);               /* flou identique à la top bar */
+    background-color: rgba(16, 16, 16, 0.8);
+    box-shadow: 0 0 5px rgba(16, 16, 16, 0.5);
+    border: 1px solid #191919;
+    backdrop-filter: blur(15px);
     color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 8px;   /* pour des coins légèrement arrondis, mets 0 si tu veux un vrai carré */
+    border-radius: 8px;
     text-decoration: none;
-    transition: opacity 0.3s, background-color 0.2s;
+    transition: opacity 0.2s, background-color 0.2s;
     opacity: 0;
     pointer-events: none;
     z-index: 10;
@@ -550,7 +550,7 @@ body {
   .hq-button:hover {
     opacity: 1;
     pointer-events: auto;
-    background-color: rgba(25, 25, 25, 0.8);   /* même transparence, couleur: même que la bordure */
+    background-color: rgba(25, 25, 25, 0.7);
   }
 
   /* Affiche le bouton si on survole l'image ou le bouton lui-même */
