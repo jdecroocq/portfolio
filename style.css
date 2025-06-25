@@ -599,25 +599,7 @@ body {
   .dock-btn:focus {
     background: rgba(25, 25, 25, 0.7)
   }
-  
-  @media (max-width: 700px) {
-    .floating-dock {
-      bottom: 10px;
-    }
-    .dock-btn {
-      width: 40px;
-      height: 40px;
-    }
-    .dock-btn svg {
-      width: 22px;
-      height: 22px;
-    }
-    .dock-btn-left,
-    .dock-btn-right {
-      border-radius: 9px 0 0 9px;
-      border-radius: 0 9px 9px 0;
-    }
-  }
+
 
  
 /* === About me === */
