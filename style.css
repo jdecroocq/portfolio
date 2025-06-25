@@ -341,23 +341,6 @@ body {
     color: #828282;
   }
 
-  .back-button-container {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 0px;
-  }
-
-  .back-link {
-    display: inline-block;
-    color: #828282;
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
-  }
-
-  .back-link:hover {
-    transform: scale(1.05);
-  }
 
   /* Titre du projet */
   .project-section h1 {
@@ -559,51 +542,71 @@ body {
     pointer-events: auto;
   }
 
-  .project-navigation {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0.5vw;
-    pointer-events: none; /* Pour ne pas bloquer d'autres interactions */
-    z-index: 1;
-  }
-  .project-navigation a.nav-arrow {
-    pointer-events: all; /* Pour que les flèches soient cliquables */
-    display: inline-block;
-    opacity: 1;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-
-  .project-navigation a.nav-arrow:hover {
-    transform: scale(1.05); /* Agrandissement au survol */
-    opacity: 1;
-  }
-
-  .project-navigation a.left img {
-    transform: rotate(0deg); /* Flèche gauche, tournée de 180° */
-  }
-
-  .project-navigation a.right img {
-    transform: rotate(180deg); /* Flèche droite, sans rotation par défaut */
-  }
-
-  .project-navigation a.left:hover img {
-    transform: rotate(0deg) scale(1.05); /* Rotation et agrandissement de la flèche gauche au survol */
-  }
-
-  .project-navigation a.right:hover img {
-    transform: rotate(180deg) scale(1.05); /* Agrandissement uniquement pour la flèche droite au survol */
-  }
-
-  .project-navigation img {
-    height: 4vh;  /* Ajuste cette valeur pour que l'image soit plus petite ou plus grande selon la taille de l'écran */
-    max-height: 30px;  /* Cette valeur limite la taille maximale de l'image */
-    width: auto;
-  }
   
+
+  /* === Barre flottante === */
+  .floating-dock {
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 36px;
+    background: rgba(16,16,16,0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    padding: 12px 34px;
+    z-index: 1200;
+    min-width: 220px;
+    max-width: 370px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(13px);
+  }
+
+  .floating-dock .dock-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .floating-dock .dock-icon:hover, .floating-dock .dock-icon:focus {
+    background: rgba(44, 226, 160, 0.22);
+    box-shadow: 0 2px 8px rgba(44,226,160,0.17);
+    transform: scale(1.07);
+  }
+
+  .floating-dock svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+
+  @media (max-width: 700px) {
+    .floating-dock {
+      padding: 10px 14px;
+      gap: 14px;
+      border-radius: 12px;
+      max-width: 98vw;
+      min-width: 140px;
+    }
+    .floating-dock .dock-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 7px;
+    }
+    .floating-dock svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
  
 /* === About me === */
   /* Appliquer un padding global à toutes les sections */
