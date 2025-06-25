@@ -514,7 +514,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(16, 16, 16, 0.9);
+    background-color: rgba(16, 16, 16, 0.8);
     box-shadow: 0 0 5px rgba(16, 16, 16, 0.5);
     backdrop-filter: blur(15px);
     border: 1px solid rgb(25, 25, 25, 1);
@@ -548,59 +548,56 @@ body {
   .floating-dock {
     position: fixed;
     left: 50%;
-    bottom: 30px;
+    bottom: 20px;
     transform: translateX(-50%);
     display: flex;
     z-index: 1200;
     gap: 0;
-    /* plus de fond ici : chaque bouton porte le style */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px rgba(16, 16, 16, 0.5);
+    border-radius: 15px;
+    border: 1px solid rgba(25,25,25,1);
   }
   
   .dock-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(16, 16, 16, 0.90);
-    border: 1px solid rgba(200,255,220,0.15);
+    background: rgba(16, 16, 16, 0.8);
     color: #fff;
     outline: none;
-    width: 54px;
-    height: 54px;
-    font-size: 20px;
-    transition: background 0.15s, box-shadow 0.15s, border-color 0.18s, filter 0.12s;
-    box-shadow: 0 2px 8px rgba(44,226,160,0.07);
-    text-decoration: none;
-    border-radius: 0; /* coins arrondis gérés par classes suivantes */
-    padding: 0;
-    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    transition: background 0.2s, box-shadow 0.2s, border-color 0.2s, filter 0.2s;
     position: relative;
+
   }
   
   .dock-btn svg {
-    width: 32px;
-    height: 32px;
+    width: 30px;
     display: block;
   }
   
   .dock-btn-left {
-    border-radius: 15px 0 0 15px;
+    border-radius: 13px 0 0 13px;
     border-right: none;
   }
+
   .dock-btn-center {
-    border-radius: 0;
-    border-left: 1px solid rgba(200,255,220,0.10);
-    border-right: 1px solid rgba(200,255,220,0.10);
+    border-left: none;
+    border-right: none;
   }
+  
   .dock-btn-right {
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 13px 13px 0;
     border-left: none;
   }
+
+
   
   .dock-btn:hover,
   .dock-btn:focus {
-    background: rgba(44, 226, 160, 0.13);
-    border-color: #32e6a0;
-    filter: brightness(1.18);
+    background: rgba(25, 25, 25, 0.7)
   }
   
   @media (max-width: 700px) {
