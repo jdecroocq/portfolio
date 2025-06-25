@@ -143,8 +143,10 @@ async function displayProjectImages() {
 
       imagesHTML += `
         <div class="project-image">
-          <img src="${imagePath}" alt="Project Image ${index + 1}" class="project-img"/>
-          <a href="${originalUrl}" target="_blank" rel="noopener noreferrer" class="hq-button">HQ</a>
+          <div class="img-hq-wrapper">
+            <img src="${imagePath}" alt="Project Image ${index + 1}" class="project-img"/>
+            <a href="${originalUrl}" target="_blank" rel="noopener noreferrer" class="hq-button">HQ</a>
+          </div>
         </div>
       `;
     });
