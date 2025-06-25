@@ -514,12 +514,22 @@ body {
     /* Aucun effet visuel ici */
   }
 
+
+    .img-hq-wrapper {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  
   /* Bouton HQ */
   .hq-button {
     position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%) scale(1);
+    top: 10px;
+    right: 10px;
+    left: auto;
+    bottom: auto;
+    transform: none;
     background-color: rgba(10, 10, 10, 0.8);
     box-shadow: 0 0 5px rgba(16, 16, 16, 1);
     backdrop-filter: blur(50px);
