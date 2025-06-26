@@ -1,5 +1,3 @@
-/* === BODY === */
-/* === RESET DE BASE === */
 @font-face {
   font-family: 'Orkney';
   src: url('fonts/orkney-regular-webfont.woff2') format('woff2'),
@@ -7,7 +5,6 @@
   font-weight: 500;
   font-style: normal;
 }
-
 
 html, body {
   margin: 0;
@@ -18,29 +15,28 @@ html, body {
   color: #828282;
 }
 
-
-/* === STRUCTURE PRINCIPALE === */
 body {
-  display: flex;            /* Disposition en colonne */
+  display: flex;
   flex-direction: column;
-  min-height: 100vh;        /* Hauteur min = hauteur viewport */
-  padding-top: 100px;       /* Espace pour le header fixe */
+  min-height: 100vh;
+  padding-top: 90px;
 }
 
 
-/* === CONTENU CENTRAL === */
-.content {
-  flex: 1;                  /* Remplit l'espace restant */
-}
 
 
-/* === PC MODE === */
+
+
+
+/* === mode large === */
+
+
+
 @media (min-width: 1px){
-/* === Header === */
   header {
     display: flex;
     flex-direction: row;
-    height: 100px;
+    height: 90px;
     align-items: stretch;
     position: fixed;
     top: 0;
@@ -54,37 +50,28 @@ body {
     padding: 0;
   }
 
-
-
-  /* === TOP-BAR : logo + burger === */
   .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 90px;
     padding: 0 4vw;
     position: relative;
     z-index: 2;
   }
 
-  /* === LOGO === */
   .logo img {
     height: 70px;
     width: auto;
-    padding-top: 15px;
+    padding-top: 10px;
     display: block;
     transition: transform 0.2s ease;
   }
 
-  .logo img:hover {
-    transform: scale(1.05);
-  }
-
-  /* === NAVIGATION (desktop par défaut) === */
   header nav {
     display: flex;
     width: 100%;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.2s ease;
     overflow: hidden;
     z-index: 1;
     align-items: center;
@@ -93,7 +80,7 @@ body {
   header nav ul {
     list-style: none;
     display: flex;
-    gap: 3rem;
+    gap: 45px;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
@@ -121,56 +108,49 @@ body {
     color: transparent;
   }
 
-  /* === BURGER BUTTON === */
   .burger {
     display: none;
-    height: 40px;
-    width: 40px;
+    width: 45px;
+    height: 45px;
     border: none;
     background: none;
     cursor: pointer;
-    z-index: 3;
     position: relative;
+    z-index: 3;
     transition: transform 0.2s ease;
   }
-
+  
   .burger .bar {
-    display: block;
     position: absolute;
-    left: 8px;
-    right: 8px;
-    height: 2.5px;
+    left: 7.5px;
+    right: 7.5px;
+    height: 3px;
     background: #fff;
     border-radius: 0px;
-    transition: transform 0.26s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
-
-  /* Positionnement des 3 barres */
+  
   .burger .bar1 { top: 12px; }
-  .burger .bar2 { top: 18px; }
-  .burger .bar3 { top: 24px; }
-
-  /* Barre du milieu : effet zoom */
+  .burger .bar2 { top: 21px; }
+  .burger .bar3 { top: 30px; }
+  
   .burger .bar2 {
-    transform: scaleX(1);
     transform-origin: center;
-    transition: transform 0.26s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
+  
   .burger.open .bar2 {
     transform: scaleX(0);
   }
 
-  /* Animation en croix */
   .burger.open .bar1 {
-    transform: translateY(6px) rotate(45deg);
-  }
-  .burger.open .bar3 {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(9px) rotate(45deg);
   }
 
-  .burger:hover {
-    transform: scale(1.05);
+  .burger.open .bar3 {
+    transform: translateY(-9px) rotate(-45deg);
   }
+
   #overlay-dark {
     position: fixed;
     top: 0;
@@ -184,7 +164,6 @@ body {
     pointer-events: none;
   }
 
-
   #overlay-dark.active {
     opacity: 1;
     visibility: visible;
@@ -192,9 +171,12 @@ body {
   }
 
   
+  
 
-/* === Gallery === */
-  /* Loading galerie */
+  
+
+
+  
   .loading-container {
     display: flex;
     justify-content: center;
@@ -205,7 +187,6 @@ body {
     color: #828282;
   }
 
-  /* Mapping gallery */
   .gallery {
     max-width: 100%;
     margin: 0 auto;
@@ -220,41 +201,35 @@ body {
     width: 100%;
   }
 
-  /* 5 colonnes */
   @media (min-width: 1501px) {
     .gallery-grid {
       grid-template-columns: repeat(5, 1fr);
     }
   }
 
-  /* 4 colonnes */
   @media (min-width: 900px) and (max-width: 1500px) {
     .gallery-grid {
       grid-template-columns: repeat(4, 1fr);
     }
   }
 
-  /* 3 colonnes */
   @media (min-width: 650px) and (max-width: 899px) {
     .gallery-grid {
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
-  /* 2 colonnes */
   @media (max-width: 649px) {
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);
     }
 
-      /* Pour s'assurer que chaque item occupe correctement son espace */
     .gallery-item {
       min-width: 0;
-      width: 100%; /* Prendre 100% de la largeur disponible */
+      width: 100%;
     }
   }
 
-  /* Éléments de la galerie */
   .gallery-item {
     opacity: 0;
     transform: translateY(20px) scale(0.98);
@@ -266,13 +241,11 @@ body {
     width: 100%;
   }
 
-  /* Lorsque l'élément devient visible */
   .gallery-item.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 
-  /* Wrapper d'image */
   .image-wrapper {
     position: relative;
     display: block;
@@ -281,43 +254,44 @@ body {
     overflow: hidden;
   }
 
-  /* L'image à l'intérieur du wrapper */
   .image-wrapper img {
     width: 100%;
     height: 100%;
     transform: scale(1.01);
-    transition: filter 0.3s ease, transform 0.3s ease;
+    transition: filter 0.2s ease, transform 0.4s ease;
     object-fit: cover;
   }
 
-  /* Effet au survol de l'image : flou et zoom léger */
   .image-wrapper:hover img {
     filter: blur(2px);
     transform: scale(1.05);
   }
 
-  /* Label du texte sur l'image */
   .image-label {
     position: absolute;
-    bottom: 5%;
+    bottom: 3%;
     left: 5%;
     right: 5%;
     color: #FFFFFF;
     font-weight: bold;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
     pointer-events: none;
     text-transform: uppercase;
     z-index: 2;
-    text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+    text-shadow: 0px 0px 10px rgba(16, 16, 16, 0.2);
   }
 
   .gallery-item:hover .image-label {
     opacity: 1;
-    /* Rendre le texte visible au survol */
   }
 
-/* === Project details === */
+
+
+
+
+
+  
   .project-section {
     background-color: #191919;
     color: #828282;
@@ -341,8 +315,6 @@ body {
     color: #828282;
   }
 
-
-  /* Titre du projet */
   .project-section h1 {
     font-size: 24px;
     color: #FFFFFF;
@@ -350,8 +322,7 @@ body {
     margin-top: 0;
     margin-bottom: 0px;
   }
-
-  /* Date du projet */
+  
   .project-date {
     font-size: 14px;
     color: #828282;
@@ -361,7 +332,6 @@ body {
     display: block;
   }
 
-  /* Description du projet */
   .project-description {
     font-size: 18px;
     margin-top: 30px;
@@ -369,7 +339,6 @@ body {
     text-align: justify;
   }
 
-  /* Titre de la section Description */
   .project-section h2 {
     font-size: 18px;
     color: #FFFFFF;
@@ -377,7 +346,6 @@ body {
     margin-bottom: 5px;
   }
 
-  /* Animation pour l'apparition du cadre description */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -389,7 +357,6 @@ body {
     }
   }
   
-  /* Applique l'animation au conteneur de description */
   .project-section, 
   .project-video, 
   .project-image,
@@ -407,7 +374,6 @@ body {
     margin-bottom: 20px;
   }
 
-  /* Vidéo YouTube */
   #videoSection {
     justify-items: center;
     width: 100%;
@@ -417,21 +383,19 @@ body {
   }
 
   .project-media {
-    height: calc(90vh - 200px); /* Limite la hauteur du conteneur */
+    height: calc(90vh - 200px);
     aspect-ratio: 16 / 9;
   }
 
-  /* S'applique à l'image OU à la vidéo */
   .media-content {
     border-radius: 15px;
-    width: 100%;       /* L'image occupe toute la largeur de son conteneur */
-    height: 100%;      /* L'image occupe toute la hauteur de son conteneur */
-    max-width: 100%;   /* Ne dépasse pas la largeur du conteneur */
-    max-height: 100%;  /* Ne dépasse pas la hauteur du conteneur */
-    object-fit: contain; /* L'image conserve son ratio sans être déformée */
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 
-  /* Liens, listes, etc. (si présents) */
   .project-section li {
     font-size: 18px;
     color: #828282;
@@ -455,14 +419,12 @@ body {
 
   #imagesSection {
     display: grid;
-    grid-template-columns: 1fr; /* Une seule colonne */
+    grid-template-columns: 1fr;
     gap: 20px;
     justify-items: center;
     width: 100%;
   }
 
-
-  /* Section contenant toutes les images du projet */
   #imagesSection {
     display: grid;
     grid-template-columns: 1fr;
@@ -471,30 +433,26 @@ body {
     width: 100%;
   }
 
-  /* Wrapper autour de chaque image, n'a qu'un rôle de positionnement */
   .project-image {
     position: relative;
     width: 100%;
-    max-width: 90vw;                /* Limite la largeur à la taille du viewport */
+    max-width: 90vw;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Pas de hauteur imposée, l'image gère tout */
     overflow: visible;
   }
 
-  /* L'image elle-même : s'adapte à la largeur ET à la hauteur de la fenêtre */
   .project-img {
     display: block;
     border-radius: 15px;
     width: auto;
     height: auto;
-    max-width: 100%;                /* Jamais plus large que le conteneur */
-    max-height: calc(75vh - 40px);  /* Jamais plus haute que la fenêtre - petite marge */
+    max-width: 100%;
+    max-height: calc(75vh - 40px);
     margin: 0 auto;
     object-fit: contain;
-    /* Aucun effet visuel ici */
   }
 
   .img-hq-wrapper {
@@ -504,7 +462,6 @@ body {
     height: auto;
   }
 
-  /* Bouton HQ */
   .hq-button {
     position: absolute;
     top: 15px;
@@ -519,9 +476,9 @@ body {
     backdrop-filter: blur(15px);
     border: 1px solid rgb(25, 25, 25, 1);
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 7.5px;
     text-decoration: none;
     transition: opacity 0.2s, background-color 0.2s;
     opacity: 0;
@@ -536,15 +493,12 @@ body {
     background-color: rgba(25, 25, 25, 0.7);
   }
 
-  /* Affiche le bouton si on survole l'image ou le bouton lui-même */
   .project-img:hover + .hq-button,
   .hq-button:hover {
     opacity: 1;
     pointer-events: auto;
   }
 
-  
-  /* === Barre flottante === */
   .floating-dock {
     position: fixed;
     left: 50%;
@@ -573,7 +527,6 @@ body {
 
   }
   
-  
   .dock-btn-left {
     border-radius: 14px 0 0 14px;
     border-right: none;
@@ -599,50 +552,52 @@ body {
       bottom: 30px;
     }
   }
- 
-/* === About me === */
-  /* Appliquer un padding global à toutes les sections */
+
+
+
+
+
+
+  
   .overview,
   .skills,
   .software,
   .connect{
-    background-color: #191919; /* Couleur de fond du cadre */
-    color: #828282; /* Couleur du texte */
-    border-radius: 15px; /* Coins arrondis */
-    margin-left: calc(15vw - 50px); /* Centre horizontalement */
-    margin-right: calc(15vw - 50px); /* Centre horizontalement */
-    margin-bottom: 40px; /* Espacement entre les sections */
-    padding-left: calc(5px + 3vw); /* Espacement interne à gauche */
-    padding-right: calc(5px + 3vw); /* Espacement interne à droite */
-    padding-bottom: calc(5px + 3vw); /* Espacement interne en bas */
+    background-color: #191919;
+    color: #828282;
+    border-radius: 15px;
+    margin-left: calc(15vw - 50px);
+    margin-right: calc(15vw - 50px);
+    margin-bottom: 40px;
+    padding-left: calc(5px + 3vw);
+    padding-right: calc(5px + 3vw);
+    padding-bottom: calc(5px + 3vw);
     padding-top: calc(5px + 3vw);;
-    text-align: justify; /* Largeur fixe de la section */
+    text-align: justify;
   }
 
-  /* Appliquer les mêmes styles de titre pour toutes les sections */
   .overview h2,
   .skills h2,
   .software h2,
   .connect h2 {
     font-size: 24px;
     margin-bottom: 30px;
-    color: #FFFFFF; /* Couleur des titres */
-    font-weight: bold; /* Mettre les titres en gras */
+    color: #FFFFFF;
+    font-weight: bold;
     margin-top: 0;
   }
 
-  /* Appliquer le style au texte dans la section "overview" */
   .overview p {
-    font-size: 18px; /* Taille de la police */
-    color: #828282; /* Couleur du texte */
-    text-align: justify; /* Justifier le texte à gauche et à droite */
+    font-size: 18px;
+    color: #828282;
+    text-align: justify;
   }
 
   .skill {
     background-color: #101010;
     color: #828282;
     padding: 15px 20px;
-    border-radius: 7px;
+    border-radius: 7.5px;
     font-size: 16px;
     text-align: center;
     white-space: nowrap;
@@ -652,31 +607,30 @@ body {
 
   .skill-list {
     display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
-    gap: 10px; /* Espacement entre les éléments */
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   .skill:hover {
     transform: scale(1.05);
-    transition: transform 0.1s ease-out; /* rapide quand on agrandit */
+    transition: transform 0.1s ease-out;
   }
 
   .skill:not(:hover) {
-    transition: transform 0.2s ease-in; /* plus lent quand on rétrécit */
+    transition: transform 0.1s ease-in;
   }
 
-  /* Disposition en grille pour la liste des logiciels */
   .software-list {
-    padding-left: calc(1vw - 5px); /* Espacement interne à gauche */
-    padding-right: calc(1vw - 5px); /* Espacement interne à droite */
+    padding-left: calc(1vw - 5px);
+    padding-right: calc(1vw - 5px);
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .software-item {
     display: flex;
-    align-items: center; /* Centrer verticalement l'icône et le texte */
-    gap: 20px; /* Espacement entre l'icône et le texte */
+    align-items: center;
+    gap: 20px;
     color: #828282;
     padding-bottom: 10px;
     font-size: 16px;
@@ -685,90 +639,80 @@ body {
   .software-icon {
     width: 50px;
     height: auto;
-    object-fit: contain; /* Assure que l'image reste proportionnelle */
-    transition: transform 0.1s; /* Pour l'animation au survol */
+    object-fit: contain;
+    transition: transform 0.1s;
   }
 
-  /* Effet au survol des icônes */
   .software-item:hover .software-icon {
-    transform: scale(1.05); /* Agrandit uniquement l'icône au survol */
+    transform: scale(1.05);
   }
 
-  /* Disposition en grille pour la liste de connexion */
   .connect-list {
-    padding-left: calc(1vw - 5px); /* Espacement interne à gauche */
-    padding-right: calc(1vw - 5px); /* Espacement interne à droite */
+    padding-left: calc(1vw - 5px);
+    padding-right: calc(1vw - 5px);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
   }
 
-  /* Style des éléments dans la liste de connexion */
   .connect-item {
     display: flex;
-    flex-direction: column; /* Empile l'icône et le texte verticalement */
-    align-items: center; /* Centre l'icône et le texte */
+    flex-direction: column;
+    align-items: center;
     color: #828282;
     font-size: 16px;
-    text-align: center; /* Centre le texte */
-    transition: color 0.2s; /* Ajoute une transition pour la couleur */
-    width: 100%; /* Assure que l'élément prend toute la largeur possible */
+    text-align: center;
+    transition: color 0.2s;
+    width: 100%;
     max-width: 180px;
   }
 
-  /* Assurez-vous que le lien n'impacte pas la mise en page du texte */
   .connect-item a {
-    text-decoration: none; /* Enlever le soulignement des liens */
-    color: inherit; /* Hérite de la couleur du parent */
-    font-size: inherit; /* Hérite de la taille de police du parent */
-    font-weight: inherit; /* Hérite du poids de la police du parent */
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
     display: flex;
-    flex-direction: column; /* Empile l'icône et le texte verticalement */
-    align-items: center; /* Centre le contenu horizontalement */
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* Changer la couleur du texte au survol */
   .connect-item:hover {
-    color: #AAAAAA; /* Le texte devient blanc au survol */
+    color: #AAAAAA;
   }
 
-  /* Taille et effet de l'icône */
   .connect-icon {
     width: 35px;
-    height: auto; /* Taille de l'icône */
-    object-fit: contain; /* Assure que l'icône reste proportionnelle */
-    transition: transform 0.2s; /* Pour l'animation au survol */
-    margin-bottom: 20px; /* Ajoute un espacement entre l'icône et le texte */
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s;
+    margin-bottom: 20px;
   }
 
-  /* Effet au survol des icônes */
   .connect-item:hover .connect-icon {
-    transform: scale(1.05); /* Agrandit uniquement l'icône au survol */
+    transform: scale(1.05);
   }
 
-  /* Effet sur le texte au survol */
   .connect-item:hover span {
     color: #AAAAAA;
   }
 
   .intro {
-    display: flex;              /* Devient un conteneur flex */
-    flex-direction: column;     /* Empile les éléments en colonne */
-    align-items: center;        /* Centre horizontalement tous les éléments */
-    justify-content: center;    /* Centre verticalement tous les éléments */
-    text-align: center;         /* Aligne le texte au centre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 60px;
   }
 
-  /* Style pour le logo */
   .logo {
     width: 100%;
-    max-width: 150px;           /* Ajuste la largeur selon tes besoins */
-    height: auto;               /* Garde les proportions de l'image */
-    margin-bottom: 10px;        /* Espace sous le logo */
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
   }
 
-  /* Style des titres et du texte */
   .intro h1 {
     font-size: 22px;
     margin: 0;
@@ -786,7 +730,6 @@ body {
     color: #828282;
   }
 
-  /* Icônes des réseaux sociaux */
   .social-icons {
     display: flex;
     justify-content: center;
@@ -836,31 +779,34 @@ body {
 
   .icon-img {
     width: 100%;
-    max-width: 25px; /* Taille des icônes */
-    height: auto; /* Garde une taille carrée */
-    object-fit: contain; /* Garder les proportions des images sans coupure */
-    transition: transform 0.2s; /* Pour l'animation au survol */
+    max-width: 25px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s;
   }
 
-  /* Effet au survol des icônes */
   .icon-img:hover {
-    transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+    transform: scale(1.1);
   }
 
 
-/* === Legal information === */
+
+
+
+
+  
   .legal-section {
-    background-color: #191919; /* Couleur de fond du cadre */
-    color: #828282; /* Couleur du texte */
-    border-radius: 15px; /* Coins arrondis */
-    text-align: justify; /* Largeur fixe de la section */
-    margin-left: calc(15vw - 50px); /* Centre horizontalement */
-    margin-right: calc(15vw - 50px); /* Centre horizontalement */
-    margin-bottom: 30px; /* Espacement entre les sections */
+    background-color: #191919;
+    color: #828282;
+    border-radius: 15px;
+    text-align: justify;
+    margin-left: calc(15vw - 50px);
+    margin-right: calc(15vw - 50px);
+    margin-bottom: 30px;
     margin-top: 100px;
-    padding-left: calc(5px + 3vw); /* Espacement interne à gauche */
-    padding-right: calc(5px + 3vw); /* Espacement interne à droite */
-    padding-bottom: calc(5px + 3vw); /* Espacement interne en bas */
+    padding-left: calc(5px + 3vw);
+    padding-right: calc(5px + 3vw);
+    padding-bottom: calc(5px + 3vw);
     padding-top: calc(5px + 3vw); 
   }
 
@@ -915,8 +861,12 @@ body {
     text-decoration: underline;
   }
 
+
+
+
+
+
   
-/* === Footer === */
   footer {
     background-color: #101010;
     color: #828282;
@@ -960,8 +910,22 @@ body {
 }
 
 
-/* === PHONE MODE === */
-/* === Header === */
+
+
+
+
+
+
+
+
+
+
+
+
+/* === mode étroit === */
+
+
+
 @media (max-width: 700px){
   .burger {
     display: block;
@@ -985,15 +949,15 @@ body {
 
   header nav ul {
     flex-direction: column;
-    align-items: flex-end; /* Aligne tous les items à droite */
+    align-items: flex-end;
     padding: 1.5rem 4vw 2rem 4vw;
     margin: 0;
     gap: 1.2rem;
   }
 
   header nav ul li {
-    width: 100%; /* pour que le lien prenne toute la largeur */
-    text-align: right; /* texte à droite */
+    width: 100%;
+    text-align: right; 
     padding-right: 4vw;
   }
 
@@ -1005,14 +969,24 @@ body {
 
   }
   header nav ul li a:hover {
-    transform: scale(1.05); /* grossit sans décaler */
+    transform: scale(1.05);
   }
 }
 
 
-/* === Gallery === */
 
-/* === Project details === */
+
+
+
+
+/* aucun contenu pour la gallerie */
+
+
+
+
+
+
+
 @media (max-width:800px) {
   .project-media {
     width: 100%;
@@ -1037,7 +1011,11 @@ body {
 }
 
 
-/* === About me === */
+
+
+
+
+
 @media (max-width: 649px) {
   .software-list {
     display: grid;
@@ -1065,7 +1043,11 @@ body {
 }
 
 
-/* === Legal information === */
+
+
+
+
+
 @media (min-width: 1470px) {
   .legal-section{
     width: 1024px;
@@ -1075,7 +1057,11 @@ body {
 }
 
 
-/* === Footer === */
+
+
+
+
+
 @media (max-width: 649px){
   footer {
     padding-bottom: 30px;
