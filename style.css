@@ -509,8 +509,8 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -573,13 +573,9 @@ body {
 
   }
   
-  .dock-btn svg {
-    width: 30px;
-    display: block;
-  }
   
   .dock-btn-left {
-    border-radius: 13px 0 0 13px;
+    border-radius: 14px 0 0 14px;
     border-right: none;
   }
 
@@ -589,7 +585,7 @@ body {
   }
   
   .dock-btn-right {
-    border-radius: 0 13px 13px 0;
+    border-radius: 0 14px 14px 0;
     border-left: none;
   }
 
