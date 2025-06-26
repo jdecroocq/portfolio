@@ -479,9 +479,6 @@ body {
     box-shadow: 0 0 5px rgba(16, 16, 16, 0.5);
     backdrop-filter: blur(15px);
     border: 1px solid rgb(25, 25, 25, 1);
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: bold;
     border-radius: 7.5px;
     text-decoration: none;
     transition: opacity 0.2s, background-color 0.2s;
