@@ -970,7 +970,11 @@ body {
   }
 
   .project-section {
-    margin-top: calc(7.5vh - 50px);
+    margin-top: calc(10vh - 50px);
+  }
+
+  .legal-section {
+    margin-top: calc(10vh - 50px);
   }
 }
 
