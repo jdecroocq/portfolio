@@ -969,7 +969,7 @@ body {
     transform: scale(1.05);
   }
 
-  project-section {
+  .project-section {
     margin-top: calc(15vw - 50px);
 }
 
