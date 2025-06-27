@@ -237,7 +237,7 @@ body {
   .gallery-item {
     opacity: 0;
     transform: translateY(20px) scale(0.98);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
     position: relative;
     overflow: hidden;
     cursor: pointer;
