@@ -1,8 +1,10 @@
 function initNoRefresh() {
-  document.querySelectorAll('a[href$=".html"]').forEach(link => {
+
+  document.querySelectorAll('a[href^="./"], a[href^="/"], a[href^="about_me"], a[href^="index"], a[href^="projects"], a[href^="about"], a[href^="portfolio"]').forEach(link => {
     link.addEventListener('click', function (e) {
-      const linkPath = new URL(this.href, window.location.origin).pathname;
-      const currentPath = window.location.pathname;
+      
+      const linkPath = new URL(this.href, window.location.origin).pathname.replace(/\/+$/, "");
+      const currentPath = window.location.pathname.replace(/\/+$/, "");
 
       if (linkPath === currentPath) {
         e.preventDefault();
