@@ -123,7 +123,7 @@ body {
     transition: transform 0.2s ease;
   }
   
-  .burger .bar {
+   .burger .bar {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -133,9 +133,9 @@ body {
     transition: transform 0.2s ease-in-out;
   }
   
-  .burger .bar1 { top: 9px; }
+  .burger .bar1 { top: 8px; }
   .burger .bar2 { top: 15px; }
-  .burger .bar3 { top: 21px; }
+  .burger .bar3 { top: 22px; }
   
   .burger .bar2 {
     transform-origin: center;
@@ -147,11 +147,11 @@ body {
   }
 
   .burger.open .bar1 {
-    transform: translateY(6px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
   }
 
   .burger.open .bar3 {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   #overlay-dark {
