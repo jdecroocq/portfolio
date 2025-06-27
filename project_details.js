@@ -146,12 +146,12 @@ async function displayProjectImages() {
           <div class="img-hq-wrapper">
             <img src="${imagePath}" alt="Project Image ${index + 1}" class="project-img"/>
             <a href="${originalUrl}" target="_blank" rel="noopener noreferrer" class="hq-button" aria-label="Afficher en haute qualité">
-              <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" focusable="false">
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                 <g stroke="#fff" stroke-width="2" fill="none">
-                  <polyline points="2,7 2,2 7,2"/>
-                  <polyline points="15,2 20,2 20,7"/>
-                  <polyline points="20,15 20,20 15,20"/>
-                  <polyline points="7,20 2,20 2,15"/>
+                  <polyline points="1,7 1,1 7,1"/>
+                  <polyline points="13,1 19,1 19,7"/>
+                  <polyline points="19,13 19,19 13,19"/>
+                  <polyline points="7,19 1,19 1,13"/>
                 </g>
               </svg>
             </a>
