@@ -12,16 +12,13 @@ function initNoRefresh() {
   });
 }
 
-// Appeller la fonction une première fois si les liens sont déjà là
 document.addEventListener('DOMContentLoaded', () => {
   initNoRefresh();
 
-  // Regarder si le footer est injecté dynamiquement
   const observer = new MutationObserver(() => {
-    initNoRefresh(); // Réattache les events aux nouveaux liens
+    initNoRefresh();
   });
 
-  // Observer le placeholder du footer
   const footer = document.getElementById('footer-placeholder');
   if (footer) {
     observer.observe(footer, { childList: true, subtree: true });
