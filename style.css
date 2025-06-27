@@ -968,6 +968,9 @@ body {
   header nav ul li a:hover {
     transform: scale(1.05);
   }
+
+  project-section {
+    margin-top: calc(15vw - 50px);
 }
 
 
