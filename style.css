@@ -113,8 +113,8 @@ body {
 
   .burger {
     display: none;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     border: none;
     background: none;
     cursor: pointer;
@@ -125,17 +125,17 @@ body {
   
   .burger .bar {
     position: absolute;
-    left: 7.5px;
-    right: 7.5px;
-    height: 3px;
+    left: 0px;
+    right: 0px;
+    height: 2px;
     background: #fff;
     border-radius: 0px;
     transition: transform 0.2s ease-in-out;
   }
   
-  .burger .bar1 { top: 12px; }
-  .burger .bar2 { top: 21px; }
-  .burger .bar3 { top: 30px; }
+  .burger .bar1 { top: 9px; }
+  .burger .bar2 { top: 15px; }
+  .burger .bar3 { top: 21px; }
   
   .burger .bar2 {
     transform-origin: center;
@@ -147,11 +147,11 @@ body {
   }
 
   .burger.open .bar1 {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
   }
 
   .burger.open .bar3 {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   #overlay-dark {
