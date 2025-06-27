@@ -1,6 +1,6 @@
 function initNoRefresh() {
 
-  document.querySelectorAll('a[href^="./"], a[href^="/"], a[href^="about_me"], a[href^="index"], a[href^="projects"], a[href^="about"], a[href^="portfolio"]').forEach(link => {
+  document.querySelectorAll('a[href^="./"], a[href^="/"], a[href^="about_me"], a[href^="index"], a[href^="legal_information"]').forEach(link => {
     link.addEventListener('click', function (e) {
       
       const linkPath = new URL(this.href, window.location.origin).pathname.replace(/\/+$/, "");
