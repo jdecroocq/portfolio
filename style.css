@@ -523,7 +523,6 @@ body {
     height: 60px;
     transition: background 0.2s, box-shadow 0.2s, border-color 0.2s, filter 0.2s;
     position: relative;
-
   }
   
   .dock-btn-left {
