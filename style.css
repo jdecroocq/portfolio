@@ -1035,7 +1035,7 @@ body {
   }
 }
 
-@media (max-width: 649px){
+@media (max-width: 700px){
   footer {
     padding-bottom: 30px;
   }
