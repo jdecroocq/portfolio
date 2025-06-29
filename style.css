@@ -987,21 +987,11 @@ body {
 
 
 
-@media (max-width:800px) {
-  .project-media {
-    width: 100%;
-    max-width: 90vw;
-    height: auto;
-    max-height: calc(90vh - 200px);
-  }
-}
-
 @media (min-width: 1000px) {
   .project-navigation {
     padding: 0 3vw;
   }
 }
-
 
 
 
