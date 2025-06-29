@@ -574,7 +574,7 @@ body {
     max-width: calc(88vw - 10px);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding-left: calc(5px + 3vw);
     padding-right: calc(5px + 3vw);
     padding-bottom: calc(5px + 3vw);
@@ -1033,26 +1033,6 @@ body {
     margin-right: auto;
   }
 }
-
-
-
-
-
-
-
-@media (min-width: 1470px) {
-  .legal-section{
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-
-
-
-
-
 
 @media (max-width: 649px){
   footer {
