@@ -50,6 +50,7 @@ body {
     box-shadow: 0 0 5px rgba(16, 16, 16, 1);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid #191919;
+    box-sizing: border-box;
     padding: 0;
   }
 
