@@ -312,6 +312,10 @@ body {
     font-size: 18px;
   }
 
+  .project-details-page .content {
+    padding-bottom: 90px;
+  }
+
   #loadingMessage {
     text-align: center;
     font-size: 18px;
