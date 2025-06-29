@@ -193,7 +193,7 @@ body {
 
   .gallery {
     max-width: 100%;
-    margin: 0 auto;
+    margin: auto;
     overflow: hidden;
     position: relative;
   }
