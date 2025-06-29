@@ -300,8 +300,10 @@ body {
     color: #828282;
     border-radius: 15px;
     text-align: justify;
-    margin-left: 3vw;
-    margin-right: 3vw;
+    width: 1000px;
+    max-width: calc(86vw - 10px);
+    margin-left: auto;
+    margin-right: auto;
     margin-top: min(3vw, 90px);
     margin-bottom: 30px;
     padding-left: calc(5px + 3vw);
@@ -995,13 +997,6 @@ body {
   }
 }
 
-@media (min-width: 1470px) {
-  .project-section {
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 
 
