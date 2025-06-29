@@ -302,6 +302,7 @@ body {
     text-align: justify;
     margin-left: calc(15vw - 50px);
     margin-right: calc(15vw - 50px);
+    margin-top: min(calc(15vw - 50px), 90px);
     margin-bottom: 30px;
     margin-top: 90px;
     padding-left: calc(5px + 3vw);
@@ -968,14 +969,6 @@ body {
   header nav ul li a:hover {
     transform: scale(1.05);
   }
-
-  .project-section {
-    margin-top: calc(7.5vh - 50px);
-  }
-
-  .legal-section {
-    margin-top: calc(7.5vh - 50px);
-  }
 }
 
 
@@ -1050,6 +1043,7 @@ body {
     width: 1024px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: min(calc(15vw - 50px), 90px);
   }
 }
 
