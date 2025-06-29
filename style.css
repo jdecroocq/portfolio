@@ -301,7 +301,7 @@ body {
     border-radius: 15px;
     text-align: justify;
     width: 1000px;
-    max-width: calc(88vw - 10px);
+    max-width: calc(88% - 10px);
     margin-left: auto;
     margin-right: auto;
     margin-top: min(3vw, 90px);
@@ -571,7 +571,7 @@ body {
     color: #828282;
     border-radius: 15px;
     width: 1000px;
-    max-width: calc(88vw - 10px);
+    max-width: calc(88% - 10px);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -807,7 +807,7 @@ body {
     border-radius: 15px;
     text-align: justify;
     width: 1000px;
-    max-width: calc(88vw - 10px);
+    max-width: calc(88% - 10px);
     margin-left: auto;
     margin-right: auto;
     margin-top: min(3vw, 90px);
