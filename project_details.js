@@ -211,17 +211,16 @@ async function loadProjectContent() {
     if (videoUrl) {
       const videoId = extractYouTubeVideoId(videoUrl);
       if (videoId) {
-          videoContainer.innerHTML = `
-            <div class="project-media">
-              <iframe 
-                class="media-content"
-                src="https://www.youtube.com/embed/${videoId}"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-          `;
+        videoContainer.innerHTML = `
+          <div class="project-video-container">
+            <iframe
+              src="https://www.youtube.com/embed/${videoId}"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        `;
         }
       }
 
