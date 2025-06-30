@@ -69,12 +69,11 @@ footer {
   
 .footer-left,
 .footer-build {
-    font-size: 13px;
-    color: #828282;
-}
-  
-.footer-left {
-    padding-left: 1vw;
+  font-size: 13px;
+  color: #828282;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  padding-bottom:0.5vw;
 }
   
 .footer-left a,
@@ -88,15 +87,14 @@ footer {
 .footer-left a:hover {
     color: #AAAAAA;
   }
-  
-.footer-build {
- padding-right: 1vw;
-}
 
-@media (max-width: 700px){
-  .footer-left,
-  .footer-build {
+@media (max-width: 700px) {
+  .footer-left {
     font-size: 10px;
+  }
+
+  .footer-build {
+    display: none;
   }
 }
 
