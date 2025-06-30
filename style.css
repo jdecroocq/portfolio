@@ -26,7 +26,28 @@ body {
   flex: 1;
 }
 
-
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .project-section, 
+  .project-video-container, 
+  .project-image,
+  .legal-section,
+  .intro,
+  .overview,
+  .skills,
+  .software,
+  .connect {
+    animation: fadeIn 1s ease-out forwards;
+  } 
 
 
 
@@ -354,26 +375,6 @@ body {
     margin-top: 30px;
     margin-bottom: 5px;
   }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .project-section, 
-  .project-video, 
-  .project-image,
-  .legal-section,
-  .intro,
-  .overview {
-    animation: fadeIn 1s ease-out forwards;
-  } 
 
   .project-section li {
     font-size: 18px;
@@ -974,23 +975,11 @@ body {
   }
 }
 
-
-
-
-
-
-
 @media (min-width: 1000px) {
   .project-navigation {
     padding: 0 3vw;
   }
 }
-
-
-
-
-
-
 
 @media (max-width: 649px) {
   .software-list {
@@ -1004,17 +993,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center; /* Centre les éléments horizontalement dans chaque cellule */
     gap: 5vw;
-  }
-}
-
-@media (min-width: 1470px) {
-  .overview,
-  .skills,
-  .software,
-  .connect {
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
