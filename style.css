@@ -892,7 +892,6 @@ body {
   .footer-left a:focus {
     color: #828282;
     text-decoration: none;
-    transition: color 0.3s ease;
   }
   
   .footer-left a:hover {
