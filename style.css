@@ -414,7 +414,6 @@ body {
   .project-video-container {
     width: min(94%, calc((75vh - 40px) * (16 / 9)));
     aspect-ratio: 16 / 9;
-    margin: 15px auto;
     background: black;
     border-radius: 15px;
     overflow: hidden;
