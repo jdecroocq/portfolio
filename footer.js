@@ -1,7 +1,7 @@
 fetch('footer.html')
   .then(response => response.text())
   .then(html => {
-    document.getElementById('footer-placeholder').innerHTML = html;
+    document.getElementById('footer-placeholder').outerHTML = html;
 
     fetch('https://api.github.com/repos/jdecroocq/portfolio/releases/latest')
       .then(response => response.json())
