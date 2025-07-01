@@ -1,3 +1,7 @@
+function normalizePath(path) {
+  return path.replace(/\/+$/, "").replace(/\.html$/, "");
+}
+
 function initNoRefresh() {
 
   document.querySelectorAll('a[href^="./"], a[href^="/"], a[href^="about_me"], a[href^="index"], a[href^="legal_information"]').forEach(link => {
