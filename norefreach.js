@@ -1,32 +1,14 @@
-function normalizePath(path) {
-  return path.replace(/\/+$/, "").replace(/\.html$/, "");
-}
+document.addEventListener('click', function (e) {
+  const link = e.target.closest('a[href^="/portfolio/"]');
+  if (!link) return;
 
-function initNoRefresh() {
+  if (link.target === "_blank" || link.href.startsWith("mailto:")) return;
 
-  document.querySelectorAll('a[href^="./"], a[href^="/"], a[href^="about_me"], a[href^="index"], a[href^="legal_information"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-      
-      const linkPath = new URL(this.href, window.location.origin).pathname.replace(/\/+$/, "");
-      const currentPath = window.location.pathname.replace(/\/+$/, "");
+  const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/+$/, "");
+  const currentPath = window.location.pathname.replace(/\/+$/, "");
 
-      if (linkPath === currentPath) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  initNoRefresh();
-
-  const observer = new MutationObserver(() => {
-    initNoRefresh();
-  });
-
-  const footer = document.getElementById('footer-placeholder');
-  if (footer) {
-    observer.observe(footer, { childList: true, subtree: true });
+  if (linkPath === currentPath) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 });
