@@ -22,10 +22,6 @@ body {
   padding-top: 90px;
 }
 
-main {
-    flex: 1;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -271,6 +267,10 @@ footer {
     width: 100%;
   }
 
+  .gallery-section {
+      flex: 1;
+  }
+  
   @media (min-width: 1501px) {
     .gallery-grid {
       grid-template-columns: repeat(5, 1fr);
