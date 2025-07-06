@@ -85,13 +85,10 @@ footer {
   }
 
 @media (max-width: 700px) {
-  .footer-left {
-    font-size: 10px;
-    padding-bottom: 30px;
-  }
-
+  .footer-left,
   .footer-build {
-    display: none;
+    padding-bottom: 60px;
+    font-size: 10px;
   }
 }
 
