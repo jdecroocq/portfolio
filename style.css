@@ -54,12 +54,10 @@ footer {
     color: #828282;
     text-align: center;
     padding-top: 90px;
-    padding-bottom: px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: px;
     z-index: 1000;
   }
   
