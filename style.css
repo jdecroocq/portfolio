@@ -18,7 +18,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: calc(100% - 90px);
   padding-top: 90px;
 }
 
