@@ -911,57 +911,103 @@ footer {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
-  .notfound-container {
-    background: #191919;
-    border-radius: 15px;
-    padding: 60px 30px 45px 30px;
-    box-shadow: 0 0 20px rgba(16,16,16,0.25);
-    text-align: center;
-    max-width: 370px;
-    margin: 40px auto;
-    animation: fadeIn 1s ease;
+  .notfound-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+  }
+  
+  .notfound-textblock {
+    margin-left: 7vw;
+    margin-right: 5vw;
+    max-width: 450px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
   }
   
   .notfound-title {
-    font-size: 5em;
+    font-size: 2.8em;
     color: #fff;
-    margin: 0 0 15px 0;
+    margin-bottom: 15px;
+    margin-top: 0;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
   
-  .notfound-text {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+  .notfound-subtitle {
+    font-size: 1.1em;
+    color: #fff;
+    margin: 0 0 25px 0;
+    font-weight: normal;
+  }
+  
+  .notfound-details {
     color: #828282;
+    font-size: 1.04em;
+    margin-bottom: 30px;
+  }
+  
+  .notfound-details a {
+    color: #1cd282;
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .notfound-details a:hover {
+    text-decoration: underline;
+    color: #32E6A0;
   }
   
   .notfound-link {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 11px 24px;
     background: linear-gradient(45deg, #05BE64, #32E6A0);
     color: #101010;
     border-radius: 7px;
     font-size: 1em;
     text-decoration: none;
     font-weight: bold;
+    margin-top: 18px;
     transition: background 0.2s, color 0.2s;
     box-shadow: 0px 1px 5px rgba(16,16,16,0.10);
   }
-  
   .notfound-link:hover {
     background: linear-gradient(45deg, #32E6A0, #05BE64);
     color: #fff;
   }
+  
+  /* Placeholder à droite pour une image, rien n'est affiché sur mobile */
+  .notfound-image-placeholder {
+    width: 140px;
+    min-width: 100px;
+    max-width: 180px;
+    height: 180px;
+    margin-right: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 700px) {
+    .notfound-image-placeholder {
+      display: none;
+    }
+  }
 
 
 
 
 
 
+
+  
 
 
 
