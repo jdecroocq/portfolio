@@ -905,28 +905,16 @@ footer {
 
 
   
-  .notfound-body {
-    background: #101010;
-    color: #828282;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
   .notfound-row {
-    z-index: 2;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   }
   
   .notfound-textblock {
-    margin-left: 15vw;
-    margin-right: 15vw;
-    max-width: 45vw;
-    text-align: justify;
+    margin-left: 15%;
+    max-width: 650px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -936,36 +924,37 @@ footer {
   .notfound-title {
     font-size: 45px;
     color: #fff;
-    margin-bottom: 0px;
-    margin-top: 0;
     font-weight: bold;
-    letter-spacing: 1px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
   
   .notfound-subtitle {
     font-size: 25px;
     color: #fff;
-    margin: 0 0 25px 0;
+    text-align: justify;
     font-weight: normal;
+    margin-bottom: 30px;
+    margin-top: 0px;
   }
   
   .notfound-details {
     color: #828282;
     font-size: 18px;
-    margin-bottom: 30px;
     text-align: justify;
+    margin-bottom: 45px;
   }
     
   .notfound-link {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 20px;
     background: linear-gradient(45deg, #05BE64, #32E6A0);
-    color: #101010 !important;
+    color: #101010;
     border-radius: 7.5px;
     font-size: 18px;
     text-decoration: none !important;
     font-weight: bold;
-    margin-top: 18px;
+    margin-top: 15px;
     border: 1px solid #101010;
     box-sizing: border-box;
   }
@@ -986,17 +975,6 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  
-@media (max-width: 700px) {
-  .notfound-image-placeholder {
-    display: none;
-  }
-  .notfound-textblock {
-    margin-left: 7vw;
-    margin-right: 7vw;
-    max-width: 86vw;
-  }
-}
 
 
 
