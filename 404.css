@@ -1,0 +1,195 @@
+@font-face {
+  font-family: 'Orkney';
+  src: url('fonts/orkney-regular-webfont.woff2') format('woff2'),
+       url('fonts/orkney-regular-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  --header-height: 90px;
+  --notfound-min-margin: 5vw;
+  --notfound-bg: #101010;
+  --notfound-panel-bg: #191919;
+  --notfound-text: #828282;
+  --notfound-title: #fff;
+  --notfound-link-bg: linear-gradient(45deg, #05BE64, #32E6A0);
+  --notfound-link-hover-bg: #00000000;
+  --notfound-link-hover-border: #1cd282;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orkney', sans-serif;
+  background: var(--notfound-bg);
+  color: var(--notfound-text);
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.notfound-main {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--notfound-min-margin);
+  box-sizing: border-box;
+}
+
+.notfound-content {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  background: var(--notfound-panel-bg);
+  border-radius: 18px;
+  min-width: 280px;
+  min-height: 320px;
+  box-sizing: border-box;
+  box-shadow: 0 0 16px rgba(16,16,16,0.18);
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  gap: 0;
+  overflow: visible;
+}
+
+.notfound-text {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 42px 36px 36px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.notfound-title {
+  font-size: 2.5rem;
+  color: var(--notfound-title);
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+.notfound-subtitle {
+  font-size: 1.3rem;
+  color: var(--notfound-title);
+  margin-bottom: 24px;
+  margin-top: 8px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.notfound-details {
+  color: var(--notfound-text);
+  font-size: 1.04rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: left;
+}
+
+.notfound-details p {
+  margin: 0 0 14px 0;
+  text-align: justify;
+}
+
+.notfound-link {
+  display: inline-block;
+  padding: 15px 22px;
+  background: var(--notfound-link-bg);
+  color: var(--notfound-bg);
+  border-radius: 7.5px;
+  font-size: 1.08rem;
+  text-decoration: none !important;
+  font-weight: bold;
+  margin-top: 18px;
+  border: 1px solid var(--notfound-bg);
+  box-sizing: border-box;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.notfound-link:hover {
+  background: var(--notfound-link-hover-bg);
+  color: #1cd282 !important;
+  border: 1px solid var(--notfound-link-hover-border);
+}
+
+.notfound-icon {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 42px 36px 36px;
+  box-sizing: border-box;
+}
+
+.notfound-icon img {
+  width: 140px;
+  max-width: 180px;
+  min-width: 100px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(16,16,16,0.12));
+}
+
+@media (max-width: 900px) {
+  .notfound-content {
+    flex-direction: column;
+    align-items: center;
+    max-width: 97vw;
+  }
+  .notfound-text, .notfound-icon {
+    padding: 32px 18px 18px 18px;
+    width: 100%;
+    max-width: unset;
+    align-items: center;
+    text-align: center;
+  }
+  .notfound-icon img {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .notfound-main {
+    padding: 2vw;
+  }
+  .notfound-content {
+    border-radius: 10px;
+    padding: 0;
+    min-height: 250px;
+  }
+  .notfound-text, .notfound-icon {
+    padding: 20px 6px 8px 6px;
+  }
+  .notfound-title {
+    font-size: 1.6rem;
+  }
+  .notfound-subtitle {
+    font-size: 1rem;
+  }
+  .notfound-icon img {
+    width: 80px;
+    min-width: 60px;
+  }
+}
+
+/* Prevent content from going out of viewport even when zoomed */
+.notfound-main,
+.notfound-content {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: auto;
+}
