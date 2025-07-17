@@ -969,7 +969,6 @@ footer {
     box-sizing: border-box; /* <<< clé ici */
   }
 
-  
   .notfound-link:hover {
     background: #00000000;
     color: #1cd282 !important;
