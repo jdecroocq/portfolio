@@ -2,14 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Page not found</title>
   <title>404 - Page not found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <style>
-    @media (max-width: 700px) {
-      .notfound-numbers-bg { display: none !important; }
-    }
-  </style>
 </head>
 <body class="notfound-body">
   <div class="notfound-row">
@@ -22,48 +18,9 @@
         <a class="notfound-link" href="https://jdecroocq.github.io/portfolio/">Back to the homepage</a>
       </div>
     </div>
+    <div class="notfound-image-placeholder">
+      <!-- image here -->
+    </div>
   </div>
-
-  <div class="notfound-numbers-bg"></div>
-
-  <script>
-  (function() {
-    if (window.innerWidth <= 700) return;
-  
-    var vw = window.innerWidth;
-    var vh = window.innerHeight;
-    var textureWidth = Math.floor(vw * 0.55);
-    var textureLeft = vw - textureWidth;
-    var fontSize = Math.floor(vw * 0.035);
-    var colCount = Math.floor(textureWidth / fontSize);
-    var rowCount = Math.floor(vh / fontSize);
-  
-    const middleRow = Math.floor(rowCount / 2);
-    const middleCol = Math.floor(colCount * 0.6);
-  
-    let grid = '';
-  
-    for (let r = 0; r < rowCount; r++) {
-      for (let c = 0; c < colCount; c++) {
-        if (r === middleRow && c === middleCol) {
-          grid += '<span class="numbers-404">404</span>';
-          c += 2;
-        } else {
-          const digit = Math.floor(Math.random() * 10);
-          const offset = Math.random() > 0.8 ? '&nbsp;' : '';
-          grid += `${offset}<span class="number-digit">${digit}</span>`;
-        }
-      }
-      grid += '<br>';
-    }
-  
-    const div = document.createElement('div');
-    div.className = 'numbers-texture';
-    div.style.left = textureLeft + 'px';
-    div.style.width = textureWidth + 'px';
-    div.innerHTML = grid;
-    document.querySelector('.notfound-numbers-bg').appendChild(div);
-  })();
-  </script>
 </body>
 </html>
