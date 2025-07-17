@@ -41,10 +41,15 @@
     var grid = '';
     for (var r = 0; r < rowCount; r++) {
       for (var c = 0; c < colCount; c++) {
-        if (r === Math.floor(rowCount/2) && c === Math.floor(colCount*0.65)) {
+        const middleRow = Math.floor(rowCount / 2);
+        const middleCol = Math.floor(colCount * 0.6); // plus vers le centre
+        
+        if (r === middleRow && c === middleCol) {
           grid += '<span class="numbers-404">404</span>';
-          c += 2;
-        } else {
+          c += 2; // sauter deux chiffres
+        }
+
+          else {
           const digit = Math.floor(Math.random() * 10);
           grid += `<span class="number-digit">${digit}</span>`;
         }
