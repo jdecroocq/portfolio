@@ -17,15 +17,28 @@
         <a class="notfound-link" href="https://jdecroocq.github.io/portfolio/">Back to the homepage</a>
       </div>
     </div>
-    <div class="notfound-numbers-bg">
-      <div class="numbers-lines">
-        729 983 157 301 812 <br>
-        210 504 <span class="numbers-404">404</span> 681 315 <br>
-        697 329 594 208 173 <br>
-        834 120 642 759 486 <br>
-        193 657 842 590 275 <br>
-      </div>
-    </div>
+    <!-- <div class="notfound-image-placeholder"></div> -->
   </div>
+  <div class="notfound-numbers-bg">
+    <div class="numbers-grid"></div>
+  </div>
+  <script>
+  (function() {
+    var cols = Math.floor(window.innerWidth * 0.52 / (window.innerWidth * 0.04));
+    var rows = Math.floor(window.innerHeight / (window.innerWidth * 0.045));
+    var grid = '';
+    for (var r = 0; r < rows; r++) {
+      for (var c = 0; c < cols; c++) {
+        if (r === Math.floor(rows / 2) && c === Math.floor(cols * 0.6)) {
+          grid += '<span class="numbers-404">404</span>';
+        } else {
+          grid += Math.floor(Math.random() * 10);
+        }
+      }
+      grid += '<br>';
+    }
+    document.querySelector('.numbers-grid').innerHTML = grid;
+  })();
+  </script>
 </body>
 </html>
