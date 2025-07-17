@@ -910,7 +910,10 @@ footer {
     text-decoration: underline;
   }
 
+  
 
+
+  
 
 
   .notfound-body {
@@ -918,7 +921,6 @@ footer {
   }
   
   .notfound-row {
-    background: #131313;
     display: flex;
     width: 100%;
     max-width: 1500px;
@@ -927,7 +929,6 @@ footer {
   }
   
   .notfound-textblock {
-    background: #211e1e;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -981,12 +982,10 @@ footer {
   }
   
   .notfound-image-placeholder {
-    background: #151515;
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
     box-sizing: border-box;
   }
   
