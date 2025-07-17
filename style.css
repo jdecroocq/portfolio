@@ -996,7 +996,7 @@ footer {
     max-width: 86vw;
   }
 }
-  }
+
   .notfound-numbers-bg {
     position: fixed;
     top: 0;
@@ -1006,25 +1006,28 @@ footer {
     pointer-events: none;
     overflow: hidden;
     z-index: 0;
+    background: linear-gradient(250deg, #191919 0%, #101010 65%);
   }
   
   .numbers-texture {
     font-size: 6.5vw;
-    line-height: 1;
-    color: #101010;
+    line-height: 0.95;
     white-space: pre-wrap;
     font-weight: bold;
     font-family: monospace;
     user-select: none;
+    position: relative;
   }
   
   .number-digit {
-    color: rgba(25, 25, 25, 0.35);
+    color: #191919;
+    opacity: 0.25;
   }
   
   .numbers-404 {
     color: #505050;
   }
+
 
 
 
