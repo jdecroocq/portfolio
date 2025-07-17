@@ -19,6 +19,10 @@ html, body {
   color: #828282;
 }
 
+.notfound-body {
+  padding-top: 0 !important;
+}
+
 body {
   display: flex;
   flex-direction: column;
