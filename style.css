@@ -996,6 +996,35 @@ footer {
     max-width: 86vw;
   }
 }
+  }
+  .notfound-numbers-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .numbers-texture {
+    font-size: 6.5vw;
+    line-height: 1;
+    color: #101010;
+    white-space: pre-wrap;
+    font-weight: bold;
+    font-family: monospace;
+    user-select: none;
+  }
+  
+  .number-digit {
+    color: rgba(25, 25, 25, 0.35);
+  }
+  
+  .numbers-404 {
+    color: #505050;
+  }
 
 
 
