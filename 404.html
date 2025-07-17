@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Page not found</title>
   <title>404 - Page not found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
@@ -17,38 +18,9 @@
         <a class="notfound-link" href="https://jdecroocq.github.io/portfolio/">Back to the homepage</a>
       </div>
     </div>
-    <!-- <div class="notfound-image-placeholder"></div> -->
+    <div class="notfound-image-placeholder">
+      <!-- image here -->
+    </div>
   </div>
-  <div class="notfound-numbers-bg"></div>
-  <script>
-  (function() {
-    var vw = window.innerWidth;
-    var vh = window.innerHeight;
-    var textureWidth = Math.floor(vw * 0.55); // 55% de la largeur
-    var textureLeft = vw - textureWidth;
-    var fontSize = Math.max(24, Math.floor(vw * 0.02));
-    var colCount = Math.floor(textureWidth / fontSize);
-    var rowCount = Math.floor(vh / fontSize);
-
-    var grid = '';
-    for (var r = 0; r < rowCount; r++) {
-      for (var c = 0; c < colCount; c++) {
-        if (r === Math.floor(rowCount/2) && c === Math.floor(colCount*0.65)) {
-          grid += '<span class="numbers-404">404</span>';
-        } else {
-          grid += Math.floor(Math.random() * 10);
-        }
-      }
-      grid += '\n';
-    }
-
-    var div = document.createElement('div');
-    div.className = 'numbers-texture';
-    div.style.left = textureLeft + 'px';
-    div.style.width = textureWidth + 'px';
-    div.innerHTML = grid;
-    document.querySelector('.notfound-numbers-bg').appendChild(div);
-  })();
-  </script>
 </body>
 </html>
