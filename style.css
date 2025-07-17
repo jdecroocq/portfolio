@@ -914,7 +914,7 @@ footer {
 
 
   .notfound-body {
-    padding-top: 60px !important; /* marge en haut */
+    padding-top: 20% !important; /* marge en haut */
     margin: 0;
     background: #101010;
     min-height: 100vh;
@@ -945,8 +945,6 @@ footer {
     font-weight: bold;
     margin-bottom: 0px;
     margin-top: 0px;
-    line-height: 1.1;
-    font-family: 'Orkney', sans-serif;
   }
   
   .notfound-subtitle {
@@ -956,7 +954,6 @@ footer {
     font-weight: normal;
     margin-bottom: 30px;
     margin-top: 0px;
-    font-family: 'Orkney', sans-serif;
   }
   
   .notfound-details {
@@ -964,7 +961,6 @@ footer {
     font-size: 20px;
     text-align: justify;
     margin-bottom: 18px;
-    font-family: 'Orkney', sans-serif;
   }
   
   .notfound-link-container {
@@ -1007,6 +1003,13 @@ footer {
     flex-shrink: 0;
     margin-top: 0;
   }
+
+
+
+
+
+
+
   
   /* Optionnel : pour que l'image soit bien centrée et responsive */
   .notfound-image-placeholder img {
