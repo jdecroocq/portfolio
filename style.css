@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+:root {
+  --header-height: 90px;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -18,8 +22,8 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  height: calc(100% - 90px);
-  padding-top: 90px;
+  height: calc(100% - var(--header-height));
+  padding-top: var(--header-height);
 }
 
 @keyframes fadeIn {
@@ -101,7 +105,7 @@ footer {
   header {
     display: flex;
     flex-direction: row;
-    height: 90px;
+    height: var(--header-height);
     align-items: stretch;
     position: fixed;
     top: 0;
@@ -120,7 +124,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: var(--header-height);
     padding: 0 4vw;
     position: relative;
     z-index: 2;
@@ -146,7 +150,7 @@ footer {
   header nav ul {
     list-style: none;
     display: flex;
-    gap: 45px;
+    gap: calc(var(--header-height)/2);
     justify-content: flex-end;
     align-items: center;
     width: 100%;
