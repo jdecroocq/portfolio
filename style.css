@@ -981,11 +981,15 @@ footer {
     border: 1px solid #1cd282;
   }
   
-.notfound-image-placeholder {
-  height: 200px; /* pour test, remplace après */
-}
-
-
+  .notfound-image-placeholder {
+    background: #151515;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
   
   .notfound-image-placeholder img {
     width: auto;
