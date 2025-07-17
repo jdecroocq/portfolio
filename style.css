@@ -997,8 +997,54 @@ footer {
   }
 }
 
+.notfound-numbers-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100vh;
+  min-width: 40vw;
+  width: 40vw;
+  max-width: 47vw;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+}
 
+.numbers-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2vh;
+}
 
+.numbers-row span {
+  font-family: 'Orkney', sans-serif;
+  font-size: 8vw;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1vw;
+  opacity: 0.18;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+  transition: opacity 0.3s;
+}
+
+.numbers-404 {
+  color: #828282 !important;
+  opacity: 0.80 !important;
+  text-shadow: 0 0 9px #191919, 0 0 2vw #101010;
+}
+
+@media (max-width: 700px) {
+  .notfound-numbers-bg {
+    display: none !important;
+  }
+}
 
 
 
