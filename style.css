@@ -923,8 +923,7 @@ footer {
   
   .notfound-textblock {
     margin-left: 15%;
-    max-width: 650px;
-    display: flex;
+    max-width: 35%;
     flex-direction: column;
     justify-content: center;
     flex: 1;
