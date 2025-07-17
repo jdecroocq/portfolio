@@ -913,6 +913,105 @@ footer {
 
 
 
+  .notfound-body {
+  padding-top: 0 !important;
+  height: 100vh;
+  background: #101010;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notfound-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.notfound-textblock {
+  max-width: 550px;
+  margin-right: 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.notfound-title {
+  font-size: 55px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  line-height: 1.1;
+  font-family: 'Orkney', sans-serif;
+}
+
+.notfound-subtitle {
+  font-size: 30px;
+  color: #fff;
+  text-align: justify;
+  font-weight: normal;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  font-family: 'Orkney', sans-serif;
+}
+
+.notfound-details {
+  color: #828282;
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 18px;
+  font-family: 'Orkney', sans-serif;
+}
+
+.notfound-link {
+  display: inline-block;
+  padding: 15px 28px;
+  background: linear-gradient(45deg, #05BE64, #32E6A0);
+  color: #101010;
+  border-radius: 8px;
+  font-size: 22px;
+  text-decoration: none !important;
+  font-weight: bold;
+  margin-top: 25px;
+  border: 1px solid #101010;
+  box-sizing: border-box;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  font-family: 'Orkney', sans-serif;
+}
+
+.notfound-link:hover {
+  background: #00000000;
+  color: #1cd282 !important;
+  border: 1px solid #1cd282;
+}
+
+.notfound-image-placeholder {
+  width: 180px;
+  max-width: 180px;
+  height: 180px;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  flex-shrink: 0;
+}
+
+/* Optionnel : pour que l'image soit bien centrée et responsive */
+.notfound-image-placeholder img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
   
 
 
