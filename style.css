@@ -21,6 +21,7 @@ html, body {
 
 .notfound-body {
   padding-top: 0 !important;
+  height: 100%;
 }
 
 body {
