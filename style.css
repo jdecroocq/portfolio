@@ -966,7 +966,7 @@ footer {
     font-weight: bold;
     margin-top: 18px;
     border: 1px solid #101010;
-    box-sizing: border-box; /* <<< clé ici */
+    box-sizing: border-box;
   }
 
   .notfound-link:hover {
