@@ -19,11 +19,6 @@ html, body {
   color: #828282;
 }
 
-.notfound-body {
-  padding-top: 0 !important;
-  height: 100%;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -922,11 +917,18 @@ footer {
   
   .notfound-row {
     display: flex;
-    width: 1200px;
+    background-color: #191919;
+    width: 1000px;
     max-width: calc(88% - 10px);
-    margin: auto;
-    margin-top: 0;
-    align-items: center;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: min(3vw, 90px);
+    margin-bottom: 30px;
+    padding-left: calc(5px + 3vw);
+    padding-right: calc(5px + 3vw);
+    padding-bottom: calc(5px + 3vw); 
+    padding-top: calc(5px + 3vw); 
   }
 
   .notfound-textblock {
