@@ -89,7 +89,7 @@ footer {
 @media (max-width: 700px) {
   .footer-left,
   .footer-build {
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     font-size: 10px;
   }
 }
