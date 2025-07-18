@@ -904,16 +904,12 @@ footer {
   .legal-section a:hover {
     text-decoration: underline;
   }
-
   
 
 
   
 
 
-  .notfound-body {
-    min-height: 100vh;
-  }
   
   .notfound-row {
     display: flex;
@@ -1084,7 +1080,7 @@ footer {
   .connect-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center; /* Centre les éléments horizontalement dans chaque cellule */
+    justify-items: center;
     gap: 5vw;
   }
 }
