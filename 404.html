@@ -68,6 +68,21 @@
 
     window.addEventListener('load', centerNotFoundContent);
     window.addEventListener('resize', centerNotFoundContent);
+
+        // BONUS : détection quand une image se charge (parfois ça change la hauteur)
+    window.addEventListener('DOMContentLoaded', () => {
+      const imgs = document.querySelectorAll('#notfound-row img');
+      imgs.forEach(img => {
+        if (!img.complete) {
+          img.addEventListener('load', centerNotFoundContent);
+        }
+      });
+    });
+  
+    // BONUS : double recalcul 100ms après (utile si scrollbar apparaît juste après le load)
+    window.addEventListener('load', () => {
+      setTimeout(centerNotFoundContent, 100);
+    });
   </script>
 </body>
 </html>
