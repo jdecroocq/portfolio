@@ -27,13 +27,28 @@
   <script>
     function centerNotFoundContent() {
       const row = document.getElementById('notfound-row');
+      if (!row) return;
+      row.style.marginTop = '0px';
+      row.style.marginBottom = '0px';
       const windowHeight = window.innerHeight;
+      const windowWidth = window.innerWidth;
       const rowHeight = row.offsetHeight;
-      const remainingSpace = windowHeight - rowHeight;
-      const marginTop = remainingSpace > 0 ? remainingSpace / 2 : 20;
+      const minTop = windowWidth * 0.03; // 3vw
+      const minBottom = 60; // 60px
+      const availableSpace = windowHeight - rowHeight;
+      let marginTop, marginBottom;
+      if (availableSpace >= minTop + minBottom) {
+        const remaining = availableSpace - minTop - minBottom;
+        marginTop = minTop + remaining / 2;
+        marginBottom = minBottom;
+      } else {
+        marginTop = minTop;
+        marginBottom = minBottom;
+      }
       row.style.marginTop = `${marginTop}px`;
+      row.style.marginBottom = `${marginBottom}px`;
     }
-    centerNotFoundContent();
+    window.addEventListener('load', centerNotFoundContent);
     window.addEventListener('resize', centerNotFoundContent);
   </script>
 </body>
