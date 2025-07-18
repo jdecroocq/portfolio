@@ -54,24 +54,24 @@ body {
 
 
 footer {
-    background-color: #101010;
     color: #828282;
     text-align: center;
-    padding-top: 90px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #191919;
     z-index: 1000;
   }
   
 .footer-left,
 .footer-build {
-  font-size: 13px;
+  font-size: 11px;
   color: #828282;
-  padding-right: 1vw;
-  padding-left: 1vw;
-  padding-bottom:0.5vw;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
   
 .footer-left a,
@@ -847,7 +847,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: min(3vw, 90px);
-    margin-bottom: 30px;
+    margin-bottom: min(3vw, 90px);
     padding-left: calc(5px + 3vw);
     padding-right: calc(5px + 3vw);
     padding-bottom: calc(5px + 3vw);
@@ -920,7 +920,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-top: min(3vw, 90px);
-    margin-bottom: 30px;
+    margin-bottom: min(3vw, 90px);
     padding-left: calc(5px + 3vw);
     padding-right: calc(5px + 3vw);
     padding-bottom: calc(5px + 3vw); 
