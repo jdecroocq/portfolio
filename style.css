@@ -921,10 +921,10 @@ footer {
     margin-right: auto;
     margin-top: min(3vw, 90px);
     margin-bottom: min(3vw, 90px);
-    padding-left: calc(5px + 3vw);
-    padding-right: calc(5px + 3vw);
+    padding-top: calc(5px + 3vw);
     padding-bottom: calc(5px + 3vw); 
-    padding-top: calc(5px + 3vw); 
+    padding-left: calc(5px + 3vw);
+    padding-right: calc(5px + 3vw); 
   }
 
   .notfound-textblock {
