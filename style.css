@@ -46,7 +46,8 @@ body {
 .overview,
 .skills,
 .software,
-.connect {
+.connect,
+.notfound-row{
   animation: fadeIn 1s ease-out forwards;
 }
 
