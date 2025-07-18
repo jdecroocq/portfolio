@@ -6,6 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/portfolio/style.css">
 </head>
+
+<script>
+  function centerNotFoundContent() {
+    const row = document.getElementById('notfound-row');
+    const windowHeight = window.innerHeight;
+    const rowHeight = row.offsetHeight;
+    const remainingSpace = windowHeight - rowHeight;
+    const marginTop = remainingSpace > 0 ? remainingSpace / 2 : 20;
+    row.style.marginTop = `${marginTop}px`;
+  }
+  centerNotFoundContent();
+  window.addEventListener('resize', centerNotFoundContent);
+</script>
+  
 <body class="notfound-body">
   <div class="notfound-row" id="notfound-row">
     <div class="notfound-textblock">
