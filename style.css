@@ -925,8 +925,9 @@ footer {
     width: 1200px;
     max-width: calc(88% - 10px);
     margin: auto;
-    margin-top: 30vh;
+    margin-top: 0;
     align-items: center;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
 
