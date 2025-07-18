@@ -968,7 +968,9 @@ footer {
   }
   
   .notfound-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     padding: 15px 25px;
     background: linear-gradient(45deg, #05BE64, #32E6A0);
     color: #101010;
@@ -978,12 +980,22 @@ footer {
     font-weight: bold;
     border: 1px solid #191919;
     box-sizing: border-box;
-  }
+    transition: all 0.2s ease;
+  }  
   
   .notfound-link:hover {
     background: transparent;
     color: #1cd282 !important;
     border: 1px solid #1cd282;
+  }
+
+  .notfound-link .arrow-icon {
+  stroke: #101010;
+  transition: stroke 0.3s ease;
+  }
+
+  .notfound-link:hover .arrow-icon {
+  stroke: #1cd282;
   }
   
   .notfound-image-placeholder {
