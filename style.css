@@ -968,32 +968,22 @@ footer {
   }
   
   .notfound-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+    display: inline-block;
     padding: 15px 25px;
     background: linear-gradient(45deg, #05BE64, #32E6A0);
-    color: #191919;
+    color: #101010;
     border-radius: 7.5px;
     font-size: 18px;
     text-decoration: none !important;
     font-weight: bold;
     border: 1px solid #191919;
     box-sizing: border-box;
-  }  
+  }
   
   .notfound-link:hover {
     background: transparent;
     color: #1cd282 !important;
     border: 1px solid #1cd282;
-  }
-
-  .notfound-link .arrow-icon {
-  stroke: #191919;
-  }
-
-  .notfound-link:hover .arrow-icon {
-  stroke: #1cd282;
   }
   
   .notfound-image-placeholder {
