@@ -29,6 +29,7 @@
       const row = document.getElementById('notfound-row');
       if (!row) return;
   
+      // Reset les marges
       row.style.marginTop = '0px';
       row.style.marginBottom = '0px';
   
@@ -37,23 +38,25 @@
       const rowHeight = row.offsetHeight;
   
       const minTop = windowWidth * 0.03; // 3vw
-      const minBottom = 60; // 60px
-      const minTotal = minTop + minBottom;
+      const minBottom = 60;              // 60px
+      const totalMin = minTop + minBottom;
   
-      const availableSpace = windowHeight - rowHeight;
+      const spaceLeft = windowHeight - rowHeight;
   
-      let marginTop, marginBottom;
+      let marginTop = 0;
+      let marginBottom = 0;
   
-      if (availableSpace >= minTotal) {
-
-        const extra = availableSpace - minTotal;
-        marginTop = minTop + extra / 2;
-        marginBottom = minBottom + extra / 2;
+      if (spaceLeft >= 2 * minBottom) {
+        // Cas 1 : assez d’espace pour centrer avec au moins 60px haut/bas
+        marginTop = marginBottom = spaceLeft / 2;
+      } else if (spaceLeft >= minTop + minBottom) {
+        // Cas 2 : pas assez pour centrer avec 60px partout, mais ≥ 3vw + 60px
+        marginTop = spaceLeft - minBottom;
+        marginBottom = minBottom;
       } else {
-
+        // Cas 3 : espace trop petit, on bloque haut à 3vw, reste va en bas (scroll)
         marginTop = minTop;
-        marginBottom = windowHeight - rowHeight - marginTop;
-        if (marginBottom < 0) marginBottom = 0;
+        marginBottom = minBottom;
       }
   
       row.style.marginTop = `${marginTop}px`;
@@ -63,5 +66,6 @@
     window.addEventListener('load', centerNotFoundContent);
     window.addEventListener('resize', centerNotFoundContent);
   </script>
+
 </body>
 </html>
