@@ -927,6 +927,7 @@ footer {
     margin: auto;
     margin-top: 30vh;
     align-items: center;
+    padding-bottom: 60px;
   }
 
   .notfound-textblock {
