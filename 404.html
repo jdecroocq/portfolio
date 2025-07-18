@@ -5,6 +5,11 @@
   <title>404 - Page not found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/portfolio/style.css">
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
 </head> 
 <body class="notfound-body">
   <div class="notfound-row" id="notfound-row">
@@ -28,44 +33,41 @@
     function centerNotFoundContent() {
       const row = document.getElementById('notfound-row');
       if (!row) return;
-  
-      // Reset les marges
+
       row.style.marginTop = '0px';
       row.style.marginBottom = '0px';
-  
+
       const windowHeight = window.innerHeight;
       const windowWidth = window.innerWidth;
       const rowHeight = row.offsetHeight;
-  
-      const minTop = windowWidth * 0.03; // 3vw
-      const minBottom = 60;              // 60px
+
+      const minTop = windowWidth * 0.03;
+      const minBottom = 60;
       const totalMin = minTop + minBottom;
-  
       const spaceLeft = windowHeight - rowHeight;
-  
+
       let marginTop = 0;
       let marginBottom = 0;
-  
+
       if (spaceLeft >= 2 * minBottom) {
-        // Cas 1 : assez d’espace pour centrer avec au moins 60px haut/bas
         marginTop = marginBottom = spaceLeft / 2;
-      } else if (spaceLeft >= minTop + minBottom) {
-        // Cas 2 : pas assez pour centrer avec 60px partout, mais ≥ 3vw + 60px
+      } else if (spaceLeft >= totalMin) {
         marginTop = spaceLeft - minBottom;
         marginBottom = minBottom;
       } else {
-        // Cas 3 : espace trop petit, on bloque haut à 3vw, reste va en bas (scroll)
         marginTop = minTop;
         marginBottom = minBottom;
+
+        const extraNeeded = rowHeight + minTop + minBottom - windowHeight;
+        document.body.style.minHeight = (windowHeight + extraNeeded) + 'px';
       }
-  
+
       row.style.marginTop = `${marginTop}px`;
       row.style.marginBottom = `${marginBottom}px`;
     }
-  
+
     window.addEventListener('load', centerNotFoundContent);
     window.addEventListener('resize', centerNotFoundContent);
   </script>
-
 </body>
 </html>
