@@ -34,16 +34,17 @@
       const windowWidth = window.innerWidth;
       const rowHeight = row.offsetHeight;
       const minTop = windowWidth * 0.03; // 3vw
-      const minBottom = 60; // 60px
+      const minBottom = 60;              // 60px
       const availableSpace = windowHeight - rowHeight;
-      let marginTop, marginBottom;
-      if (availableSpace >= minTop + minBottom) {
-        const remaining = availableSpace - minTop - minBottom;
-        marginTop = minTop + remaining / 2;
-        marginBottom = minBottom;
-      } else {
+      let marginTop = availableSpace / 2;
+      let marginBottom = availableSpace / 2;
+      if (marginTop < minTop) {
         marginTop = minTop;
+        marginBottom = availableSpace - minTop;
+      }
+      if (marginBottom < minBottom) {
         marginBottom = minBottom;
+        marginTop = availableSpace - minBottom;
       }
       row.style.marginTop = `${marginTop}px`;
       row.style.marginBottom = `${marginBottom}px`;
