@@ -8,6 +8,7 @@
 
 :root {
   --header-height: 90px;
+  --green-glow: 0 0 45px #1cd28250;
 }
 
 html, body {
