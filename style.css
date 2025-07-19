@@ -1001,9 +1001,15 @@ footer {
     right: -30%;
     height: 550px;
     z-index: -1;
-    color: #101010;
-    fill: currentColor;
-    pointer-events: none;
+  }
+
+  .teapot-link {
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    z-index: -1;
   }
 
   @media (max-width: 1200px) {
