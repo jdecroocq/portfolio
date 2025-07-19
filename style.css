@@ -1003,13 +1003,15 @@ footer {
     z-index: -1;
   }
 
-  .teapot-link {
-    display: block;
-    position: relative;
-    width: auto;
-    height: auto;
-    text-decoration: none;
-    z-index: -1;
+  .notfound-teapot-link {
+    position: absolute;
+    right: -30%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 550px;
+    height: 550px;
+    z-index: 0;
+    cursor: pointer;
   }
 
   @media (max-width: 1200px) {
