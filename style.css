@@ -986,26 +986,24 @@ footer {
     border: 1px solid #1cd282;
   }
 
-  .notfound-image-wrapper {
-    overflow-x: hidden;
-    position: relative;
-    width: 100%;
-  }
-  
   .notfound-image-placeholder {
     position: relative;
+    overflow: visible;
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
   }
-
+  
   .notfound-floating-image {
     position: absolute;
     right: -20%;
     height: 500px;
     z-index: -1;
+    color: #101010;
+    fill: currentColor;
+    pointer-events: none;
   }
 
   @media (max-width: 1000px) {
