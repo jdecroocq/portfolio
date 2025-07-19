@@ -1001,17 +1001,9 @@ footer {
     right: -30%;
     height: 550px;
     z-index: -1;
-  }
-
-  .notfound-teapot-link {
-    position: absolute;
-    right: -30%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 550px;
-    height: 550px;
-    z-index: 0;
-    cursor: pointer;
+    color: #101010;
+    fill: currentColor;
+    pointer-events: none;
   }
 
   @media (max-width: 1200px) {
