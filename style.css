@@ -987,8 +987,8 @@ footer {
   }
   
   .notfound-image-placeholder {
-    position: relative;       /* AJOUTÉ */
-    overflow: visible;        /* AJOUTÉ */
+    position: relative;
+    overflow: visible;
     width: 50%;
     display: flex;
     align-items: center;
@@ -998,14 +998,10 @@ footer {
   }
 
   .notfound-floating-image {
-  position: absolute;
-  right: -5%;              /* pour faire dépasser la hanse */
-  bottom: 0;
-  height: 400px;           /* ajuste à ton goût */
-  z-index: 1;
-  color: #101010;
-  fill: currentColor;
-  pointer-events: none;
+    position: absolute;
+    right: -20%;
+    height: 500px;
+    z-index: -1;
   }
 
   @media (max-width: 1200px) {
