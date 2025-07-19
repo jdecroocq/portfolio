@@ -998,8 +998,8 @@ footer {
   
   .notfound-floating-image {
     position: absolute;
-    right: -20%;
-    height: 500px;
+    right: -30%;
+    height: 550px;
     z-index: -1;
     color: #101010;
     fill: currentColor;
