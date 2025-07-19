@@ -19,7 +19,7 @@
   --color-a-gradient-end: #32e6a0;
 
   --header-height: 90px;
-  --green-glow: 0 0 45px #1cd28250;
+  --glow: 0 0 45px #1cd28250;
 }
 
 html, body {
