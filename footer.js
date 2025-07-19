@@ -6,12 +6,11 @@ fetch('footer.html')
     fetch('https://api.github.com/repos/jdecroocq/portfolio/releases/latest')
       .then(response => response.json())
       .then(data => {
-        // Récupération de la date
+
         const date = new Date(data.published_at);
         const year = date.getFullYear();
         const monthName = date.toLocaleString('en-US', { month: 'long' });
 
-        // Format du mois selon la règle demandée
         let monthDisplay;
         if (monthName.length > 4) {
           monthDisplay = monthName.slice(0, 3) + '.';
