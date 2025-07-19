@@ -18,8 +18,20 @@
   --color-a-gradient-start: #05be64;
   --color-a-gradient-end: #32e6a0;
 
-  --header-height: 90px;
+  --radius-s: 8px;
+  --radius-l: 16px;
+
+  --border: 1px;
+
+  --animation-f: 0.2s ease;
+  --animation-m: 0.4s ease;
+  --animation-s: 0.8s ease;
+
+  --mode-switch: 768px;  
+  
   --glow: 0 0 45px #1cd28250;
+
+  --header-height: 90px;
 }
 
 html, body {
