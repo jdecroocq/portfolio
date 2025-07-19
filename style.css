@@ -996,14 +996,18 @@ footer {
     box-sizing: border-box;
   }
   
-  .notfound-floating-image {
+  .notfound-image-placeholder a {
     position: absolute;
     right: -30%;
     height: 550px;
     z-index: -1;
-    color: #101010;
-    fill: currentColor;
-    pointer-events: none;
+    display: block;
+  }
+
+  .notfound-floating-image {
+    height: 100%;
+    width: auto;
+    display: block;
   }
 
   @media (max-width: 1200px) {
