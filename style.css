@@ -934,7 +934,7 @@ footer {
   }
 
   .notfound-textblock {
-    width: 65%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
