@@ -1,4 +1,4 @@
-fetch('footer.html')
+fetch('/portfolio/footer.html')
   .then(response => response.text())
   .then(html => {
     document.getElementById('footer-placeholder').outerHTML = html;
