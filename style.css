@@ -7,6 +7,17 @@
 }
 
 :root {
+  --color-b: #000000;
+  --color-b-a: rgba(0, 0, 0, 0.75);
+  --color-g-8: #080808;
+  --color-g-16: #101010;
+  --color-g-32: #202020;
+  --color-g-128: #808080;
+  --color-w: #ffffff;
+  --color-a: #1cd282;
+  --color-a-gradient-start: #05be64;
+  --color-a-gradient-end: #32e6a0;
+
   --header-height: 90px;
   --green-glow: 0 0 45px #1cd28250;
 }
