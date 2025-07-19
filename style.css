@@ -1006,7 +1006,7 @@ footer {
     pointer-events: none;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     .notfound-row {
       flex-direction: column;
       align-items: flex-start;
