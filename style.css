@@ -47,9 +47,14 @@
 
   --switch-mode: 768px;
   
-  --border: var(--size-1);
   --header: var(--size-64);
+  --border: var(--size-1);
   --glow: 0 0 var(--size-32) rgba(28, 210, 130, 0.25);
+  
+  /* A voir : 
+  - Les variables combinées sont utilses s'il y a des calcules associés à l'elements comme le header par exemple.
+  - Aussi, pour un élément de style recurrent comme les bordures.
+  */
 }
 
 html, body {
