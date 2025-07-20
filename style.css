@@ -9,8 +9,10 @@
 :root {
   --color-b: #000000;
   --color-b-a: rgba(0, 0, 0, 0.75);
-  --color-g-8: #080808;
-  --color-g-16: #101010;
+  --color-g-8:   #080808;
+  --color-g-8-a: rgba(8, 8, 8, 0.75);
+  --color-g-16:  #101010;
+  --color-g-16-a: rgba(16, 16, 16, 0.75);
   --color-g-32: #202020;
   --color-g-128: #808080;
   --color-w: #ffffff;
