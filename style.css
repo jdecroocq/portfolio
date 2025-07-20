@@ -15,7 +15,7 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: 'Orkney', sans-serif;
-  background: #101010;
+  background: #101010; /*===/!\===*/
   color: var(--color-128);
 }
 
@@ -72,7 +72,9 @@ body {
   --switch-mode: 768px;
   
   --header: var(--size-64);
-  --border: var(--size-1);
+  
+  --border: var(--size-1) solid var(--color-128);
+  
   --glow: 0 0 var(--size-32) rgba(28, 210, 130, 0.25);
 }
 
@@ -120,7 +122,62 @@ p {
 
 
 
-/* A degager plus loin*/
+
+
+
+
+
+
+
+
+/*Header avant*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: var(--border);
+    z-index: 500;
+  }
+  
+.footer-text {
+  font-size: 11px;
+  padding: 5px 10px;
+  color: var(--color-128);
+}
+  
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--color-256);
+}
+
+@media (max-width: var(--switch-mode)) {
+  .footer-text {
+    padding-bottom: 20px;
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+/* ===== ===== ===== */
+
+
+
+
+
+
+
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -144,42 +201,6 @@ p {
 .notfound-row{
   animation: fadeIn 1s ease-out forwards;
 }
-
-
-
-
-/*Header avant*/
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #191919;
-    z-index: 500;
-  }
-  
-.footer-text {
-  font-size: 11px;
-  padding: 5px 10px;
-  color: #828282;
-}
-  
-footer a {
-  color: inherit;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #ffffff;
-}
-
-@media (max-width: 700px) {
-  .footer-text {
-    padding-bottom: 20px;
-    font-size: 10px;
-  }
-}
-
-
 
 
 
