@@ -155,8 +155,7 @@ footer {
     z-index: 500;
   }
   
-.footer-legal,
-.footer-build {
+.footer-text {
   font-size: 11px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -177,8 +176,7 @@ footer a:hover {
 }
 
 @media (max-width: 700px) {
-  .footer-legal,
-  .footer-build {
+  .footer-text {
     padding-bottom: 20px;
     font-size: 10px;
   }
