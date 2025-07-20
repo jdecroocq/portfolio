@@ -167,17 +167,17 @@ footer {
   padding-left: 10px;
 }
   
-.footer-left a,
-.footer-left a:visited,
-.footer-left a:active,
-.footer-left a:focus {
+footer a,
+footer a:visited,
+footer a:active,
+footer a:focus {
   color: #828282;
   text-decoration: none;
 }
-  
-.footer-left a:hover {
-    color: #ffffff;
-  }
+
+footer a:hover {
+  color: #ffffff;
+}
 
 @media (max-width: 700px) {
   .footer-left,
