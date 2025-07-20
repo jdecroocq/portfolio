@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+
+
+
+
 :root {
   --color-1: #000000;
   --color-8: #070707;
@@ -56,6 +60,35 @@
   - Aussi, pour un élément de style recurrent comme les bordures.
   */
 }
+
+
+
+
+
+h1 {
+  text-transform: uppercase;
+  color: var(--color-256);
+  font-weight: bold;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: var(--color-256);
+  font-weight: bold;
+}
+
+h3 {
+}
+
+p {
+}
+
+footer {
+}
+
+
+
+
 
 html, body {
   margin: 0;
