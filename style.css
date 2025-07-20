@@ -7,21 +7,21 @@
 }
 
 :root {
-  --color-1:    #000000;
-  --color-8:    #070707;
-  --color-16:   #0f0f0f;
-  --color-32:   #1f1f1f;
-  --color-64:   #3f3f3f;
-  --color-128:  #7f7f7f;
-  --color-256:  #ffffff;
+  --color-1: #000000;
+  --color-8: #070707;
+  --color-16: #0f0f0f;
+  --color-32: #1f1f1f;
+  --color-64: #3f3f3f;
+  --color-128: #7f7f7f;
+  --color-256: #ffffff;
   
-  --color-1-a:    rgba(0, 0, 0, 0.75);
-  --color-8-a:    rgba(7, 7, 7, 0.75);
-  --color-16-a:   rgba(15, 15, 15, 0.75);
-  --color-32-a:   rgba(31, 31, 31, 0.75);
-  --color-64-a:   rgba(63, 63, 63, 0.75);
-  --color-128-a:  rgba(127, 127, 127, 0.75);
-  --color-256-a:  rgba(255, 255, 255, 0.75);
+  --color-1-a: rgba(0, 0, 0, 0.75);
+  --color-8-a: rgba(7, 7, 7, 0.75);
+  --color-16-a: rgba(15, 15, 15, 0.75);
+  --color-32-a: rgba(31, 31, 31, 0.75);
+  --color-64-a: rgba(63, 63, 63, 0.75);
+  --color-128-a: rgba(127, 127, 127, 0.75);
+  --color-256-a: rgba(255, 255, 255, 0.75);
 
   --color-ac: #1cd282;
   --color-ac-g-0: #05be64;
