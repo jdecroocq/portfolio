@@ -133,11 +133,11 @@ p {
 /*Header avant*/
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    border-top: var(--border);
-    z-index: 500;
-  }
+  display: flex;
+  justify-content: space-between;
+  border-top: var(--border);
+  z-index: 500;
+}
   
 .footer-text {
   font-size: 11px;
