@@ -222,7 +222,7 @@ footer a:hover {
     background-color: rgba(16, 16, 16, 0.8);
     box-shadow: 0 0 5px rgba(16, 16, 16, 1);
     backdrop-filter: blur(30px);
-    border-bottom: 1px solid #191919;
+    border-bottom: var(--border);
     box-sizing: border-box;
     padding: 0;
   }
