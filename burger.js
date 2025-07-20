@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initBurgerMenu() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('header nav');
   const navLinks = document.querySelector('header nav ul');
   let overlay = document.getElementById('overlay-dark');
   const header = document.querySelector('header');
+
+  if (!burger || !nav || !header) return;
 
   if (!overlay) {
     overlay = document.createElement('div');
@@ -39,11 +41,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     if (window.innerWidth > 700) {
       if (burger.classList.contains('open')) {
         closeMenu();
       }
     }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new MutationObserver((mutations, obs) => {
+    const header = document.querySelector('header');
+    const burger = document.querySelector('.burger');
+    if (header && burger) {
+      initBurgerMenu();
+      obs.disconnect();
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
   });
 });
