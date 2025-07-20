@@ -73,7 +73,7 @@ body {
   
   --header: var(--size-64);
   
-  --border: var(--size-1) solid var(--color-64);
+  --border: var(--size-1) solid var(--color-32);
   
   --glow: 0 0 var(--size-32) rgba(28, 210, 130, 0.25);
 }
