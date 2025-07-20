@@ -138,7 +138,6 @@ body {
 .overview,
 .skills,
 .software,
-.connect,
 .notfound-row{
   animation: fadeIn 1s ease-out forwards;
 }
@@ -479,7 +478,7 @@ footer {
   }
 
   .project-details-page .content {
-    padding-bottom: 90px;
+    margin-bottom: min(3vw, 90px);
   }
 
   #loadingMessage {
