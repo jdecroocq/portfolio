@@ -27,21 +27,29 @@
   --color-ac-g-0: #05be64;
   --color-ac-g-1: #32e6a0;
 
-  --radius-8: 8px;
-  --radius-16: 16px;
-
-  --border: 1px;
-
+  --size-1: 1px;
+  --size-2: 2px;
+  --size-4: 4px;
+  --size-8: 8px;
+  --size-16: 16px;
+  --size-24: 24px;
+  --size-32: 32px;
+  --size-48: 48px;
+  --size-64: 64px;
+  --size-96: 96px;
+  --size-128: 128px;
+  --size-192: 192px;
+  --size-256: 256px;
+  
   --animation-2: 0.2s ease;
   --animation-4: 0.4s ease;
   --animation-8: 0.8s ease;
 
   --switch-mode: 768px;
   
-  --glow: 0 0 32px rgba(28, 210, 130, 0.25)
-;
-
-  --header-height: 64px;
+  --border: var(--size-1);
+  --header: var(--size-64);
+  --glow: 0 0 var(--size-32) rgba(28, 210, 130, 0.25);
 }
 
 html, body {
@@ -56,8 +64,8 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  height: calc(100% - var(--header-height));
-  padding-top: var(--header-height);
+  height: calc(100% - var(--header));
+  padding-top: var(--header);
 }
 
 @keyframes fadeIn {
@@ -140,7 +148,7 @@ footer {
   header {
     display: flex;
     flex-direction: row;
-    height: var(--header-height);
+    height: var(--header);
     align-items: stretch;
     position: fixed;
     top: 0;
@@ -159,7 +167,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: var(--header-height);
+    height: var(--header);
     padding: 0 4vw;
     position: relative;
     z-index: 2;
@@ -182,10 +190,10 @@ footer {
     align-items: center;
   }
 
-  header nav ul {
+   nav ul {
     list-style: none;
     display: flex;
-    gap: calc(var(--header-height)/2);
+    gap: calc(var(--header)/2);
     justify-content: flex-end;
     align-items: center;
     width: 100%;
