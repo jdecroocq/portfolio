@@ -149,12 +149,8 @@ p {
 
 
 footer {
-    color: #828282;
-    text-align: center;
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border-top: 1px solid #191919;
     z-index: 500;
   }
@@ -162,7 +158,6 @@ footer {
 .footer-legal,
 .footer-build {
   font-size: 11px;
-  color: #828282;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 10px;
