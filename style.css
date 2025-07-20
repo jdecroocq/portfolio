@@ -7,33 +7,41 @@
 }
 
 :root {
-  --color-b: #000000;
-  --color-b-a: rgba(0, 0, 0, 0.75);
-  --color-g-8:   #080808;
-  --color-g-8-a: rgba(8, 8, 8, 0.75);
-  --color-g-16:  #101010;
-  --color-g-16-a: rgba(16, 16, 16, 0.75);
-  --color-g-32: #202020;
-  --color-g-128: #808080;
-  --color-w: #ffffff;
-  --color-a: #1cd282;
-  --color-a-gradient-start: #05be64;
-  --color-a-gradient-end: #32e6a0;
+  --color-1:    #000000;
+  --color-8:    #070707;
+  --color-16:   #0f0f0f;
+  --color-32:   #1f1f1f;
+  --color-64:   #3f3f3f;
+  --color-128:  #7f7f7f;
+  --color-256:  #ffffff;
+  
+  --color-1-a:    rgba(0, 0, 0, 0.75);
+  --color-8-a:    rgba(7, 7, 7, 0.75);
+  --color-16-a:   rgba(15, 15, 15, 0.75);
+  --color-32-a:   rgba(31, 31, 31, 0.75);
+  --color-64-a:   rgba(63, 63, 63, 0.75);
+  --color-128-a:  rgba(127, 127, 127, 0.75);
+  --color-256-a:  rgba(255, 255, 255, 0.75);
 
-  --radius-s: 8px;
-  --radius-l: 16px;
+  --color-ac: #1cd282;
+  --color-ac-g-0: #05be64;
+  --color-ac-g-1: #32e6a0;
+
+  --radius-8: 8px;
+  --radius-16: 16px;
 
   --border: 1px;
 
-  --animation-f: 0.2s ease;
-  --animation-m: 0.4s ease;
-  --animation-s: 0.8s ease;
+  --animation-2: 0.2s ease;
+  --animation-4: 0.4s ease;
+  --animation-8: 0.8s ease;
 
-  --mode-switch: 768px;  
+  --switch-mode: 768px;
   
-  --glow: 0 0 45px #1cd28250;
+  --glow: 0 0 32px rgba(28, 210, 130, 0.25)
+;
 
-  --header-height: 90px;
+  --header-height: 64px;
 }
 
 html, body {
