@@ -179,7 +179,7 @@ footer {
   }
 
   .logo img {
-    height: var(--size-64);
+    height: var(--size-48);
     width: auto;
     padding-top: 10px;
     display: block;
