@@ -9,9 +9,8 @@ fetch('/portfolio/footer.html')
         document.getElementById('build-version').textContent = 'Build ' + data.tag_name;
       })
       .catch(() => {
-        document.getElementById('build-version').textContent = 'Version inconnue';
       });
   })
   .catch(error => {
-    console.error('Erreur lors du chargement du footer :', error);
+    console.error('Error while loading the footer:', error);
   });
