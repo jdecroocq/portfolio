@@ -52,6 +52,9 @@ body {
   --color-ac-g-0: #05be64;
   --color-ac-g-1: #32e6a0;
 
+  --color-icon: var(--color-256);
+  --color-logo: var(--color-256);
+
   --size-1: 1px;
   --size-2: 2px;
   --size-4: 4px;
