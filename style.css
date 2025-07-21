@@ -245,25 +245,6 @@ header nav ul li a.active {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-#overlay-dark {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(10, 10, 10, 0.8);
-  z-index: 4;
-  opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.21, 0.15, 0.52, 0.69), visibility 0.3s ease;
-  pointer-events: none;
-}
-
-#overlay-dark.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
 
 
 
@@ -291,6 +272,27 @@ footer a:hover {
 }
 
 
+
+
+
+#overlay-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 10, 10, 0.8);
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.21, 0.15, 0.52, 0.69), visibility 0.3s ease;
+  pointer-events: none;
+}
+
+#overlay-dark.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
 
 
