@@ -258,8 +258,8 @@ footer {
 }
   
 .footer-text {
-  font-size: 11px; /*===?===*/
-  padding: 5px 10px; /*===/!\===*/
+  font-size: 11px;
+  padding: 5px 10px;
   color: var(--color-128);
 }
   
