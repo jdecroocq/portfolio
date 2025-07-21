@@ -23,14 +23,14 @@ function initBurgerMenu() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('header nav');
   const navLinks = document.querySelector('header nav ul');
-  let overlay = document.getElementById('overlay-dark');
+  let overlay = document.getElementById('dark-overlay');
   const header = document.querySelector('header');
 
   if (!burger || !nav || !header) return;
 
   if (!overlay) {
     overlay = document.createElement('div');
-    overlay.id = 'overlay-dark';
+    overlay.id = 'dark-overlay';
     document.body.appendChild(overlay);
   }
 
