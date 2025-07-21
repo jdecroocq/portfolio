@@ -186,6 +186,7 @@ header nav {
 header nav ul li a {
   display: inline-block;
   color: var(--color-256);
+  text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
   transition: var(--animation-2);
