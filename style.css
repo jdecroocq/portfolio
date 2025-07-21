@@ -163,7 +163,7 @@ header {
   z-index: 2;
 }
 
-.logo img {
+.logo svg {
   height: var(--size-48);
   width: auto;
   display: block;
