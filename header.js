@@ -16,7 +16,7 @@ fetch('/portfolio/header.html')
     initBurgerMenu();
   })
   .catch(error => {
-    console.error('Erreur lors du chargement du header :', error);
+    console.error('Error while loading the header:', error);
   });
 
 function initBurgerMenu() {
