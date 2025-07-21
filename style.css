@@ -72,6 +72,9 @@ body {
   --size-48: 48px;
   --size-96: 96px;
   --size-192: 192px;
+
+  --text-panel-px: var(--size-4);
+  --text-panel-vw: 3vw;  
   
   --animation-2: 0.2s ease;
   --animation-4: 0.4s ease;
