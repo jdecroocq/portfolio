@@ -163,7 +163,6 @@ header {
 .logo img {
   height: var(--size-48);
   width: auto;
-  padding-top: calc((var(--header) - var(--size-48))/2);
   display: block;
 }
 
