@@ -15,7 +15,7 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: 'Orkney', sans-serif;
-  background: #101010;
+  background: var(--color-1);
   color: var(--color-128);
 }
 
@@ -148,7 +148,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(16, 16, 16, 0.8);
+  background-color: var(--color-1-a);
   box-shadow: 0 0 5px rgba(16, 16, 16, 1);
   backdrop-filter: var(--blur-2);
   border-bottom: var(--border);
