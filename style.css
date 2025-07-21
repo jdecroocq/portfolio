@@ -150,15 +150,15 @@ p {
   border: var(--border);
   text-align: justify;
   width: var(--size-1024);
-  max-width: calc(88% - 10px);
+  max-width: calc(88% - var(--size-8);
   margin-left: auto;
   margin-right: auto;
-  margin-top: min(3vw, 90px);
-  margin-bottom: 30px;
-  padding-left: calc(5px + 3vw);
-  padding-right: calc(5px + 3vw);
-  padding-bottom: calc(5px + 3vw);
-  padding-top: calc(5px + 3vw);
+  margin-top: min(3vw, var(--size-64));
+  margin-bottom: var(--size-32);
+  padding-left: calc(var(--size-4) + 3vw);
+  padding-right: calc(var(--size-4) + 3vw);
+  padding-bottom: calc(var(--size-4) + 3vw);
+  padding-top: calc(var(--size-4) + 3vw);
 }
 
 
