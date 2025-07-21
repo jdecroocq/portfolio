@@ -307,6 +307,51 @@ footer a:hover {
     padding-bottom: 20px; /*===/!\===*/
     font-size: 10px; /*===/!\===*/
   }
+
+  .burger {
+    display: block;
+    margin-left: auto;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  header nav {
+    flex-direction: column;
+    max-height: 0;
+    transition: max-height 0.4s cubic-bezier(0.28, 0.36, 0.46, 0.83);
+  }
+
+  header nav.show {
+    max-height: 200px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1.5rem 4vw 2rem 4vw;
+    margin: 0;
+    gap: 1.2rem;
+  }
+
+  header nav ul li {
+    width: 100%;
+    text-align: right; 
+    padding-right: 4vw;
+  }
+
+  header nav ul li a {
+    font-size: 1.2rem;
+    text-align: right;
+    display: inline-block;
+    transform-origin: center;
+
+  }
+  header nav ul li a:hover {
+    transform: scale(1.05);
+  }
 }
 
 
@@ -1137,53 +1182,6 @@ footer a:hover {
 
 
   
-
-@media (max-width: 700px){
-  .burger {
-    display: block;
-    margin-left: auto;
-  }
-
-  header {
-    flex-direction: column;
-    height: auto;
-  }
-
-  header nav {
-    flex-direction: column;
-    max-height: 0;
-    transition: max-height 0.4s cubic-bezier(0.28, 0.36, 0.46, 0.83);
-  }
-
-  header nav.show {
-    max-height: 200px;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 1.5rem 4vw 2rem 4vw;
-    margin: 0;
-    gap: 1.2rem;
-  }
-
-  header nav ul li {
-    width: 100%;
-    text-align: right; 
-    padding-right: 4vw;
-  }
-
-  header nav ul li a {
-    font-size: 1.2rem;
-    text-align: right;
-    display: inline-block;
-    transform-origin: center;
-
-  }
-  header nav ul li a:hover {
-    transform: scale(1.05);
-  }
-}
 
 @media (min-width: 1000px) {
   .project-navigation {
