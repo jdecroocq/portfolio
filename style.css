@@ -311,7 +311,6 @@ footer a:hover {
 
   header {
     flex-direction: column;
-    height: auto;
   }
 
   header nav {
