@@ -140,6 +140,28 @@ p {
 
 
 
+.text-panel {
+  background-color: var(--col-1);
+  color: #828282;
+  border-radius: 15px;
+  text-align: justify;
+  width: 1000px;
+  max-width: calc(88% - 10px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: min(3vw, 90px);
+  margin-bottom: 30px;
+  padding-left: calc(5px + 3vw);
+  padding-right: calc(5px + 3vw);
+  padding-bottom: calc(5px + 3vw);
+  padding-top: calc(5px + 3vw);
+  font-size: 18px;
+}
+
+
+
+
+
 header {
   display: flex;
   height: var(--header);
@@ -383,6 +405,7 @@ footer a:hover {
   }
 }
   
+.text-panel,  /* ========== /!\ ========== */ 
 .project-section, 
 .project-video-container, 
 .project-image,
@@ -525,24 +548,6 @@ footer a:hover {
 
 
   
-  .project-section {
-    background-color: #191919;
-    color: #828282;
-    border-radius: 15px;
-    text-align: justify;
-    width: 1000px;
-    max-width: calc(88% - 10px);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: min(3vw, 90px);
-    margin-bottom: 30px;
-    padding-left: calc(5px + 3vw);
-    padding-right: calc(5px + 3vw);
-    padding-bottom: calc(5px + 3vw);
-    padding-top: calc(5px + 3vw);
-    font-size: 18px;
-  }
-
   .project-details-page .content {
     margin-bottom: min(3vw, 90px);
   }
