@@ -167,6 +167,7 @@ header {
   height: var(--size-48);
   width: auto;
   display: block;
+  color: var(--color-logo);
 }
 
 header nav {
@@ -684,6 +685,7 @@ footer a:hover {
     pointer-events: none;
     z-index: 10;
     box-sizing: border-box;
+    color: var(--color-icon);
   }
 
   .hq-button:hover {
@@ -717,7 +719,7 @@ footer a:hover {
     align-items: center;
     justify-content: center;
     background: rgba(16, 16, 16, 0.8);
-    color: #fff;
+    color: var(--color-icon);
     outline: none;
     width: 60px;
     height: 60px;
@@ -915,6 +917,7 @@ footer a:hover {
     max-width: 150px;
     height: auto;
     margin-bottom: 10px;
+    color: var(--color-logo);
   }
 
   .intro h1 {
