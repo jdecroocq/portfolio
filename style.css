@@ -1205,12 +1205,3 @@ footer a:hover {
     gap: 5vw;
   }
 }
-
-
-/*
-@media (max-width: 768px) {
-  *:hover:not(.hover-autorisé):not(.hover-autorisé *) {
-    all: unset !important;
-  }
-}
-*/
