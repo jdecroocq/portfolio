@@ -155,6 +155,12 @@ footer a:hover {
   color: var(--color-256);
 }
 
+
+
+
+
+
+
 @media (max-width: 768px) {
   .footer-text {
     padding-bottom: 20px; /*===/!\===*/
