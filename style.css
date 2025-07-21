@@ -70,11 +70,16 @@ body {
   --animation-4: 0.4s ease;
   --animation-8: 0.8s ease;
 
+  --blur-1: blur(var(--size-16));
+  --blur-2: blur(var(--size-32));
+    
+  --border: var(--size-1) solid var(--color-32);
+  --border-radius-1: var(--size-8);
+  --border-radius-2: var(--size-16);
+
   --switch-mode: 768px;
   
   --header: var(--size-64);
-  
-  --border: var(--size-1) solid var(--color-32);
   
   --glow: 0 0 var(--size-32) rgba(var(--color-ac-rgb), 0.25);
 }
@@ -142,12 +147,11 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(16, 16, 16, 0.8);
-  box-shadow: 0 0 5px rgba(16, 16, 16, 1);
-  backdrop-filter: blur(30px);
+  background-color: rgba(16, 16, 16, 0.8); /*===/!\===*/
+  box-shadow: 0 0 5px rgba(16, 16, 16, 1); /*===/!\===*/
+  backdrop-filter: var(--blur-2);
   border-bottom: var(--border);
   box-sizing: border-box;
-  padding: 0;
 }
 
 .top-bar {
