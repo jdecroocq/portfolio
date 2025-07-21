@@ -156,7 +156,7 @@ header {
 .top-bar {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: var(--header);
   z-index: 2;
 }
 
