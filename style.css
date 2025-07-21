@@ -767,25 +767,6 @@ footer a:hover {
 
 
   
-  .overview,
-  .skills,
-  .software,
-  .connect{
-    background-color: #191919;
-    color: #828282;
-    border-radius: 15px;
-    width: 1000px;
-    max-width: calc(88% - 10px);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    padding-left: calc(5px + 3vw);
-    padding-right: calc(5px + 3vw);
-    padding-bottom: calc(5px + 3vw);
-    padding-top: calc(5px + 3vw);;
-    text-align: justify;
-  }
-
   .connect{
     margin-bottom: min(3vw, 90px);
   }
@@ -1010,23 +991,6 @@ footer a:hover {
 
 
   
-  .legal-section {
-    background-color: #191919;
-    color: #828282;
-    border-radius: 15px;
-    text-align: justify;
-    width: 1000px;
-    max-width: calc(88% - 10px);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: min(3vw, 90px);
-    margin-bottom: min(3vw, 90px);
-    padding-left: calc(5px + 3vw);
-    padding-right: calc(5px + 3vw);
-    padding-bottom: calc(5px + 3vw);
-    padding-top: calc(5px + 3vw); 
-  }
-
   .legal-section h1 {
     margin-top: 0;
     font-size: 24px;
@@ -1084,21 +1048,6 @@ footer a:hover {
 
 
   
-  .notfound-row {
-    display: flex;
-    background-color: #191919;
-    width: 1000px;
-    max-width: calc(88% - 10px);
-    border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: min(3vw, 90px);
-    margin-bottom: min(3vw, 90px);
-    padding-top: calc(5px + 3vw);
-    padding-bottom: calc(5px + 3vw); 
-    padding-left: calc(5px + 3vw);
-    padding-right: calc(5px + 3vw); 
-  }
 
   .notfound-textblock {
     width: 60%;
