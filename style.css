@@ -275,7 +275,7 @@ footer a:hover {
 
 
 
-#overlay-dark {
+#dark-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -288,7 +288,7 @@ footer a:hover {
   pointer-events: none;
 }
 
-#overlay-dark.active {
+#dark-overlay.active {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
