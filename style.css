@@ -1133,7 +1133,7 @@ footer a:hover {
     border: 1px solid #1cd282;
   }
 
-  .notfound-image-placeholder {
+  .notfound-illustration {
     position: relative;
     width: 50%;
     display: flex;
@@ -1142,7 +1142,7 @@ footer a:hover {
     box-sizing: border-box;
   }
   
-  .notfound-image-placeholder a {
+  .notfound-illustration a {
     fill: var(--color-illustration);
     position: absolute;
     height: 400px;
@@ -1150,7 +1150,7 @@ footer a:hover {
     display: block;
   }
 
-  .notfound-floating-image {
+  .teapot {
     height: 100%;
     width: auto;
     display: block;
@@ -1166,7 +1166,7 @@ footer a:hover {
       width: 100%;
     }
   
-    .notfound-image-placeholder {
+    .notfound-illustration {
       display: none;
     }
   }
