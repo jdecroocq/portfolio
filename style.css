@@ -836,6 +836,7 @@ footer a:hover {
     white-space: nowrap;
     padding-left: 15px;
     padding-right: 15px;
+    user-select: none;
   }
 
   .skill-list {
