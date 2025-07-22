@@ -209,7 +209,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: var(--color-1-75);
+  background-color: var(--color-0-75);
   box-shadow: var(--shadow);
   backdrop-filter: var(--blur-2);
   border-bottom: var(--border);
@@ -325,7 +325,7 @@ footer {
 .footer-text {
   font-size: 11px;
   padding: 5px 10px;
-  color: var(--color-128);
+  color: var(--color-4);
 }
   
 footer a {
@@ -347,7 +347,7 @@ footer a:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-1-75);
+  background-color: var(--color-0-75);
   z-index: 4;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -718,7 +718,7 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-1-75);
+    background-color: var(--color-0-75);
     box-shadow: var(--shadow);
     backdrop-filter: var(--blur-1);
     border: var(--border);
@@ -762,7 +762,7 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-1-75);
+    background: var(--color-0-75);
     color: var(--color-icon);
     outline: none;
     width: 60px;
@@ -842,7 +842,7 @@ footer a:hover {
   }
 
   .skill:hover {
-    background-color: var(--color-16);
+    background-color: var(--color-2);
   }
 
   .software-list {
