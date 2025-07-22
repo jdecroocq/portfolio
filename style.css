@@ -124,7 +124,8 @@ body {
   --blur-1: blur(var(--size-16));
   --blur-2: blur(var(--size-32));
 
-  --border: var(--size-1) solid var(--color-32);
+  --border-size: var(--size-1);
+  --border: var(--border-size) solid var(--color-32);
   --border-radius-1: var(--size-8);
   --border-radius-2: var(--size-16);
 
@@ -774,7 +775,7 @@ footer a:hover {
   }
   
   .dock-btn-left {
-    border-radius: calc(var(--border-radius-2) - 1) 0 0 calc(var(--border-radius-2) - 1);
+    border-radius: calc(var(--border-radius-2) - var(--border-size)) 0 0 calc(var(--border-radius-2) - var(--border-size));
     border-right: none;
   }
 
@@ -784,7 +785,7 @@ footer a:hover {
   }
   
   .dock-btn-right {
-    border-radius: 0 calc(var(--border-radius-2) - 1) calc(var(--border-radius-2) - 1) 0;
+    border-radius: 0 calc(var(--border-radius-2) - var(--border-size)) calc(var(--border-radius-2) - var(--border-size)) 0;
     border-left: none;
   }
 
