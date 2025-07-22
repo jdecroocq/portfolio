@@ -1142,7 +1142,8 @@ footer a:hover {
     box-sizing: border-box;
   }
   
-  .notfound-image-placeholder a {
+  .notfound-image-placeholder svg {
+    fill: var(--border-color);
     position: absolute;
     right: -30%;
     height: 550px;
