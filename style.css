@@ -128,7 +128,8 @@ body {
   --border-radius-1: var(--size-8);
   --border-radius-2: var(--size-16);
 
-  --shadow: 0 0 var(--size-4) rgba(0, 0, 0, var(--alpha-25));
+  --shadow-i: var(--alpha-25);
+  --shadow: 0 0 var(--size-4) rgba(0, 0, 0, var(--shadow-i));
   --glow: 0 0 var(--size-32) var(--color-a-25);
 
   --switch-mode: 768px;
