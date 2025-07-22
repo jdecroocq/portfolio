@@ -31,29 +31,66 @@ body {
 
 
 :root {
-  --color-1: #000000;
-  --color-8: #070707;
-  --color-16: #0f0f0f;
-  --color-32: #1f1f1f;
-  --color-64: #3f3f3f;
-  --color-128: #7f7f7f;
-  --color-256: #ffffff;
-  
-  --color-1-a: rgba(0, 0, 0, 0.75);
-  --color-8-a: rgba(7, 7, 7, 0.75);
-  --color-16-a: rgba(15, 15, 15, 0.75);
-  --color-32-a: rgba(31, 31, 31, 0.75);
-  --color-64-a: rgba(63, 63, 63, 0.75);
-  --color-128-a: rgba(127, 127, 127, 0.75);
-  --color-256-a: rgba(255, 255, 255, 0.75);
+  --color-1-rgb: 0, 0, 0;
+  --color-8-rgb: 7, 7, 7;
+  --color-16-rgb: 15, 15, 15;
+  --color-32-rgb: 31, 31, 31;
+  --color-64-rgb: 63, 63, 63;
+  --color-128-rgb: 127, 127, 127;
+  --color-256-rgb: 255, 255, 255;
+  --color-a-rgb: 28, 210, 130;
 
-  --color-ac: #1cd282;
-  --color-ac-rgb: 28, 210, 130;
-  --color-ac-g-0: #05be64;
-  --color-ac-g-1: #32e6a0;
+  --alpha-75: 0.75;
+  --alpha-50: 0.5;
+  --alpha-25: 0.25;
+
+  --color-1: rgb(var(--color-1-rgb));
+  --color-1-75: rgba(var(--color-1-rgb), var(--alpha-75));
+  --color-1-50: rgba(var(--color-1-rgb), var(--alpha-50));
+  --color-1-25: rgba(var(--color-1-rgb), var(--alpha-25));
+
+  --color-8: rgb(var(--color-8-rgb));
+  --color-8-75: rgba(var(--color-8-rgb), var(--alpha-75));
+  --color-8-50: rgba(var(--color-8-rgb), var(--alpha-50));
+  --color-8-25: rgba(var(--color-8-rgb), var(--alpha-25));
+
+  --color-16: rgb(var(--color-16-rgb));
+  --color-16-75: rgba(var(--color-16-rgb), var(--alpha-75));
+  --color-16-50: rgba(var(--color-16-rgb), var(--alpha-50));
+  --color-16-25: rgba(var(--color-16-rgb), var(--alpha-25));
+
+  --color-32: rgb(var(--color-32-rgb));
+  --color-32-75: rgba(var(--color-32-rgb), var(--alpha-75));
+  --color-32-50: rgba(var(--color-32-rgb), var(--alpha-50));
+  --color-32-25: rgba(var(--color-32-rgb), var(--alpha-25));
+
+  --color-64: rgb(var(--color-64-rgb));
+  --color-64-75: rgba(var(--color-64-rgb), var(--alpha-75));
+  --color-64-50: rgba(var(--color-64-rgb), var(--alpha-50));
+  --color-64-25: rgba(var(--color-64-rgb), var(--alpha-25));
+
+  --color-128: rgb(var(--color-128-rgb));
+  --color-128-75: rgba(var(--color-128-rgb), var(--alpha-75));
+  --color-128-50: rgba(var(--color-128-rgb), var(--alpha-50));
+  --color-128-25: rgba(var(--color-128-rgb), var(--alpha-25));
+
+  --color-256: rgb(var(--color-256-rgb));
+  --color-256-75: rgba(var(--color-256-rgb), var(--alpha-75));
+  --color-256-50: rgba(var(--color-256-rgb), var(--alpha-50));
+  --color-256-25: rgba(var(--color-256-rgb), var(--alpha-25));
+
+  --color-a: rgb(var(--color-ac-rgb));
+  --color-a-75: rgba(var(--color-ac-rgb), var(--alpha-75));
+  --color-a-50: rgba(var(--color-ac-rgb), var(--alpha-50));
+  --color-a-25: rgba(var(--color-ac-rgb), var(--alpha-25));
+
+  --color-a-g-0: #05be64;
+  --color-a-g-1: #32e6a0;
 
   --color-icon: var(--color-256);
   --color-logo: var(--color-256);
+
+
 
   --size-1: 1px;
   --size-2: 2px;
@@ -73,43 +110,44 @@ body {
   --size-96: 96px;
   --size-192: 192px;
 
+
+
   --text-panel-px: var(--size-4);
   --text-panel-vw: 3vw;  
-  
+
+
+
   --animation-2: 0.2s ease;
   --animation-4: 0.4s ease;
   --animation-8: 0.8s ease;
 
+
+
   --blur-1: blur(var(--size-16));
   --blur-2: blur(var(--size-32));
-    
+
+
+
   --border: var(--size-1) solid var(--color-32);
   --border-radius-1: var(--size-8);
   --border-radius-2: var(--size-16);
 
+  --shadow: 0 0 var(--size-4) rgba(0, 0, 0, var(--alpha-25);
+  --glow: 0 0 var(--size-32) var(--color-a-25);
+
   --switch-mode: 768px;
   
   --header: var(--size-64);
-  
-  --glow: 0 0 var(--size-32) rgba(var(--color-ac-rgb), 0.25);
 }
 
 .light-mode {
-  --color-1: #ffffff;
-  --color-8: #f8f8f8;
-  --color-16: #f0f0f0;
-  --color-32: #e0e0e0;
-  --color-64: #c0c0c0;
-  --color-128: #808080;
-  --color-256: #000000;
-
-  --color-1-a: rgba(255, 255, 255, 0.75);
-  --color-8-a: rgba(248, 248, 248, 0.75);
-  --color-16-a: rgba(240, 240, 240, 0.75);
-  --color-32-a: rgba(224, 224, 224, 0.75);
-  --color-64-a: rgba(192, 192, 192, 0.75);
-  --color-128-a: rgba(128, 128, 128, 0.75);
-  --color-256-a: rgba(0, 0, 0, 0.75);
+  --color-1-rgb: 255, 255, 255;
+  --color-8-rgb: 248, 248, 248;
+  --color-16-rgb: 240, 240, 240;
+  --color-32-rgb: 224, 224, 224;
+  --color-64-rgb: 192, 192, 192;
+  --color-128-rgb: 128, 128, 128;
+  --color-256-rgb: 0, 0, 0;
 }
 
 
