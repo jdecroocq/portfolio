@@ -133,14 +133,13 @@ body {
   --header: var(--size-64);
 }
 
-.light-mode {
-  --color-1-rgb: 255, 255, 255;
-  --color-8-rgb: 248, 248, 248;
-  --color-16-rgb: 240, 240, 240;
-  --color-32-rgb: 224, 224, 224;
-  --color-64-rgb: 192, 192, 192;
-  --color-128-rgb: 128, 128, 128;
-  --color-256-rgb: 0, 0, 0;
+/*.light-mode {
+  --color-0-rgb:
+  --color-1-rgb:
+  --color-2-rgb:
+  --color-3-rgb:
+  --color-4-rgb:
+  --color-5-rgb:*/
 
   --shadow-i: var(--alpha-25);
 }
@@ -151,13 +150,13 @@ body {
 
 /*h1 {
   text-transform: uppercase;
-  color: var(--color-256);
+  color: var(--color-5);
   font-weight: bold;
 }
 
 h2 {
   text-transform: uppercase;
-  color: var(--color-256);
+  color: var(--color-5);
   font-weight: bold;
 }
 
@@ -250,7 +249,7 @@ header nav {
 
 header nav ul li a {
   display: inline-block;
-  color: var(--color-256);
+  color: var(--color-5);
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
@@ -334,7 +333,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--color-256);
+  color: var(--color-5);
 }
 
 
