@@ -83,6 +83,7 @@ body {
 
   --color-icon: var(--color-5);
   --color-logo: var(--color-5);
+  --color-illustration: var(--color-1);
 
 
 
@@ -183,7 +184,6 @@ p {
 
 
 .text-panel {
-  background-color: var(--color-0);
   border-radius: var(--border-radius-2);
   border: var(--border);
   text-align: justify;
@@ -1085,7 +1085,7 @@ footer a:hover {
   }
 
   .notfound-textblock {
-    width: 60%;
+    width: 65%;
   }
   
   .notfound-title {
@@ -1138,16 +1138,15 @@ footer a:hover {
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     box-sizing: border-box;
   }
   
   .notfound-image-placeholder a {
-    fill: var(--border-color);
+    fill: var(--color-illustration);
     position: absolute;
-    right: -30%;
-    height: 550px;
-    z-index: 0;
+    height: 400px;
+    z-index: -1;
     display: block;
   }
 
