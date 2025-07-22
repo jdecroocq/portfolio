@@ -719,9 +719,9 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-1-a);
-    box-shadow: 0 0 5px rgba(16, 16, 16, 0.5);
-    backdrop-filter: blur(15px);
+    background-color: var(--color-1-75);
+    box-shadow: var(--shadow);
+    backdrop-filter: var(--blur-1);
     border: var(--border);
     border-radius: var(--border-radius-1);
     text-decoration: none;
@@ -736,7 +736,7 @@ footer a:hover {
   .hq-button:hover {
     opacity: 1;
     pointer-events: auto;
-    background-color: var(--color-16);
+    background-color: var(--color-16-50);
   }
 
   .project-img:hover + .hq-button,
@@ -753,27 +753,27 @@ footer a:hover {
     display: flex;
     z-index: 1200;
     gap: 0;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 0 5px rgba(16, 16, 16, 0.5);
-    border-radius: 15px;
-    border: 1px solid rgba(25,25,25,1);
+    backdrop-filter: var(--blur-1);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius-2);
+    border: var(--border);
   }
   
   .dock-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(16, 16, 16, 0.8);
+    background: var(--color-1-75);
     color: var(--color-icon);
     outline: none;
     width: 60px;
     height: 60px;
-    transition: background 0.2s, box-shadow 0.2s, border-color 0.2s, filter 0.2s;
+    transition: var(--animation-2);
     position: relative;
   }
   
   .dock-btn-left {
-    border-radius: 14px 0 0 14px;
+    border-radius: calc(var(--border-radius-2) - 1) 0 0 calc(var(--border-radius-2) - 1);
     border-right: none;
   }
 
@@ -783,13 +783,13 @@ footer a:hover {
   }
   
   .dock-btn-right {
-    border-radius: 0 14px 14px 0;
+    border-radius: 0 calc(var(--border-radius-2) - 1) calc(var(--border-radius-2) - 1) 0;
     border-left: none;
   }
 
   .dock-btn:hover,
   .dock-btn:focus {
-    background: rgba(25, 25, 25, 0.7)
+    background: var(--color-16-50);
   }
 
   @media (max-width: 700px) {
