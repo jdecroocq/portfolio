@@ -1078,7 +1078,9 @@ footer a:hover {
   
 
 
-  
+  .notfound-row {
+    display: flex;
+  }
 
   .notfound-textblock {
     width: 60%;
