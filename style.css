@@ -81,10 +81,6 @@ body {
   --color-6-g-0: #05be64;
   --color-6-g-1: #32e6a0;
 
-  --color-icon: var(--color-5);
-  --color-logo: var(--color-5);
-  --color-illustration: var(--color-1);
-
 
 
   
@@ -107,7 +103,11 @@ body {
   --size-192: 192px;
 
 
+  
 
+  --color-icon: var(--color-5);
+  --color-logo: var(--color-5);
+  --color-illustration: var(--color-1);
   
   --text-panel-px: var(--size-4);
   --text-panel-vw: 3vw;  
