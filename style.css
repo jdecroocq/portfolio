@@ -555,7 +555,7 @@ footer a:hover {
 
   
   .project-details-page .content {
-    margin-bottom: min(3vw, 90px);
+    margin-bottom: min(var(--text-panel-vw), var(--size-64));
   }
 
   #loadingMessage {
@@ -685,13 +685,13 @@ footer a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(16, 16, 16, 0.8);
+    background-color: var(--color-1-a);
     box-shadow: 0 0 5px rgba(16, 16, 16, 0.5);
     backdrop-filter: blur(15px);
-    border: 1px solid rgb(25, 25, 25, 1);
-    border-radius: 7.5px;
+    border: var(--border);
+    border-radius: var(--border-radius-1);
     text-decoration: none;
-    transition: opacity 0.2s, background-color 0.2s;
+    transition: var(--animation-2);
     opacity: 0;
     pointer-events: none;
     z-index: 10;
@@ -702,7 +702,7 @@ footer a:hover {
   .hq-button:hover {
     opacity: 1;
     pointer-events: auto;
-    background-color: rgba(25, 25, 25, 0.7);
+    background-color: var(--color-16);
   }
 
   .project-img:hover + .hq-button,
