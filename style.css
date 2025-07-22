@@ -126,6 +126,7 @@ body {
 
   --border-size: var(--size-1);
   --border: var(--border-size) solid var(--color-32);
+  --border-d: var(--border-size) dashed var(--color-32);
   --border-radius-1: var(--size-8);
   --border-radius-2: var(--size-16);
 
@@ -184,7 +185,7 @@ p {
 
 
 .text-panel {
-  background-color: var(--col-1);
+  background-color: var(--color-1);
   border-radius: var(--border-radius-2);
   border: var(--border);
   text-align: justify;
@@ -825,7 +826,8 @@ footer a:hover {
   }
 
   .skill {
-    background-color: #101010;
+    background-color: var(--color-8);
+    border: var(--border-d);
     color: #828282;
     padding: 15px 20px;
     border-radius: 7.5px;
@@ -843,12 +845,7 @@ footer a:hover {
   }
 
   .skill:hover {
-    transform: scale(1.05);
-    transition: transform 0.1s ease-out;
-  }
-
-  .skill:not(:hover) {
-    transition: transform 0.1s ease-in;
+    background-color: var(--color-16);
   }
 
   .software-list {
