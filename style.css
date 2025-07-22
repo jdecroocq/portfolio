@@ -92,6 +92,7 @@ body {
 
 
 
+  
   --size-1: 1px;
   --size-2: 2px;
   --size-4: 4px;
@@ -112,21 +113,16 @@ body {
 
 
 
+  
   --text-panel-px: var(--size-4);
   --text-panel-vw: 3vw;  
-
-
 
   --animation-2: 0.2s ease;
   --animation-4: 0.4s ease;
   --animation-8: 0.8s ease;
 
-
-
   --blur-1: blur(var(--size-16));
   --blur-2: blur(var(--size-32));
-
-
 
   --border: var(--size-1) solid var(--color-32);
   --border-radius-1: var(--size-8);
@@ -136,7 +132,7 @@ body {
   --glow: 0 0 var(--size-32) var(--color-a-25);
 
   --switch-mode: 768px;
-  
+
   --header: var(--size-64);
 }
 
