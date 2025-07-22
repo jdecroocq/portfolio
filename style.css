@@ -738,7 +738,7 @@ footer a:hover {
   .hq-button:hover {
     opacity: 1;
     pointer-events: auto;
-    background-color: var(--color-16-50);
+    background-color: var(--color-32-75);
   }
 
   .project-img:hover + .hq-button,
@@ -791,7 +791,7 @@ footer a:hover {
 
   .dock-btn:hover,
   .dock-btn:focus {
-    background: var(--color-16-50);
+    background: var(--color-32-75);
   }
 
   @media (max-width: 700px) {
