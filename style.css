@@ -133,17 +133,19 @@ body {
   --header: var(--size-64);
 }
 
-/*.light-mode {
+
+/*
+.light-mode {
   --color-0-rgb:
   --color-1-rgb:
   --color-2-rgb:
   --color-3-rgb:
   --color-4-rgb:
-  --color-5-rgb:*/
+  --color-5-rgb:
 
   --shadow-i: var(--alpha-25);
 }
-
+*/
 
 
 
