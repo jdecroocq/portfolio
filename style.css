@@ -1146,7 +1146,7 @@ footer a:hover {
     fill: var(--color-illustration);
     position: absolute;
     height: 400px;
-    z-index: -1;
+    z-index: 0;
     display: block;
   }
 
