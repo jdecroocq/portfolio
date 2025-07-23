@@ -103,7 +103,7 @@ body {
   --size-192: 192px;
 
 
-  
+  --size-illustration: 400px;
 
   --color-icon: var(--color-5);
   --color-logo: var(--color-5);
@@ -137,7 +137,7 @@ body {
 }
 
 
-/*
+
 .light-mode {
   --color-0-rgb:
   --color-1-rgb:
@@ -148,7 +148,7 @@ body {
 
   --shadow-i: var(--alpha-25);
 }
-*/
+
 
 
 
@@ -199,15 +199,6 @@ p {
   line-height: 1.2;
   margin: 0 0 10px 0;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -422,6 +413,40 @@ footer a:hover {
 
 
 
+.notfound-row {
+  display: flex;
+}
+
+.notfound-textblock {
+  width: 65%;
+}
+
+.notfound-illustration {
+  position: relative;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.notfound-illustration a {
+  fill: var(--color-illustration);
+  position: absolute;
+  height: var(--size-illustration);
+  display: block;
+}
+
+.teapot {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+
+
+
+
 @media (max-width: 768px) {
   .footer-text {
     padding-bottom: 20px; /*===/!\===*/
@@ -475,6 +500,18 @@ footer a:hover {
 }
 
 
+
+
+
+@media (max-width: 1100px) {
+  .notfound-textblock {
+    width: 100%;
+  }
+ 
+  .notfound-illustration {
+    display: none;
+  }
+}
 
 
 
@@ -1135,51 +1172,7 @@ footer a:hover {
   
 
 
-  .notfound-row {
-    display: flex;
-  }
 
-  .notfound-textblock {
-    width: 65%;
-  }
-  
-  .notfound-illustration {
-    position: relative;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    box-sizing: border-box;
-  }
-  
-  .notfound-illustration a {
-    fill: var(--color-illustration);
-    position: absolute;
-    height: 400px;
-    z-index: 0;
-    display: block;
-  }
-
-  .teapot {
-    height: 100%;
-    width: auto;
-    display: block;
-  }
-
-  @media (max-width: 1200px) {
-    .notfound-row {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .notfound-textblock {
-      width: 100%;
-    }
-  
-    .notfound-illustration {
-      display: none;
-    }
-  }
   
 
 
