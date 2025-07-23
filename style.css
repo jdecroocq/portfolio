@@ -153,35 +153,45 @@ body {
 
 
 h1 {
+  font-size: 35px;
+  font-weight: bold;
   text-transform: uppercase;
   color: var(--color-5);
-  font-weight: bold;
-  font-size: 35px;
+  text-align: left;
+  margin: 0 0 0 0;
 }
 
 h2 {
+  font-size: 24px;
+  font-weight: bold;
   text-transform: uppercase;
   color: var(--color-5);
-  font-weight: bold;
-  font-size: 24px;
+  text-align: left;
+  margin: 0 0 0 0;
 }
 
 h3 {
-  color: var(--color-5);
-  font-weight: normal;
   font-size: 24px;
+  font-weight: normal;
+  color: var(--color-5);
+  text-align: left;
+  margin: -10px 0 20px 0;
 }
 
 h4 {
-  color: var(--color-4);
-  font-weight: normal;
   font-size: 14px;
+  font-weight: normal;
+  color: var(--color-4);
+  text-align: left;
+  margin: 0 0 0 0;
 }
 
 p {
-  color: var(--color-4);
-  font-weight: normal;
   font-size: 18px;
+  font-weight: normal;
+  color: var(--color-4);
+  text-align: justify;
+  margin: 0 0 10px 0;
 }
 
 
