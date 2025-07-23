@@ -22,8 +22,8 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  height: calc(100% - var(--header));
-  padding-top: var(--header);
+  height: calc(100% - var(--size-header));
+  padding-top: var(--size-header);
 }
 
 
@@ -85,49 +85,32 @@ body {
 
 
 
-  
-  --size-1: 1px;
-  --size-2: 2px;
-  --size-4: 4px;
-  --size-8: 8px;
-  --size-16: 16px;
-  --size-32: 32px;
-  --size-64: 64px;
-  --size-128: 128px;
-  --size-256: 256px;
-  --size-512: 512px;
-  --size-1024: 1024px;
-  --size-2048: 2048px;
 
-  --size-24: 24px;
-  --size-48: 48px;
-  --size-96: 96px;
-  --size-192: 192px;
-
-
+  --size-header: 64px;
+  --size-text-panel: 1024px;
   --size-illustration: 400px;
 
   --color-icon: var(--color-5);
   --color-logo: var(--color-5);
   --color-illustration: var(--color-1);
   
-  --text-panel-px: var(--size-4);
+  --text-panel-px: 4px;
   --text-panel-vw: 3vw;  
 
   --animation-2: 0.2s ease;
   --animation-4: 0.4s ease;
   --animation-8: 0.8s ease;
 
-  --blur-1: blur(var(--size-16));
-  --blur-2: blur(var(--size-32));
+  --blur-1: blur(16px);
+  --blur-2: blur(32px);
 
-  --border-size: var(--size-1);
+  --border-size: 1px;
   --border-color: var(--color-3);
   --border: var(--border-size) solid var(--border-color);
   --border-d: var(--border-size) dashed var(--border-color);
   --border-a: var(--border-size) solid var(--color-6);
-  --border-radius-1: var(--size-8);
-  --border-radius-2: var(--size-16);
+  --border-radius-1: 8px;
+  --border-radius-2: 16px;
 
   --shadow-i: var(--alpha-25);
   --shadow:
@@ -140,8 +123,6 @@ body {
     0 0 35px var(--color-6-25);
 
   --switch-mode: 768px;
-
-  --header: var(--size-64);
 }
 
 
@@ -214,7 +195,7 @@ p {
 
 header {
   display: flex;
-  height: var(--header);
+  height: var(--size-header);
   position: fixed;
   top: 0;
   left: 0;
@@ -231,12 +212,12 @@ header {
 .top-bar {
   display: flex;
   align-items: center;
-  height: var(--header);
+  height: var(--size-header);
   z-index: 2;
 }
 
 .logo svg {
-  height: var(--size-48);
+  height: 48px;
   width: auto;
   display: block;
   color: var(--color-logo);
@@ -254,7 +235,7 @@ nav ul {
   list-style: none;
   display: flex;
   width: 100%;
-  gap: calc(var(--header)/2);
+  gap: calc(var(--size-header)/2);
   justify-content: flex-end;
   align-items: center;
 }
@@ -356,12 +337,12 @@ footer a:hover {
   border-radius: var(--border-radius-2);
   border: var(--border);
   text-align: justify;
-  width: var(--size-1024);
+  width: var(--size-text-panel);
   max-width: calc((100% - 2 * 2 * var(--text-panel-vw)) - (2 * var(--text-panel-px)));
   margin-left: auto;
   margin-right: auto;
-  margin-top: min(var(--text-panel-vw), var(--size-64));
-  margin-bottom: min(var(--text-panel-vw), var(--size-64));
+  margin-top: min(var(--text-panel-vw), var(--size-header));
+  margin-bottom: min(var(--text-panel-vw), var(--size-header));
   padding-left: calc(var(--text-panel-px) + var(--text-panel-vw));
   padding-right: calc(var(--text-panel-px) + var(--text-panel-vw));
   padding-bottom: calc(var(--text-panel-px) + var(--text-panel-vw));
@@ -690,7 +671,7 @@ footer a:hover {
 
   
   .project-details-page .content {
-    margin-bottom: min(var(--text-panel-vw), var(--size-64));
+    margin-bottom: min(var(--text-panel-vw), var(--size-header));
   }
 
   #loadingMessage {
