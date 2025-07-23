@@ -207,6 +207,7 @@ header {
   border-bottom: var(--border);
   box-sizing: border-box;
   padding: 0 4vw;
+  overflow: clip;
 }
 
 .top-bar {
