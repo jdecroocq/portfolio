@@ -81,6 +81,7 @@ body {
 
   --color-6-g-0: #05be64;
   --color-6-g-1: #32e6a0;
+  --colot-6-g: linear-gradient(45deg, #05BE64, #32E6A0);
 
 
 
@@ -373,9 +374,9 @@ footer a:hover {
 
 .green-button {
   font-size: 18px;
-  padding: 20px 20px;
+  padding: 16px 20px;
   display: inline-block;
-  background: linear-gradient(45deg, #05BE64, #32E6A0);
+  background: var(--color-6-g);
   color: var(--color-0);
   border-radius: var(--border-radius-1);
   text-decoration: none !important;
@@ -384,7 +385,6 @@ footer a:hover {
   border: 1px solid #000; /* === /!\ === */
   box-sizing: border-box;
   margin: 16px 0 0 0;
-  box-shadow: var(--glow);
 }
 
 .green-button:hover {
