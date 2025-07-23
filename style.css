@@ -557,8 +557,8 @@ footer a:hover {
     align-items: center;
     text-align: center;
     font-size: 18px;
-    padding: 100px 0;
-    color: #828282;
+    margin: 40vh 0 40vh 0;
+    color: var(--color-4);
   }
 
   .gallery {
