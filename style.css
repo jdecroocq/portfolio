@@ -379,7 +379,7 @@ footer a:hover {
   display: inline-block;
   background: linear-gradient(45deg, #05BE64, #32E6A0);
   color: var(--color-0);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-1);
   text-decoration: none !important;
   font-weight: bold;
   line-height: 1;
