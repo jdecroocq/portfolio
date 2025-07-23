@@ -123,6 +123,7 @@ body {
   --border-color: var(--color-3);
   --border: var(--border-size) solid var(--border-color);
   --border-d: var(--border-size) dashed var(--border-color);
+  --border-a: var(--border-size) solid var(--color-6);
   --border-radius-1: var(--size-8);
   --border-radius-2: var(--size-16);
 
@@ -366,6 +367,32 @@ footer a {
 
 footer a:hover {
   color: var(--color-5);
+}
+
+
+
+
+
+.green-button {
+  font-size: 18px;
+  padding: 20px 20px;
+  display: inline-block;
+  background: linear-gradient(45deg, #05BE64, #32E6A0);
+  color: var(--color-0);
+  border-radius: var(--border-radius);
+  text-decoration: none !important;
+  font-weight: bold;
+  line-height: 1;
+  border: 1px solid #000; /* === /!\ === */
+  box-sizing: border-box;
+  margin: 16px 0 0 0;
+  box-shadow: var(--glow);
+}
+
+.green-button:hover {
+  background: transparent;
+  color: var(--color-6) !important;
+  border: var(--border-a);
 }
 
 
