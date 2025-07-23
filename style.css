@@ -179,7 +179,7 @@ h4 {
 }
 
 p {
-  folor: var(--color-4);
+  color: var(--color-4);
   font-weight: normal;
   font-size: 18px;
 }
