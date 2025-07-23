@@ -557,7 +557,7 @@ footer a:hover {
     align-items: center;
     text-align: center;
     font-size: 18px;
-    margin: 40vh 0 40vh 0;
+    padding: 100px 0;
     color: var(--color-4);
   }
 
