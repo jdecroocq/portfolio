@@ -1143,25 +1143,6 @@ footer a:hover {
     width: 65%;
   }
   
-  .notfound-link {
-    display: inline-block;
-    padding: 15px 25px;
-    background: linear-gradient(45deg, #05BE64, #32E6A0);
-    color: #191919;
-    border-radius: 7.5px;
-    font-size: 18px;
-    text-decoration: none !important;
-    font-weight: bold;
-    border: 1px solid #191919;
-    box-sizing: border-box;
-  }
-  
-  .notfound-link:hover {
-    background: transparent;
-    color: #1cd282 !important;
-    border: 1px solid #1cd282;
-  }
-
   .notfound-illustration {
     position: relative;
     width: 50%;
