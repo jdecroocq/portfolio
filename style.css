@@ -204,26 +204,6 @@ p {
 
 
 
-.text-panel {
-  border-radius: var(--border-radius-2);
-  border: var(--border);
-  text-align: justify;
-  width: var(--size-1024);
-  max-width: calc((100% - 2 * 2 * var(--text-panel-vw)) - (2 * var(--text-panel-px)));
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: min(var(--text-panel-vw), var(--size-64));
-  margin-bottom: min(var(--text-panel-vw), var(--size-64));
-  padding-left: calc(var(--text-panel-px) + var(--text-panel-vw));
-  padding-right: calc(var(--text-panel-px) + var(--text-panel-vw));
-  padding-bottom: calc(var(--text-panel-px) + var(--text-panel-vw));
-  padding-top: calc(var(--text-panel-px) + var(--text-panel-vw));
-}
-
-
-
-
-
 header {
   display: flex;
   height: var(--header);
@@ -262,7 +242,7 @@ header nav {
   z-index: 1;
 }
 
- nav ul {
+nav ul {
   list-style: none;
   display: flex;
   width: 100%;
@@ -358,6 +338,26 @@ footer a {
 
 footer a:hover {
   color: var(--color-5);
+}
+
+
+
+
+
+.text-panel {
+  border-radius: var(--border-radius-2);
+  border: var(--border);
+  text-align: justify;
+  width: var(--size-1024);
+  max-width: calc((100% - 2 * 2 * var(--text-panel-vw)) - (2 * var(--text-panel-px)));
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: min(var(--text-panel-vw), var(--size-64));
+  margin-bottom: min(var(--text-panel-vw), var(--size-64));
+  padding-left: calc(var(--text-panel-px) + var(--text-panel-vw));
+  padding-right: calc(var(--text-panel-px) + var(--text-panel-vw));
+  padding-bottom: calc(var(--text-panel-px) + var(--text-panel-vw));
+  padding-top: calc(var(--text-panel-px) + var(--text-panel-vw));
 }
 
 
