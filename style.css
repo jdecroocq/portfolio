@@ -42,8 +42,6 @@ body {
   --alpha-75: 0.75;
   --alpha-50: 0.5;
   --alpha-25: 0.25;
-  --alpha-15: 0.15;
-  --alpha-10: 0.10;
   
 
   --color-0: rgb(var(--color-0-rgb));
@@ -80,8 +78,6 @@ body {
   --color-6-75: rgba(var(--color-6-rgb), var(--alpha-75));
   --color-6-50: rgba(var(--color-6-rgb), var(--alpha-50));
   --color-6-25: rgba(var(--color-6-rgb), var(--alpha-25));
-  --color-6-15: rgba(var(--color-6-rgb), var(--alpha-15));
-  --color-6-10: rgba(var(--color-6-rgb), var(--alpha-10));
 
   --color-6-g-0: #05be64;
   --color-6-g-1: #32e6a0;
