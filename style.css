@@ -1110,7 +1110,6 @@ footer a:hover {
 
   .notfound-row {
     display: flex;
-    overflow: hidden;
   }
 
   .notfound-textblock {
