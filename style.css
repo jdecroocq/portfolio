@@ -906,7 +906,7 @@ footer a:hover {
 
   .skill {
     background-color: var(--color-1);
-    border: var(--border-d);
+    border: var(--border);
     color: #828282;
     padding: 15px 20px;
     border-radius: 7.5px;
