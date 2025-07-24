@@ -89,6 +89,7 @@ body {
   --size-header: var(--size-base);
   --size-text-panel: 1024px;
   --size-illustration: 400px;
+  --margin-base: min(var(--text-panel-vw), var(--size-base));
 
   --color-icon: var(--color-5);
   --color-logo: var(--color-5);
@@ -339,9 +340,9 @@ footer a:hover {
   text-align: justify;
   width: var(--size-text-panel);
   max-width: calc((100% - 2 * 2 * var(--text-panel-vw)) - (2 * var(--text-panel-px)));
-  margin-top: min(var(--text-panel-vw), var(--size-base));
+  margin-top: var(--margin-base);
   margin-right: auto;
-  margin-bottom: min(var(--text-panel-vw), var(--size-base));
+  margin-bottom: var(--margin-base);
   margin-left: auto;
   padding: calc(var(--text-panel-px) + var(--text-panel-vw));
 }
@@ -410,6 +411,7 @@ footer a:hover {
   justify-content: center;
   text-align: center;
   padding-top: var(--size-base);
+  padding-bottom: calc(64px - var(--margin-base));
 }
 
 .logo-about-me {
@@ -883,7 +885,7 @@ icon-img:hover {
 
   
   .project-details-page .content {
-    margin-bottom: min(var(--text-panel-vw), var(--size-base));
+    margin-bottom: var(--margin-base);
   }
 
   #loadingMessage {
