@@ -905,20 +905,22 @@ footer a:hover {
   }
 
   .name {
+    text-transform: uppercase;
     font-size: 22px;
     margin: 0;
-    color: #FFFFFF;
+    color: var(--color-5);
   }
 
   .title {
+    text-transform: uppercase;
     font-size: 16px;
     margin: 5px 0;
-    color: #FFFFFF;
+    color: var(--color-5);
   }
 
   .location {
     font-size: 18px;
-    color: #828282;
+    color: var(--color-4);
   }
 
   .social-icons {
