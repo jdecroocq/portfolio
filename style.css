@@ -149,7 +149,7 @@ h1 {
   color: var(--color-5);
   text-align: left;
   line-height: 1;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 h2 {
@@ -885,23 +885,51 @@ footer a:hover {
 
 
 
-  
 
-  .overview h2,
-  .skills h2,
-  .software h2,
-  .connect h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #FFFFFF;
-    font-weight: bold;
-    margin-top: 0;
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: var(--size-header);
   }
 
-  .overview p {
+  .logo-about-me {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    color: var(--color-logo);
+  }
+
+  .name {
+    font-size: 22px;
+    margin: 0;
+    color: #FFFFFF;
+  }
+
+  .title {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #FFFFFF;
+  }
+
+  .location {
     font-size: 18px;
     color: #828282;
-    text-align: justify;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 5px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInIcons 1s ease forwards;
+    animation-delay: 0.3s;
   }
 
   .skill {
@@ -1005,50 +1033,7 @@ footer a:hover {
     color: #AAAAAA;
   }
 
-  .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px;
-  }
-
-  .logo-about-me {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-    color: var(--color-logo);
-  }
-
-  .intro h1 {
-    font-size: 22px;
-    margin: 0;
-    color: #FFFFFF;
-  }
-
-  .intro h2 {
-    font-size: 16px;
-    margin: 5px 0;
-    color: #FFFFFF;
-  }
-
-  .intro p {
-    font-size: 18px;
-    color: #828282;
-  }
-
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 5px;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeInIcons 1s ease forwards;
-    animation-delay: 0.3s;
-  }
+  
 
   @keyframes fadeInIcons {
     to {
