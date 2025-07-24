@@ -82,14 +82,15 @@ body {
   --color-6-g-0: #05be64;
   --color-6-g-1: #32e6a0;
   --color-6-g: linear-gradient(45deg, #05BE64, #32E6A0);
-
-
+  
 
   --size-base: 64px;
   --size-header: var(--size-base);
   --size-text-panel: 1024px;
   --size-illustration: 400px;
   --margin-base: min(var(--text-panel-vw), var(--size-base));
+  --margin-base-compensation: calc(var(--size-base) - var(--margin-base));
+  
 
   --color-icon: var(--color-5);
   --color-logo: var(--color-5);
@@ -411,7 +412,7 @@ footer a:hover {
   justify-content: center;
   text-align: center;
   padding-top: var(--size-base);
-  padding-bottom: calc(64px - var(--margin-base));
+  padding-bottom: var(--margin-base-compensation);
 }
 
 .logo-about-me {
