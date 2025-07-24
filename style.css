@@ -334,19 +334,16 @@ footer a:hover {
 
 
 .text-panel {
-  border-radius: var(--border-radius-2);
   border: var(--border);
+  border-radius: var(--border-radius-2);
   text-align: justify;
   width: var(--size-text-panel);
   max-width: calc((100% - 2 * 2 * var(--text-panel-vw)) - (2 * var(--text-panel-px)));
-  margin-left: auto;
-  margin-right: auto;
   margin-top: min(var(--text-panel-vw), var(--size-header));
+  margin-right: auto;
   margin-bottom: min(var(--text-panel-vw), var(--size-header));
-  padding-left: calc(var(--text-panel-px) + var(--text-panel-vw));
-  padding-right: calc(var(--text-panel-px) + var(--text-panel-vw));
-  padding-bottom: calc(var(--text-panel-px) + var(--text-panel-vw));
-  padding-top: calc(var(--text-panel-px) + var(--text-panel-vw));
+  margin-left: auto;
+  padding: calc(var(--text-panel-px) + var(--text-panel-vw));
 }
 
 
