@@ -458,7 +458,7 @@ footer a:hover {
   gap: 20px;
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeInIcons 1s ease;
+  animation: fadeInIcons 1s ease forwards;
   animation-delay: var(--animation-2);
 }
 
