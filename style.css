@@ -461,6 +461,18 @@ footer a:hover {
   animation-delay: var(--animation-2);
 }
 
+.icon-img {
+  width: 100%;
+  max-width: 25px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.icon-img:hover {
+  transform: scale(1.1);
+}
+
 .skill {
   background-color: var(--color-1);
   border: var(--border);
@@ -598,18 +610,6 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.icon-img {
-  width: 100%;
-  max-width: 25px;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.2s;
-}
-
-icon-img:hover {
-  transform: scale(1.1);
 }
 
 
