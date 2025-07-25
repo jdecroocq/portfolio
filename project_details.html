@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="icons/ico.png" type="image/png">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Details</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
+  <link rel="icon" type="image/png" href="icons/ico.png"/>
+  <link rel="stylesheet" href="style.css"/>
   <script src="header.js" defer></script>
-  <script src="project_details.js"></script>
   <script src="footer.js" defer></script>
-  
-<body class="project-details-page">
-
+  <script src="project_details.js"></script>
+</head>
+<body>
   <div id="header-placeholder"></div>
-
-  <main class="content">
-
+  <main class="page">
     <div id="loadingMessage">Loading...</div>
-
     <div id="mainContent" style="display: none;">
       <section class="project-section text-panel">
         <div id="projectContent"></div>
       </section>
-
       <section id="videoSection"></section>
-
       <section class="images-main-section">
         <div id="imagesSection" class="images-gallery"></div>
       </section>
     </div>
   </main>
-
   <div class="floating-dock">
   <a id="dockPrevProject" class="dock-btn dock-btn-left" href="#" title="Previous project">
     <svg width="30" height="30" viewBox="0 0 30 30">
@@ -45,11 +36,9 @@
     <rect x="4.5"  y="4.5"  width="5" height="5"/>
     <rect x="12.5" y="4.5"  width="5" height="5"/>
     <rect x="20.5" y="4.5"  width="5" height="5"/>
-
     <rect x="4.5"  y="12.5" width="5" height="5"/>
     <rect x="12.5" y="12.5" width="5" height="5"/>
     <rect x="20.5" y="12.5" width="5" height="5"/>
-
     <rect x="4.5"  y="20.5" width="5" height="5"/>
     <rect x="12.5" y="20.5" width="5" height="5"/>
     <rect x="20.5" y="20.5" width="5" height="5"/>
@@ -62,8 +51,6 @@
     </svg>
   </a>
   </div>
- 
-  <div id="footer-placeholder"></div>
-  
+   <div id="footer-placeholder"></div>
 </body>
 </html>
