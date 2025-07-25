@@ -363,6 +363,14 @@ footer a:hover {
 
 
 
+.panel-flex {
+  display: flex;
+}
+
+
+
+
+
 .green-button {
   font-size: 18px;
   padding: 16px 20px;
@@ -615,10 +623,6 @@ footer a:hover {
 
 
 
-
-.panel-flex {
-  display: flex;
-}
 
 .notfound-text {
   width: 65%;
