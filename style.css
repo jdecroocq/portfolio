@@ -787,10 +787,6 @@ footer a:hover {
     gap: 1px;
     width: 100%;
   }
-
-  .gallery-section {
-      flex: 1;
-  }
   
   @media (min-width: 1501px) {
     .gallery-grid {
