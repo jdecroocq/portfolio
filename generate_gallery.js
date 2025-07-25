@@ -24,7 +24,7 @@ async function findTileImage(folderId) {
 
 async function generateGallery() {
   const gallery = document.querySelector('.gallery-grid');
-  const loading = document.getElementById('loadingGallery');
+  const loading = document.getElementById('loading');
 
   loading.style.display = 'flex';
   gallery.style.display = 'none';
