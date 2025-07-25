@@ -371,6 +371,20 @@ footer a:hover {
 
 
 
+#loading {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  color: var(--color-4);
+}
+
+
+
+
+
 .green-button {
   font-size: 18px;
   padding: 16px 20px;
@@ -764,16 +778,6 @@ footer a:hover {
 
 
   
-  .loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 18px;
-    padding: 100px 0;
-    color: var(--color-4);
-  }
-
   .gallery {
     max-width: 100%;
     margin: 0 auto;
@@ -879,13 +883,6 @@ footer a:hover {
 
 
   
-  #loadingMessage {
-    text-align: center;
-    font-size: 18px;
-    padding: 100px 0;
-    color: #828282;
-  }
-
   .project-section h1 {
     font-size: 24px;
     color: #FFFFFF;
