@@ -211,6 +211,7 @@ header {
   box-sizing: border-box;
   padding: 0 4vw;
   overflow: clip;
+  user-select: none;
 }
 
 .top-bar {
@@ -315,6 +316,7 @@ footer {
   justify-content: space-between;
   border-top: var(--border);
   z-index: 500;
+  user-select: none;
 }
   
 .footer-text {
@@ -530,7 +532,6 @@ footer a:hover {
   font-size: 16px;
   text-align: center;
   white-space: nowrap;
-  user-select: none;
 }
 
 .skill-list {
@@ -548,7 +549,6 @@ footer a:hover {
   padding-right: calc(1vw - 5px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  user-select: none;
 }
 
 .software-item {
