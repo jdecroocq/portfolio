@@ -342,7 +342,9 @@ footer a:hover {
   flex: 1;
 }
 
-
+.flex {
+  display: flex;
+}
 
 
 
@@ -357,14 +359,6 @@ footer a:hover {
   margin-bottom: var(--margin-base);
   margin-left: auto;
   padding: calc(var(--text-panel-px) + var(--text-panel-vw));
-}
-
-
-
-
-
-.panel-flex {
-  display: flex;
 }
 
 
