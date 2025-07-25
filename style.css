@@ -342,10 +342,16 @@ footer a:hover {
   flex: 1;
 }
 
+
 .flex {
   display: flex;
 }
 
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
 
 
 .text-panel {
@@ -362,17 +368,11 @@ footer a:hover {
 }
 
 
-
-
-
 #loading {
   text-align: center;
   font-size: 18px;
   color: var(--color-4);
 }
-
-
-
 
 
 .green-button {
@@ -390,14 +390,12 @@ footer a:hover {
   margin: 16px 0 0 0;
 }
 
+
 .green-button:hover {
   background: transparent;
   color: var(--color-6) !important;
   border: var(--border-a);
 }
-
-
-
 
 
 #dark-overlay {
