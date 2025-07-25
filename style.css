@@ -340,6 +340,9 @@ footer a:hover {
 
 .page {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -372,13 +375,9 @@ footer a:hover {
 
 
 #loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   font-size: 18px;
   color: var(--color-4);
-  flex: 1;
 }
 
 
