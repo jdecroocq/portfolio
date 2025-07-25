@@ -879,10 +879,6 @@ footer a:hover {
 
 
   
-  .project-details-page .content {
-    margin-bottom: var(--margin-base);
-  }
-
   #loadingMessage {
     text-align: center;
     font-size: 18px;
