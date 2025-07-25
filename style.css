@@ -774,17 +774,6 @@ footer a:hover {
 
 
 @media (min-width: 1px){
-
-
-
-  
-  .gallery {
-    max-width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-  }
-
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
