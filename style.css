@@ -476,7 +476,7 @@ footer a:hover {
   gap: 20px;
   opacity: 0;
   transform: translateY(10px);
-  animation: fadeInIcons 1s ease forwards;
+  animation: fadeInIcons 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
   animation-delay: var(--animation-2);
 }
 
