@@ -204,7 +204,7 @@ async function loadProjectContent() {
     
     await displayProjectImages();  
         
-    document.getElementById('loadingMessage').style.display = 'none';
+    document.getElementById('loading').style.display = 'none';
     document.getElementById('mainContent').style.display = 'block';
 
 
