@@ -289,6 +289,7 @@ header {
   right: 0;
   z-index: 1000;
   background-color: var(--color-0-75);
+  border-bottom: var(--border);
   box-shadow: var(--shadow);
   backdrop-filter: var(--blur-2);
   box-sizing: border-box;
