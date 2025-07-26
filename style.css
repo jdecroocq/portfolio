@@ -262,11 +262,12 @@ p {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--color-0-75);
+  background-color: var(--color-0-50);
   z-index: 4;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   pointer-events: none;
+  backdrop-filter: blur(4px);
 }
 
 #dark-overlay.active {
