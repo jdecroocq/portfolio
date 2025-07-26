@@ -310,6 +310,7 @@ header {
 
 header nav {
   display: flex;
+  flex: 1;
   font-size: 14px;
 }
 
