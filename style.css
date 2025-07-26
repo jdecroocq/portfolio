@@ -310,9 +310,6 @@ header {
 
 header nav {
   display: flex;
-  flex: 1;
-  transition: var(--animation-2);
-  z-index: 1;
   font-size: 14px;
 }
 
