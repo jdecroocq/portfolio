@@ -31,8 +31,8 @@ async function generateGallery() {
 
   const projectsFolderId = await getFolderIdByName(ROOT_FOLDER_ID, 'Projects');
   if (!projectsFolderId) {
-    console.error("Dossier 'Projects' introuvable.");
-    loading.innerText = "Erreur : Dossier 'Projects' introuvable.";
+    console.error("Error: 'Projects' folder not found.");
+    loading.innerText = "Error: 'Projects' folder not found.";
     return;
   }
 
@@ -75,7 +75,7 @@ async function generateGallery() {
           adjustTextSize();
         }, 50);
       }
-      
+
       if (!hasInsertedAtLeastOne) {
         loading.style.display = 'none';
         gallery.style.display = 'grid';
@@ -86,14 +86,14 @@ async function generateGallery() {
         adjustTextSize();
       });
     } else {
-      console.warn(`Pas d’image 'tile.jpg' trouvée dans le dossier : ${folder.name}`);
+      console.warn(`Warning: No 'tile.jpg' found in folder: ${folder.name}`);
     }
   }
 
   window.addEventListener('resize', adjustTextSize);
 
   if (!hasInsertedAtLeastOne) {
-    loading.innerText = "Aucun projet avec image trouvé.";
+    loading.innerText = "No projects with images found.";
   }
 }
 
