@@ -99,11 +99,6 @@ body {
   --text-panel-px: 4px;
   --text-panel-vw: 3vw;  
 
-  --animation-1: 0.1s ease;
-  --animation-2: 0.2s ease;
-  --animation-4: 0.4s ease;
-  --animation-8: 0.8s ease;
-
   --blur-1: blur(16px);
   --blur-2: blur(32px);
 
@@ -584,7 +579,7 @@ footer a:hover {
   height: 100%;
   max-height: 25px;
   object-fit: contain;
-  transition: var(--animation-2);
+  transition: 0.2s;
 }
 
 .icon-img:hover {
@@ -632,7 +627,7 @@ footer a:hover {
   width: 45px;
   height: auto;
   object-fit: contain;
-  transition: var(--animation-1);
+  transition: 0.1s;
 }
 
 .connect-list {
@@ -988,7 +983,7 @@ footer a:hover {
     backdrop-filter: var(--blur-1);
     border-radius: var(--border-radius-1);
     text-decoration: none;
-    transition: var(--animation-2);
+    transition: 0.2s;
     opacity: 0;
     pointer-events: none;
     z-index: 10;
