@@ -294,7 +294,6 @@ header {
   box-sizing: border-box;
   padding: 0 4vw;
   overflow: clip;
-  user-select: none;
 }
 
 .top-bar {
@@ -399,7 +398,6 @@ footer {
   justify-content: space-between;
   border-top: var(--border);
   z-index: 500;
-  user-select: none;
 }
   
 .footer-text {
