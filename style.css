@@ -42,7 +42,6 @@ body {
   --alpha-75: 0.75;
   --alpha-50: 0.5;
   --alpha-25: 0.25;
-  --alpha-10: 0.1;
   
 
   --color-0: rgb(var(--color-0-rgb));
@@ -116,7 +115,8 @@ body {
   --border-radius-1: 8px;
   --border-radius-2: 16px;
 
-  --shadow: 0 0 8px rgba(0, 0, 0, var(--alpha-10))
+  --shadow-i: var(--alpha-50);
+  --shadow: 0 0 8px rgba(0, 0, 0, var(--alpha-50))
   --glow:
     0 0 5px var(--color-6-25),
     0 0 15px var(--color-6-25),
@@ -135,7 +135,7 @@ body {
   --color-4-rgb:
   --color-5-rgb:
 
-  --shadow-i: calc(var(--alpha-25) / 2);
+  --shadow-i: calc(var(--alpha-25) / 4);
 } */
 
 
