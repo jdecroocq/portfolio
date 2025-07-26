@@ -635,10 +635,6 @@ footer a:hover {
   transition: var(--animation-1);
 }
 
-.software-item:hover .software-icon {
-  transform: scale(0.9);
-}
-
 .connect-list {
   margin-top: 30px;
   padding-left: calc(1vw - 5px);
