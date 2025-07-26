@@ -352,7 +352,8 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  position: absolute;
+  inset: 0;  
 }
 
 
