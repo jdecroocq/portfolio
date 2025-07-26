@@ -287,6 +287,7 @@ header {
   z-index: 1000;
   background-color: var(--color-0-75);
   box-shadow: var(--shadow);
+  border-bottom: var(--border);
   backdrop-filter: var(--blur-2);
   box-sizing: border-box;
   padding: 0 4vw;
