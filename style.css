@@ -1029,14 +1029,12 @@ footer a:hover {
     background: var(--color-0-75);
     color: var(--color-icon);
     outline: none;
-    width: 60px;
-    height: 60px;
-    transition: var(--animation-2);
+    width: var(--size-base);
+    height: var(--size-base);
     position: relative;
   }
   
-  .dock-btn:hover,
-  .dock-btn:focus {
+  .dock-btn:hover {
     background: var(--color-3-75);
   }
 
