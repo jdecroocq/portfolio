@@ -319,7 +319,7 @@ nav ul {
 
 header nav ul li a {
   position: relative;
-  display: inline-block;
+  display: block;
   color: var(--color-5);
   text-transform: uppercase;
   text-decoration: none;
@@ -417,7 +417,7 @@ header nav ul li a.active::after {
   }
 
   header nav.show {
-    max-height: 200px;
+    max-height: calc(var(--number-nav) * 19px + (var(--number-nav) - 1) * 32px + 2 * (4vw + 14px));
   }
 
   header nav ul {
