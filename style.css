@@ -207,15 +207,6 @@ p {
 }
 
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  inset: 0; 
-}
-
-
 .text-panel {
   border: var(--border);
   border-radius: var(--border-radius-2);
@@ -231,9 +222,14 @@ p {
 
 
 #loading {
-  text-align: center;
   font-size: 18px;
   color: var(--color-4);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0; 
 }
 
 
