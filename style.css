@@ -418,7 +418,7 @@ header nav ul li a.active::after {
   header nav {
     flex-direction: column;
     max-height: 0;
-    transition: max-height 0.4s cubic-bezier(0.28, 0.36, 0.46, 0.83);
+    transition: max-height 0.4s ease;
   }
 
   header nav.show {
