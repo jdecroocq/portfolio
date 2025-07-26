@@ -291,7 +291,6 @@ header {
   background-color: var(--color-0-75);
   box-shadow: var(--shadow);
   backdrop-filter: var(--blur-2);
-  border-bottom: var(--border);
   box-sizing: border-box;
   padding: 0 4vw;
   overflow: clip;
