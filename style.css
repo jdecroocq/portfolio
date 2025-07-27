@@ -905,15 +905,6 @@ footer a:hover {
     margin: 0 0 10px 0;
   }
 
-  .project-section a {
-    color: #1cd282;
-    text-decoration: none;
-  }
-
-  .project-section a:hover {
-    text-decoration: underline;
-  }
-
   #videoSection {
     justify-items: center;
     width: 100%;
@@ -1087,15 +1078,6 @@ footer a:hover {
     list-style: disc;
     padding-left: 20px;
     margin: 0 0 5px 0;
-  }
-
-  .legal-section a {
-    color: #1cd282;
-    text-decoration: none;
-  }
-
-  .legal-section a:hover {
-    text-decoration: underline;
   }
   
 
