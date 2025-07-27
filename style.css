@@ -117,6 +117,8 @@ body {
     0 0 35px var(--color-6-25);
 
   --switch-mode: 768px;
+
+  --number-nav: 2;
 }
 
 
@@ -442,7 +444,7 @@ header nav ul li a:hover {
   }
 
   header nav.show {
-    max-height: 119.2px;
+    max-height: calc((21.6px * var(--number-nav)) + (var(--number-nav) + 1) * 32px);
   }
 
   header nav ul {
