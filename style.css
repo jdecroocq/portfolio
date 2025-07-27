@@ -220,8 +220,6 @@ a:hover {
 
 
 .text-panel {
-  border: var(--border);
-  border-radius: var(--border-radius-2);
   text-align: justify;
   width: 1024px;
   max-width: calc((100% - 2 * 2 * var(--text-panel-vw)) - (2 * var(--text-panel-px)));
@@ -299,7 +297,6 @@ header {
   z-index: 1000;
   background-color: var(--color-0-75);
   box-shadow: var(--shadow);
-  border-bottom: var(--border);
   backdrop-filter: var(--blur-2);
   box-sizing: border-box;
   padding: 0 4vw;
