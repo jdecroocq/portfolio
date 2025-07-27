@@ -340,7 +340,7 @@ nav ul {
 
 header nav ul li a {
   position: relative;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
   color: var(--color-5);
   text-transform: uppercase;
@@ -356,7 +356,7 @@ header nav ul li a::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 2px;
+  height: 1px;
   width: 100%;
   background-color: var(--color-5);
   transform: scaleX(0);
