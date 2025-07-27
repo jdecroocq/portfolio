@@ -225,10 +225,7 @@ a:hover {
   text-align: justify;
   width: 1024px;
   max-width: calc((100% - 2 * 2 * var(--text-panel-vw)) - (2 * var(--text-panel-px)));
-  margin-top: var(--margin-base);
-  margin-right: auto;
-  margin-bottom: var(--margin-base);
-  margin-left: auto;
+  margin: var(--margin-base) auto;
   padding: calc(var(--text-panel-px) + var(--text-panel-vw));
 }
 
