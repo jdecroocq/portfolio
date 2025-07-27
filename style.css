@@ -417,7 +417,7 @@ header nav ul li a.active::after {
   }
 
   header nav.show {
-    max-height: calc(var(--number-nav) * 19px + (var(--number-nav) - 1) * 32px + 2 * (4vw + 14px));
+    max-height: 116px;
   }
 
   header nav ul {
