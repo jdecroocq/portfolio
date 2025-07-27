@@ -86,7 +86,6 @@ body {
 
   --size-base: 64px;
   --size-header: var(--size-base);
-  --size-text-panel: 1024px;
   --size-illustration: 400px;
   --margin-base: min(var(--text-panel-vw), var(--size-base));
   --margin-base-compensation: calc(var(--size-base) - var(--margin-base));
@@ -222,7 +221,7 @@ a:hover {
   border: var(--border);
   border-radius: var(--border-radius-2);
   text-align: justify;
-  width: var(--size-text-panel);
+  width: 1024px;
   max-width: calc((100% - 2 * 2 * var(--text-panel-vw)) - (2 * var(--text-panel-px)));
   margin-top: var(--margin-base);
   margin-right: auto;
