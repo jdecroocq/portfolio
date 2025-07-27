@@ -479,6 +479,7 @@ footer a {
 
 footer a:hover {
   color: var(--color-5);
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
