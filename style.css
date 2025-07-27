@@ -319,7 +319,7 @@ nav ul {
 
 header nav ul li a {
   position: relative;
-  display: block;
+  display: inline-block;
   color: var(--color-5);
   text-transform: uppercase;
   text-decoration: none;
