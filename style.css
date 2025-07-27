@@ -102,7 +102,7 @@ body {
   --blur-2: blur(32px);
 
   --border-size: 1px;
-  --border-color: var(--color-3);
+  --border-color: var(--color-2);
   --border: var(--border-size) solid var(--border-color);
   --border-d: var(--border-size) dashed var(--border-color);
   --border-a: var(--border-size) solid var(--color-6);
