@@ -423,7 +423,7 @@ header nav ul li a.active::after {
   header nav ul {
     flex-direction: column;
     align-items: flex-end;
-    padding:4vw;
+    padding: 8px 0 8px 4vw;
     gap: 32px;
   }
 
