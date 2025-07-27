@@ -362,6 +362,10 @@ header nav ul li a.active::after {
   transform: scaleX(1);
 }
 
+header nav ul li a:hover {
+  text-decoration: none;
+}
+
 .burger {
   display: none;
   width: 30px;
