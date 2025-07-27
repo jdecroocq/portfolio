@@ -497,13 +497,6 @@ footer a:hover {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .footer-text {
-    padding-bottom: 20px; /*===/!\===*/
-    font-size: 10px; /*===/!\===*/
-  }
-}
-
 
 
 
