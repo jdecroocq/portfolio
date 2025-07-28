@@ -87,7 +87,6 @@ body {
   --size-base: 64px;
   --size-header: var(--size-base);
   --size-illustration: 400px;
-  --margin-base-compensation: calc(var(--size-base) - var(--margin-base));
   
 
   --color-icon: var(--color-5);
@@ -505,7 +504,6 @@ footer a:hover {
   justify-content: center;
   text-align: center;
   padding-top: var(--size-base);
-  padding-bottom: var(--margin-base-compensation);
 }
 
 .logo-about-me {
