@@ -119,12 +119,12 @@ body {
 
 /*
 .light-mode {
-  --color-0-rgb:
-  --color-1-rgb:
-  --color-2-rgb:
-  --color-3-rgb:
-  --color-4-rgb:
-  --color-5-rgb:
+  --color-0-rgb: 255, 255, 255;
+  --color-1-rgb: 245, 245, 245;
+  --color-2-rgb: 235, 235, 235;
+  --color-3-rgb: 225, 225, 225;
+  --color-4-rgb: 95, 95, 95;
+  --color-5-rgb: 0, 0, 0;
 
   --shadow-i: calc(var(--alpha-25) / 4);
 } */
