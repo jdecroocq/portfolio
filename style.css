@@ -283,17 +283,17 @@ a:hover {
 
 header {
   display: flex;
-  height: calc(var(--size-header) - var(--size-border));
+  height: var(--size-header);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   background-color: var(--color-0-75);
-  border-bottom: var(--border);
-  box-shadow: var(--shadow);
+  box-shadow:
+    var(--shadow),
+    inset 0 -1px 0px var(--color-border);
   backdrop-filter: var(--blur-2);
-  box-sizing: border-box;
   padding: 0 4vw;
   overflow: clip;
 }
