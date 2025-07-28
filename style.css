@@ -82,30 +82,30 @@ body {
   --color-6-g-0: #05be64;
   --color-6-g-1: #32e6a0;
   --color-6-g: linear-gradient(45deg, var(--color-6-g-0), var(--color-6-g-1));
+
   
 
   --size-base: 64px;
   --size-header: var(--size-base);
   --size-illustration: 400px;
   --size-border: 1px;
-  
 
   --color-icon: var(--color-5);
   --color-logo: var(--color-5);
-  --color-illustration: var(--color-1); 
+  --color-illustration: var(--color-1);
+  --color-border: var(--color-3);
 
   --blur-1: blur(16px);
   --blur-2: blur(32px);
 
-  --border-color: var(--color-3);
-  --border: var(--size-border) solid var(--border-color);
-  --border-d: var(--size-border) dashed var(--border-color);
+  --border: var(--size-border) solid var(--color-border);
+  --border-d: var(--size-border) dashed var(--color-border);
   --border-a: var(--size-border) solid var(--color-6);
   --border-radius-1: 8px;
   --border-radius-2: 16px;
 
   --shadow-i: var(--alpha-50);
-  --shadow: 0 0 8px rgba(0, 0, 0, var(--alpha-50))
+  --shadow: 0 0 8px rgba(0, 0, 0, var(--alpha-50));
   --glow:
     0 0 5px var(--color-6-25),
     0 0 15px var(--color-6-25),
@@ -283,7 +283,7 @@ a:hover {
 
 header {
   display: flex;
-  height: calc(var(--size-header) + var(--size-border);
+  height: calc(var(--size-header) - var(--size-border);
   position: fixed;
   top: 0;
   left: 0;
