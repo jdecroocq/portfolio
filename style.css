@@ -104,8 +104,8 @@ body {
   --border-radius-1: 8px;
   --border-radius-2: 16px;
 
-  --shadow-i: var(--alpha-50);
-  --shadow: 0 0 8px rgba(0, 0, 0, var(--alpha-50));
+  --shadow-i: var(--alpha-25);
+  --shadow: 0 0 8px rgba(0, 0, 0, var(--shadow-i));
   --glow:
     0 0 5px var(--color-6-25),
     0 0 15px var(--color-6-25),
@@ -126,7 +126,7 @@ body {
   --color-4-rgb: 95, 95, 95;
   --color-5-rgb: 0, 0, 0;
 
-  --shadow-i: calc(var(--alpha-25) / 4);
+  --shadow-i: 0.15;
 } */
 
 
