@@ -87,16 +87,12 @@ body {
   --size-base: 64px;
   --size-header: var(--size-base);
   --size-illustration: 400px;
-  --margin-base: min(var(--text-panel-vw), var(--size-base));
   --margin-base-compensation: calc(var(--size-base) - var(--margin-base));
   
 
   --color-icon: var(--color-5);
   --color-logo: var(--color-5);
-  --color-illustration: var(--color-1);
-  
-  --text-panel-px: 4px;
-  --text-panel-vw: 3vw;  
+  --color-illustration: var(--color-1); 
 
   --blur-1: blur(16px);
   --blur-2: blur(32px);
@@ -222,9 +218,8 @@ a:hover {
 .text-panel {
   text-align: justify;
   width: 1024px;
-  max-width: calc((100% - 2 * 2 * var(--text-panel-vw)) - (2 * var(--text-panel-px)));
-  margin: var(--margin-base) auto;
-  padding: calc(var(--text-panel-px) + var(--text-panel-vw));
+  max-width: calc(100% -  12vw);
+  margin: max(64px, 5vw) auto;
 }
 
 
