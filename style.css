@@ -283,7 +283,7 @@ a:hover {
 
 header {
   display: flex;
-  height: calc(var(--size-header) - var(--size-border);
+  height: calc(var(--size-header) - var(--size-border));
   position: fixed;
   top: 0;
   left: 0;
