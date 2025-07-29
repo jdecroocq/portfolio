@@ -37,8 +37,11 @@ async function generateGallery() {
 
   const projectFolders = await listProjectFolders(projectsFolderId);
 
-  let hasInsertedAtLeastOne = false;
+  projectFolders.sort((a, b) =>
+    new Date(b.createdTime) - new Date(a.createdTime)
+  );
 
+  let hasInsertedAtLeastOne = false;
   for (const folder of projectFolders) {
     const tile = await findTileImage(folder.id);
 
