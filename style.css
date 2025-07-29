@@ -213,7 +213,10 @@ a:hover {
 }
 
 
-.page {
+.page,
+.text-panel,
+.project-video-container,
+.project-image {
   flex: 1;
   position: relative;
   animation: fadeIn 1s ease-out forwards;
