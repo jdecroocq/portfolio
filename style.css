@@ -540,7 +540,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .gallery-grid {
-  grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .gallery-item {
@@ -580,9 +580,9 @@ footer a:hover {
   object-fit: cover;
 }
 
-  .image-wrapper:hover img {
-    filter: blur(2px);
-    transform: scale(1.05);
+.image-wrapper:hover img {
+  filter: blur(2px);
+  transform: scale(1.05);
 }
 
 .image-label {
@@ -600,7 +600,7 @@ footer a:hover {
   text-shadow: var(--shadow);
 }
 
-.gallery-item:hover .image-label {
+  .gallery-item:hover .image-label {
   opacity: 1;
 }
 
