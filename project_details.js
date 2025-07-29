@@ -1,4 +1,5 @@
-import { API_KEY, ROOT_FOLDER_ID } from './config.js';
+const API_KEY = 'AIzaSyDH_v9G1JUD-NEkm1bnpWlbty588Kml5Hs';
+const ROOT_FOLDER_ID = '1UzmdatXkevjNC4-D_D_kL8s8BcAS8vEC';
 
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
