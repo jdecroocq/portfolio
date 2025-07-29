@@ -172,6 +172,15 @@ h4 {
   margin: 64px 0 16px 0;
 }
 
+h5 {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--color-4);
+  text-align: left;
+  line-height: 1;
+  margin: -20px 0 35px 0;
+}
+
 p {
   font-size: 18px;
   font-weight: normal;
@@ -842,48 +851,6 @@ footer a:hover {
 
 
   
-  .project-section h1 {
-    font-size: 24px;
-    color: #FFFFFF;
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: 0px;
-  }
-  
-  .project-date {
-    font-size: 14px;
-    color: #828282;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    display: block;
-  }
-
-  .project-description {
-    font-size: 18px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    text-align: justify;
-  }
-
-  .project-section h2 {
-    font-size: 18px;
-    color: #FFFFFF;
-    margin-top: 30px;
-    margin-bottom: 5px;
-  }
-
-  .project-section li {
-    font-size: 18px;
-    color: #828282;
-    margin: 0 0 5px 0;
-  }
-
-  .project-section ul {
-    list-style: disc;
-    padding-left: 20px;
-    margin: 0 0 10px 0;
-  }
-
   #videoSection {
     justify-items: center;
     width: 100%;
