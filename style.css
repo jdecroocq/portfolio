@@ -844,7 +844,7 @@ footer a:hover {
   gap: 16px;
   justify-items: center;
   width: 100%;
-  padding-bottom: /* /!\ */;
+  padding-bottom: 128px;
 }
 
 .project-image {
