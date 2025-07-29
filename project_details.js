@@ -64,12 +64,12 @@ function parseContent(raw) {
     }
   }
 
-  let html = `<h1>${getQueryParam('projectName')}</h1>`;
+  let html = `<h2>${getQueryParam('projectName')}</h2>`;
   html += date
-    ? `<span class="project-date">${date}</span>`
-    : `<span class="project-date">Date not found</span>`;
+    ? `<h5>${date}</h5>`
+    : `<h5>Date not found</h5>`;
   if (description) {
-    html += `<p class="project-description">${description}</p>`;
+    html += `<p>${description}</p>`;
   }
 
   console.log("Parsed Content HTML:", html);
