@@ -281,6 +281,27 @@ a:hover {
 
 
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+.text-panel,
+.project-video-container, 
+.project-image {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+
+
+
+
 header {
   display: flex;
   height: var(--size-header);
@@ -738,30 +759,7 @@ footer a:hover {
 
 
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-  
-.text-panel,  /* ========== /!\ ========== */ 
-.project-section, 
-.project-video-container, 
-.project-image,
-.legal-section,
-.intro,
-.overview,
-.skills,
-.software,
-.connect,
-.notfound-row{
-  animation: fadeIn 1s ease-out forwards;
-}
+
 
 
 
