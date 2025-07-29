@@ -293,6 +293,7 @@ a:hover {
 }
   
 .text-panel,
+.intro,
 .project-video-container, 
 .project-image {
   animation: fadeIn 1s ease-out forwards;
