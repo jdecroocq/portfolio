@@ -216,8 +216,7 @@ a:hover {
 .intro,
 .text-panel,
 .project-video-container,
-.project-image,
-.floating-dock {
+.project-image {
   flex: 1;
   position: relative;
   animation: fadeIn 1s ease-out forwards;
