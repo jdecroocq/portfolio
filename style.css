@@ -966,7 +966,6 @@ footer a:hover {
     backdrop-filter: var(--blur-1);
     border-radius: var(--border-radius-1);
     text-decoration: none;
-    transition: 0.2s;
     opacity: 0;
     pointer-events: none;
     z-index: 10;
