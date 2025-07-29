@@ -899,7 +899,7 @@ footer a:hover {
 .hq-button:hover {
   opacity: 1;
   pointer-events: auto;
-  background-color: var(--color-3-75);
+  background-color: var(--color-2-75);
 }
 
 .project-img:hover + .hq-button,
@@ -935,7 +935,7 @@ footer a:hover {
 }
   
 .dock-btn:hover {
-  background: var(--color-3-75);
+  background: var(--color-2-75);
 }
 
 
