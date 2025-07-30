@@ -218,6 +218,11 @@ a:hover {
   position: relative;
 }
 
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .intro,
 .text-panel,
