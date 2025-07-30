@@ -666,13 +666,6 @@ footer a:hover {
   gap: 20px;
 }
 
-@keyframes fadeInIcons {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .social-icons a {
   opacity: 0;
   transform: translateY(10px);
