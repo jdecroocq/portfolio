@@ -898,6 +898,8 @@ footer a:hover {
   z-index: 10;
   box-sizing: border-box;
   color: var(--color-icon);
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .hq-button:hover {
@@ -910,6 +912,7 @@ footer a:hover {
 .hq-button:hover {
   opacity: 1;
   pointer-events: auto;
+  transform: translateY(0);
 }
 
 .floating-dock {
