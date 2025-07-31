@@ -133,13 +133,13 @@ async function displayProjectImages() {
           <div class="img-hq-wrapper">
             <img src="${imagePath}" alt="Project Image ${index + 1}" class="project-img"/>
             <a href="${originalUrl}" target="_blank" rel="noopener noreferrer" class="hq-button" aria-label="View image in high quality">
-              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-                <g stroke="currentColor" stroke-width="2" fill="none">
-                  <polyline points="1,7 1,1 7,1"/>
-                  <polyline points="13,1 19,1 19,7"/>
-                  <polyline points="19,13 19,19 13,19"/>
-                  <polyline points="7,19 1,19 1,13"/>
-                </g>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="square" aria-hidden="true" focusable="false" role="img">
+                <path d="
+                  M1 7 V1 H7
+                  M13 1 H19 V7
+                  M19 13 V19 H13
+                  M7 19 H1 V13
+                " />
               </svg>
             </a>
           </div>
