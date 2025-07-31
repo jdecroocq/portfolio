@@ -132,14 +132,9 @@ async function displayProjectImages() {
         <div class="project-image">
           <div class="img-hq-wrapper">
             <img src="${imagePath}" alt="Project Image ${index + 1}" class="project-img"/>
-            <a href="${originalUrl}" target="_blank" rel="noopener noreferrer" class="hq-button" aria-label="View image in high quality">
+            <a href="${originalUrl}" target="_blank" rel="noopener noreferrer" class="hq-button">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter" stroke-linecap="square" aria-hidden="true" focusable="false" role="img">
-                <path d="
-                  M1 7 V1 H7
-                  M13 1 H19 V7
-                  M19 13 V19 H13
-                  M7 19 H1 V13
-                " />
+                <path d="M1 6 V1 H6 M14 1 H19 V6 M19 14 V19 H14 M6 19 H1 V14"/>
               </svg>
             </a>
           </div>
