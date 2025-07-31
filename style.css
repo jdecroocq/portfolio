@@ -943,6 +943,9 @@ footer a:hover {
   background: var(--color-2-75);
 }
 
+#dockPrevProject svg { transform: translateX(3px); }
+#dockNextProject svg { transform: translateX(-3px); }
+
 
 
 
