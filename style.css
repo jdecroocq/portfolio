@@ -513,7 +513,7 @@ footer {
 
 footer ul {
   display: flex;
-  gap: 32px;
+  gap: min(32px, 4vw);
   list-style: none;
   margin: 0;
   padding: 0;
