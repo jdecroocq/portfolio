@@ -1,9 +1,4 @@
-The following elements in this repository are not covered by the MIT License:
+This repository's source code is licensed under the MIT License, with certain elements explicitly excluded. The following assets are not covered by the MIT License: all visual assets related to the site's brand identity, including logos, custom icons, and original illustrations, as well as any logos of third-party software or social networks that have been adapted or recreated for this site's visual style.
 
-- All visual assets related to the site's brand identity, including logos, custom icons, and original illustrations.
-- Logos of third-party software or social networks that have been adapted or recreated for this site's visual style.
-
-This applies to both embedded assets and external image files.
-
-These assets are copyright © 2025 Jean Decroocq, all rights reserved.
-They may not be copied, modified, or reused without explicit permission.
+This exclusion applies to assets embedded directly in the source code as well as those referenced from external files.
+These assets are copyright © 2025, all rights reserved. They may not be copied, modified, or reused without explicit permission.
