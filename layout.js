@@ -9,14 +9,12 @@ const headerHTML = `
         </svg>
       </a>
     </div>
-
     <button class="burger" aria-label="Toggle menu">
       <span class="bar bar1"></span>
       <span class="bar bar2"></span>
       <span class="bar bar3"></span>
     </button>
   </div>
-
   <nav>
     <ul class="nav-links">
       <li><a href="/portfolio/">Projects</a></li>
@@ -40,15 +38,11 @@ const footerHTML = `
 
 (function () {
   const placeholder = document.getElementById('header-placeholder');
-  if (!placeholder) {
-    console.warn('Header placeholder not found.');
-    return;
-  }
+  if (!placeholder) return;
   placeholder.innerHTML = headerHTML;
 
   const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll('nav ul.nav-links a');
-  navLinks.forEach(link => {
+  document.querySelectorAll('nav ul.nav-links a').forEach(link => {
     if (link.getAttribute('href') === currentPath) {
       link.classList.add('active');
     } else {
@@ -56,72 +50,61 @@ const footerHTML = `
     }
   });
 
-  function initBurgerMenu() {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('header nav');
-    const header = document.querySelector('header');
-    if (!burger || !nav || !header) return;
-    let overlay = document.getElementById('dark-overlay');
-    if (!overlay) {
-      overlay = document.createElement('div');
-      overlay.id = 'dark-overlay';
-      document.body.appendChild(overlay);
-    }
-    function closeMenu() {
-      nav.classList.remove('show');
-      burger.classList.remove('open');
-      overlay.classList.remove('active');
-      header.classList.remove('open');
-    }
-    burger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      nav.classList.toggle('show');
-      burger.classList.toggle('open');
-      overlay.classList.toggle('active');
-      header.classList.toggle('open');
-    });
-    overlay.addEventListener('click', () => {
-      if (header.classList.contains('open')) {
-        closeMenu();
-      }
-    });
-    document.addEventListener('click', (e) => {
-      const clickedInsideHeader = header.contains(e.target);
-      if (!clickedInsideHeader && header.classList.contains('open')) {
-        closeMenu();
-      }
-    });
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 700 && burger.classList.contains('open')) {
-        closeMenu();
-      }
-    });
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('header nav');
+  const header = document.querySelector('header');
+  if (!burger || !nav || !header) return;
+
+  let overlay = document.getElementById('dark-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'dark-overlay';
+    document.body.appendChild(overlay);
   }
-  initBurgerMenu();
+
+  function closeMenu() {
+    nav.classList.remove('show');
+    burger.classList.remove('open');
+    overlay.classList.remove('active');
+    header.classList.remove('open');
+  }
+
+  burger.addEventListener('click', e => {
+    e.stopPropagation();
+    nav.classList.toggle('show');
+    burger.classList.toggle('open');
+    overlay.classList.toggle('active');
+    header.classList.toggle('open');
+  });
+
+  overlay.addEventListener('click', () => {
+    if (header.classList.contains('open')) closeMenu();
+  });
+
+  document.addEventListener('click', e => {
+    if (!header.contains(e.target) && header.classList.contains('open')) closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 700 && burger.classList.contains('open')) closeMenu();
+  });
 })();
 
 (function () {
   const placeholder = document.getElementById('footer-placeholder');
-  if (!placeholder) {
-    console.warn('Footer placeholder not found.');
-    return;
-  }
+  if (!placeholder) return;
   placeholder.innerHTML = footerHTML;
 
   const yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const CACHE_KEY = 'portfolio_latest_release';
   const CACHE_TS_KEY = 'portfolio_latest_release_ts';
-  const CACHE_DURATION_MS = 60 * 60 * 1000;
+  const CACHE_DURATION_MS = 15 * 60 * 1000;
 
   function applyVersion(tag) {
     const versionEl = document.getElementById('build-version');
-    if (versionEl && tag) {
-      versionEl.textContent = 'Build ' + tag;
-    }
+    if (versionEl && tag) versionEl.textContent = 'Build ' + tag;
   }
 
   const now = Date.now();
@@ -142,8 +125,7 @@ const footerHTML = `
           try {
             localStorage.setItem(CACHE_KEY, data.tag_name);
             localStorage.setItem(CACHE_TS_KEY, String(Date.now()));
-          } catch (_) {
-          }
+          } catch (_) {}
         }
       })
       .catch(err => {
