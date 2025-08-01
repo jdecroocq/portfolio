@@ -1,8 +1,9 @@
-The following elements in this repository are NOT covered by the MIT License:
+The following elements in this repository are not covered by the MIT License:
 
-- Logos
-- Custom icons
-- SVG illustrations used as part of the site's visual identity
+- All visual assets related to the site's brand identity, including logos, custom icons, and original illustrations.
+- Logos of third-party software or social networks that have been adapted or recreated for this site's visual style.
+
+This applies to both embedded assets and external image files.
 
 These assets are copyright © 2025 Jean Decroocq, all rights reserved.
 They may not be copied, modified, or reused without explicit permission.
