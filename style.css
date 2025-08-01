@@ -94,7 +94,7 @@ body {
 
   --color-icon: var(--color-5);
   --color-logo: var(--color-5);
-  --color-illustration: var(--color-1);
+  --color-illustration: var(--color-2);
   --color-border: var(--color-3);
 
   --blur-1: blur(16px);
@@ -187,7 +187,7 @@ h5 {
   color: var(--color-4);
   text-align: left;
   line-height: 1;
-  margin: -20px 0 35px 0;
+  margin: -15px 0 20px 0;
 }
 
 p {
