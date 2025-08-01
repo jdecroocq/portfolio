@@ -1,4 +1,12 @@
-This repository's source code is licensed under the MIT License, with certain elements explicitly excluded. The following assets are not covered by the MIT License: all visual assets related to the site's brand identity, including logos, custom icons, and original illustrations, as well as any logos of third-party software or social networks that have been adapted or recreated for this site's visual style.
+LICENSE EXCLUSIONS AND COPYRIGHT NOTICE
 
-This exclusion applies to assets embedded directly in the source code as well as those referenced from external files.
-These assets are copyright © 2025, all rights reserved. They may not be copied, modified, or reused without explicit permission.
+This repository's source code is distributed under the terms of the MIT License. However, certain elements are explicitly excluded from this license and are subject to their own copyright.
+
+The following assets are the exclusive property of the copyright holder and are not covered by the MIT License:
+
+- All visual assets related to the site's brand identity, including logos, custom icons, and original illustrations.
+- Any logos of third-party software or social networks that have been adapted or recreated for this site's specific visual style.
+
+This copyright applies to all formats of these assets, whether they are embedded directly within the source code or referenced as external files.
+
+These assets are copyright © 2025, all rights reserved. They may not be copied, modified, or reused without the explicit written permission of the copyright holder.
