@@ -1,10 +1,13 @@
 <footer>
-  <div class="footer-text">
-    <a href="/portfolio/legal_information">Legal Information</a>
-  </div>
-  <div class="footer-text">
-    <a href="https://github.com/jdecroocq/portfolio" target="_blank" rel="noopener noreferrer">
+  <ul>
+    <li><a href="/portfolio/legal_information">Legal Information</a></li>
+    <li><a href="https://github.com/jdecroocq/portfolio" target="_blank" rel="noopener noreferrer">
       <span id="build-version"></span>
-    </a>
-  </div>
+    </a></li>
+    <li><span aria-label="Copyright">©</span> <span id="year"></span> Jean Decroocq</li>
+  </ul>
 </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
