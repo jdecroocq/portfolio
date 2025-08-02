@@ -1,10 +1,13 @@
-This repository's source code is distributed under the terms of the MIT License. However, certain elements are explicitly excluded from this license and are subject to their own copyright.
+This repository's source code is distributed under the terms of the MIT License. However, certain elements are explicitly excluded from this license and are subject to their own copyright or trademark rights.
 
-The following assets are the exclusive property of the copyright holder and are not covered by the MIT License:
+The following assets are not covered by the MIT License:
 
-- All visual assets related to the site's brand identity, including logos, custom icons, and original illustrations.
-- Any logos of third-party software or social networks that have been adapted or recreated for this site's specific visual style.
+- All visual assets related to the site's brand identity, including custom logos, original icons, and unique illustrations.  
+- Any logos or brand marks of third-party software, services, or social networks, whether used as-is or adapted/stylized for the website’s design.  
+- The font “Orkney”, licensed under the SIL Open Font License, Version 1.1 (see `fonts/` directory for full license text).
 
-This copyright applies to all formats of these assets, whether they are embedded directly within the source code or referenced as external files.
+These assets are either:  
+- © 2025, all rights reserved to the site owner, or  
+- the property of their respective copyright/trademark holders.
 
-These assets are copyright © 2025, all rights reserved. They may not be copied, modified, or reused without the explicit written permission of the copyright holder.
+They may not be copied, modified, or reused without the explicit written permission of the relevant rights holder, unless otherwise permitted by the applicable license.
