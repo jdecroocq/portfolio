@@ -221,37 +221,18 @@ a:hover {
 
 
 
+
+
 .page {
   flex: 1;
   position: relative;
 }
 
+
 .center {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.section {
-  margin: 100px 0 0 0;
-}
-
-.intro,
-.text-panel,
-.project-video-container,
-.project-image {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 
@@ -266,6 +247,12 @@ a:hover {
   max-width: calc(100% -  12vw);
   margin: max(64px, 5vw) auto;
 }
+
+
+.section {
+  margin: max(64px, 5vw) 0;
+}
+
 
 
 #loading {
@@ -321,6 +308,25 @@ a:hover {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+
+.intro,
+.text-panel,
+.project-video-container,
+.project-image {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
