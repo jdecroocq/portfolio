@@ -233,7 +233,7 @@ a:hover {
 }
 
 
-.text-panel {
+.panel {
   text-align: justify;
   width: 1024px;
   max-width: calc(100% -  12vw);
@@ -304,7 +304,7 @@ a:hover {
 
 
 .intro,
-.text-panel,
+.panel,
 .project-video-container,
 .project-image {
   animation: fadeIn 1s ease-out forwards;
