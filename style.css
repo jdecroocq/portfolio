@@ -176,6 +176,7 @@ h4 {
 h4::before {
   content: "✦";
   margin-right: 0.5rem;
+  color: var(--color-6);
 }
 
 h5 {
