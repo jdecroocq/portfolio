@@ -85,8 +85,7 @@ body {
 
   
 
-  --size-base: 64px;
-  --size-header: var(--size-base);
+  --size-header: 64px;
   --size-illustration: 400px;
   --size-border: 1px;
   --size-viewport-h: calc(75vh - 40px);
@@ -525,7 +524,7 @@ footer {
   display: flex;
   align-items: center;
   padding: var(--size-padding-layout);
-  min-height: var(--size-base);
+  min-height: 64px;
 }
 
 footer ul {
@@ -656,7 +655,7 @@ footer a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: var(--size-base);
+  padding-top: 64px;
 }
 
 .logo-about-me {
@@ -876,7 +875,7 @@ footer a:hover {
   gap: 16px;
   justify-items: center;
   width: 100%;
-  padding-bottom: var(--size-base);
+  padding-bottom: 64px;
 }
 
 .project-image {
@@ -964,8 +963,8 @@ footer a:hover {
   background: var(--color-0-75);
   color: var(--color-icon);
   outline: none;
-  width: var(--size-base);
-  height: var(--size-base);
+  width: 64px;
+  height: 64px;
   position: relative;
 }
   
