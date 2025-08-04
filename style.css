@@ -930,6 +930,10 @@ footer a:hover {
   transform: translateY(0);
 }
 
+.floating-dock.bumped {
+  bottom: 100px;
+}
+
 .floating-dock {
   position: fixed;
   left: 50%;
