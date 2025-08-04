@@ -942,6 +942,7 @@ footer a:hover {
   box-shadow: var(--shadow);
   border-radius: var(--border-radius-2);
   overflow: hidden;
+  transition: transform 0.2s ease;
 }
   
 .dock-btn {
