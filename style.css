@@ -658,7 +658,7 @@ footer a:hover {
 }
 
 .name {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--color-5);
@@ -668,7 +668,7 @@ footer a:hover {
 }
 
 .title {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--color-5);
@@ -678,7 +678,7 @@ footer a:hover {
 }
 
 .location {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--color-4);
   text-align: left;
   line-height: 1.2;
