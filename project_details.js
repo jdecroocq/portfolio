@@ -258,17 +258,13 @@ window.addEventListener('DOMContentLoaded', async () => {
   });
 
 
-
 function updateFloatingDockPosition() {
   const dock = document.querySelector('.floating-dock');
   const footer = document.getElementById('footer');
   if (!dock || !footer) return;
 
-  const dockRect = dock.getBoundingClientRect();
-  const footerRect = footer.getBoundingClientRect();
-
   const minSpace = 0;
-
+  const footerRect = footer.getBoundingClientRect();
   const overlap = window.innerHeight - footerRect.top + minSpace;
 
   if (overlap > 0) {
@@ -280,5 +276,10 @@ function updateFloatingDockPosition() {
 
 window.addEventListener('scroll', updateFloatingDockPosition);
 window.addEventListener('resize', updateFloatingDockPosition);
-
 window.addEventListener('DOMContentLoaded', updateFloatingDockPosition);
+
+const mainContent = document.getElementById('mainContent');
+if (mainContent) {
+  const resizeObserver = new ResizeObserver(updateFloatingDockPosition);
+  resizeObserver.observe(mainContent);
+}
