@@ -24,7 +24,7 @@ const headerHTML = `
 </header>`;
 
 const footerHTML = `
-<footer>
+<footer id="footer">
   <ul>
     <li><a href="/portfolio/legal_information">Legal Information</a></li>
     <li>
