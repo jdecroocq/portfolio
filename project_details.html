@@ -9,6 +9,51 @@
   <script src="layout.js" defer></script>
   <script type="module" src="project_details.js"></script>
 </head>
+<script>
+(function() {
+  const dock = document.querySelector('.floating-dock');
+  const footer = document.getElementById('footer-placeholder');
+  if (!dock || !footer) return;
+
+  let ticking = false;
+
+  function updateDockOffset() {
+    ticking = false;
+
+    const dockRect = dock.getBoundingClientRect();
+    const footerRect = footer.getBoundingClientRect();
+
+    // Hauteur visible de la dock
+    const dockHeight = dockRect.height;
+
+    // Si la dock recouvre le footer (i.e. son bas dépasse dans le footer)
+    const overlap = (window.innerHeight - footerRect.top); // >0 si footer monte sous la dock
+
+    if (overlap > 0) {
+      // On remonte la dock juste assez pour ne plus toucher : 
+      // translateY négatif pour la déplacer vers le haut
+      const neededShift = Math.min(overlap + 8, dockHeight + 32); // +8px de marge
+      dock.style.transform = `translateX(-50%) translateY(-${neededShift}px)`;
+    } else {
+      // Retour à la position normale
+      dock.style.transform = 'translateX(-50%) translateY(0)';
+    }
+  }
+
+  function onScrollOrResize() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateDockOffset);
+    }
+  }
+
+  window.addEventListener('scroll', onScrollOrResize, { passive: true });
+  window.addEventListener('resize', onScrollOrResize);
+
+  // initial check
+  requestAnimationFrame(updateDockOffset);
+})();
+</script>
 <body>
   <div id="header-placeholder"></div>
   <main class="page">
