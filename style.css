@@ -934,7 +934,8 @@ footer a:hover {
   position: fixed;
   left: 50%;
   bottom: 32px;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(0);
+  transition: transform 0.8s ease;
   display: flex;
   z-index: 1200;
   gap: 0;
