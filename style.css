@@ -930,6 +930,10 @@ footer a:hover {
   transform: translateY(0);
 }
 
+.footer-hidden {
+  display: none !important;
+}
+
 .floating-dock {
   position: fixed;
   left: 50%;
