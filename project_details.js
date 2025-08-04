@@ -256,3 +256,36 @@ window.addEventListener('DOMContentLoaded', async () => {
   window.addEventListener('DOMContentLoaded', async () => {
       await updateDockNavigation();
   });
+
+
+// === Floating Dock Avoid Footer ===
+
+function updateFloatingDockPosition() {
+  const dock = document.querySelector('.floating-dock');
+  const footer = document.getElementById('footer');
+  if (!dock || !footer) return;
+
+  const dockRect = dock.getBoundingClientRect();
+  const footerRect = footer.getBoundingClientRect();
+
+  // Espace minimal désiré entre le dock et le footer (en px)
+  const minSpace = 24;
+
+  // Calcul : distance entre le bas du viewport et le top du footer
+  const overlap = window.innerHeight - footerRect.top + minSpace;
+
+  if (overlap > 0) {
+    // Le dock chevauche le footer, on le remonte
+    dock.style.transform = `translateX(-50%) translateY(-${overlap}px)`;
+  } else {
+    // Position normale
+    dock.style.transform = 'translateX(-50%) translateY(0)';
+  }
+}
+
+// On écoute le scroll et le resize
+window.addEventListener('scroll', updateFloatingDockPosition);
+window.addEventListener('resize', updateFloatingDockPosition);
+
+// On exécute au chargement aussi
+window.addEventListener('DOMContentLoaded', updateFloatingDockPosition);
