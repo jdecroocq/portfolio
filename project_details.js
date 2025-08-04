@@ -256,3 +256,82 @@ window.addEventListener('DOMContentLoaded', async () => {
   window.addEventListener('DOMContentLoaded', async () => {
       await updateDockNavigation();
   });
+
+
+function initDockAvoidFooter(options = {}) {
+  const minGap = options.minGap ?? 16; // px, espace minimal entre dock et footer
+  const defaultBottom = 32; // la valeur de base en px que tu avais dans le CSS
+  const dock = document.querySelector('.floating-dock');
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+
+  if (!dock) return;
+
+  let footer = null;
+  let scheduled = false;
+
+  // fonction qui fait le calcul et ajuste le bottom
+  function adjustDock() {
+    scheduled = false;
+    if (!footer) {
+      // rien à faire si footer pas encore présent
+      dock.style.bottom = defaultBottom + 'px';
+      return;
+    }
+    const dockRect = dock.getBoundingClientRect();
+    const footerRect = footer.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+
+    // distance entre le bas de la fenêtre et le début du footer
+    const distanceFooterTopToViewportBottom = viewportHeight - footerRect.top;
+
+    if (distanceFooterTopToViewportBottom > 0) {
+      // potentiel chevauchement : combien ça empiète + minGap
+      const neededLift = distanceFooterTopToViewportBottom + minGap;
+      // on remonte le dock de façon à garder minGap
+      dock.style.bottom = neededLift + 'px';
+    } else {
+      // pas de footer visible / chevauchement : position normale
+      dock.style.bottom = defaultBottom + 'px';
+    }
+  }
+
+  // throttle via requestAnimationFrame
+  function scheduleAdjust() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(adjustDock);
+  }
+
+  // Observer pour détecter quand le footer réel est injecté dans le placeholder
+  const mo = new MutationObserver((mutations) => {
+    if (!footer) {
+      // on cherche un descendant qui ressemble à un footer
+      const possible = footerPlaceholder.querySelector('footer') || footerPlaceholder.firstElementChild;
+      if (possible) {
+        footer = possible;
+        // faire un ajustement initial
+        scheduleAdjust();
+      }
+    }
+  });
+
+  mo.observe(footerPlaceholder, { childList: true, subtree: true });
+
+  // Si le footer est déjà dans le DOM au moment de l'appel
+  const existingFooter = footerPlaceholder.querySelector('footer') || footerPlaceholder.firstElementChild;
+  if (existingFooter) {
+    footer = existingFooter;
+  }
+
+  // événements pour recalculer (scroll/resize)
+  window.addEventListener('scroll', scheduleAdjust, { passive: true });
+  window.addEventListener('resize', scheduleAdjust);
+
+  // initial
+  scheduleAdjust();
+}
+
+// initialisation : après que le DOM et les footers soient (potentiellement) montés
+document.addEventListener('DOMContentLoaded', () => {
+  initDockAvoidFooter({ minGap: 16 });
+});
