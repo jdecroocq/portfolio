@@ -9,6 +9,29 @@
   <script src="layout.js" defer></script>
   <script type="module" src="project_details.js"></script>
 </head>
+  
+<script>
+  const dock = document.querySelector('.floating-dock');
+  const footer = document.getElementById('footer-placeholder');
+
+  if (dock && footer && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          dock.classList.add('bumped');
+        } else {
+          dock.classList.remove('bumped');
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0,
+    });
+
+    observer.observe(footer);
+  }
+</script>
+  
 <body>
   <div id="header-placeholder"></div>
   <main class="page">
