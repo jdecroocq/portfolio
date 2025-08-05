@@ -9,7 +9,7 @@ const headerHTML = `
         </svg>
       </a>
     </div>
-    <button class="theme-switch" type="button">
+    <button class="theme-switch nav-link" type="button">
       <span class="switch-track">
         <span class="switch-thumb"></span>
       </span>
@@ -22,13 +22,12 @@ const headerHTML = `
   </div>
 <nav>
   <ul class="nav-links">
-    <li><a href="/portfolio/">Projects</a></li>
-    <li><a href="/portfolio/about_me">About me</a></li>
+    <li><a class="nav-link" href="/portfolio/">Projects</a></li>
+    <li><a class="nav-link" href="/portfolio/about_me">About me</a></li>
   </ul>
 </nav>
-</header>`;
+</header>
 
-const footerHTML = `
 <footer id="footer">
   <ul>
     <li><a href="/portfolio/legal_information">Legal Information</a></li>
