@@ -26,7 +26,7 @@ const headerHTML = `
     <li><a class="nav-link" href="/portfolio/about_me">About me</a></li>
   </ul>
 </nav>
-</header>`
+</header>`;
 
 const headerHTML = `
 <footer id="footer">
