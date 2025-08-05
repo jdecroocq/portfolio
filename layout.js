@@ -9,7 +9,11 @@ const headerHTML = `
         </svg>
       </a>
     </div>
-    <button class="theme-switch" type="button">o</button>
+    <button class="theme-switch" type="button">
+      <span class="switch-track">
+        <span class="switch-thumb"></span>
+      </span>
+    </button>
     <button class="burger">
       <span class="bar bar1"></span>
       <span class="bar bar2"></span>
