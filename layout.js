@@ -14,7 +14,6 @@ const headerHTML = `
       <span class="bar bar2"></span>
       <span class="bar bar3"></span>
     </button>
-    <button class="theme-toggle" type="button">Thème</button>
   </div>
 <nav>
   <ul class="nav-links">
