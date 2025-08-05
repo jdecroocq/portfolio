@@ -42,6 +42,17 @@ const footerHTML = `
   if (!placeholder) return;
   placeholder.innerHTML = headerHTML;
 
+    // Sélectionne le bouton (après avoir ajouté le header dans la page)
+  const themeBtn = document.querySelector('.theme-switch');
+  const body = document.body;
+  
+  // Vérifie que le bouton existe avant d'ajouter un événement
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      body.classList.toggle('light-mode');
+    });
+  }
+
   const currentPath = window.location.pathname;
   document.querySelectorAll('nav ul.nav-links a').forEach(link => {
     if (link.getAttribute('href') === currentPath) {
@@ -88,17 +99,6 @@ const footerHTML = `
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 700 && burger.classList.contains('open')) closeMenu();
-  });
-})();
-
-(function () {
-  const themeBtn = document.querySelector('.theme-switch');
-  const body = document.body;
-
-  if (!themeBtn) return;
-
-  themeBtn.addEventListener('click', function () {
-    body.classList.toggle('light-mode');
   });
 })();
 
