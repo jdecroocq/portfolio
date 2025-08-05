@@ -933,7 +933,7 @@ footer a:hover {
 .floating-dock {
   position: fixed;
   left: 50%;
-  bottom: 32px;
+  bottom: 24px;
   transform: translateX(-50%) translateY(0);
   display: flex;
   z-index: 1200;
@@ -943,6 +943,12 @@ footer a:hover {
   border-radius: var(--border-radius-2);
   overflow: hidden;
   transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  . floating-dock {
+     bottom: 32px;
+  }
 }
   
 .dock-btn {
