@@ -1,31 +1,22 @@
 const headerHTML = `
 <header>
   <div class="top-bar">
-    <div class="logo">
-      <a href="/portfolio/">
-        <svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-          <path fill="currentColor" d="m128 35.624 80 46.188v92.376l-80 46.188-80-46.188v-45.95l12 3.75v35.272l68 39.26 68-39.26V88.74l-68-39.26-68 39.26v24.499l-12-2.062V81.812z"/>
-          <path fill="currentColor" d="m0 108 128 22 63-10.828v9.141L128 148zm213 7.391L256 108l-43 13.437z"/>
-        </svg>
-      </a>
-    </div>
-    <button class="theme-switch nav-link" type="button">
-      <span class="switch-track">
-        <span class="switch-thumb"></span>
-      </span>
+    <div class="logo">...</div>
+    <button class="nav-action theme-switch">
+      <span class="switch-track"><span class="switch-thumb"></span></span>
     </button>
-    <button class="burger">
+    <button class="burger" aria-label="Menu">
       <span class="bar bar1"></span>
       <span class="bar bar2"></span>
       <span class="bar bar3"></span>
     </button>
   </div>
-<nav>
-  <ul class="nav-links">
-    <li><a class="nav-link" href="/portfolio/">Projects</a></li>
-    <li><a class="nav-link" href="/portfolio/about_me">About me</a></li>
-  </ul>
-</nav>
+  <nav>
+    <ul class="nav-links">
+      <li><a class="nav-action" href="/portfolio/">Projects</a></li>
+      <li><a class="nav-action" href="/portfolio/about_me">About me</a></li>
+    </ul>
+  </nav>
 </header>`;
 
 const footerHTML = `
