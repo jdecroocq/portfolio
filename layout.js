@@ -18,9 +18,6 @@ const headerHTML = `
   </div>
 <nav>
   <ul class="nav-links">
-    <li class="theme-list-item">
-      <button class="theme-toggle" type="button">o</button>
-    </li>
     <li><a href="/portfolio/">Projects</a></li>
     <li><a href="/portfolio/about_me">About me</a></li>
   </ul>
