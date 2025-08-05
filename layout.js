@@ -17,6 +17,11 @@ const headerHTML = `
   </div>
   <nav>
     <ul class="nav-links">
+      <li>
+        <span class="theme-switcher" tabindex="0" title="Switch theme">
+          <svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="currentColor"/></svg>
+        </span>
+      </li>
       <li><a href="/portfolio/">Projects</a></li>
       <li><a href="/portfolio/about_me">About me</a></li>
     </ul>
@@ -88,6 +93,42 @@ const footerHTML = `
   window.addEventListener('resize', () => {
     if (window.innerWidth > 700 && burger.classList.contains('open')) closeMenu();
   });
+  
+  // ---- Ajout du switcher de thème ----
+  const THEME_KEY = 'portfolio_theme_mode';
+  const body = document.body;
+  const themeSwitcher = document.querySelector('.theme-switcher');
+
+  // Fonction pour appliquer le thème
+  function applyTheme(mode) {
+    if (mode === 'light') {
+      body.classList.add('light-mode');
+    } else {
+      body.classList.remove('light-mode');
+    }
+  }
+
+  // Charger la préférence au démarrage
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  applyTheme(savedTheme === 'light' ? 'light' : 'dark'); // sombre par défaut
+
+  // Toggle au clic
+  if (themeSwitcher) {
+    themeSwitcher.addEventListener('click', () => {
+      const isLight = body.classList.contains('light-mode');
+      const newMode = isLight ? 'dark' : 'light';
+      applyTheme(newMode);
+      localStorage.setItem(THEME_KEY, newMode);
+    });
+
+    // Accessibilité au clavier (entrée ou espace)
+    themeSwitcher.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        themeSwitcher.click();
+      }
+    });
+  }
 })();
 
 (function () {
