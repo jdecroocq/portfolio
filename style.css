@@ -512,7 +512,7 @@ header nav ul li a:hover {
 
 
 footer {
-  background: var(--color-0);
+  background-color: var(--color-0);
   border-top: var(--border);
   z-index: 500;
   display: flex;
