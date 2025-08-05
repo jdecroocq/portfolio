@@ -42,11 +42,9 @@ const footerHTML = `
   if (!placeholder) return;
   placeholder.innerHTML = headerHTML;
 
-    // Sélectionne le bouton (après avoir ajouté le header dans la page)
   const themeBtn = document.querySelector('.theme-switch');
   const body = document.body;
-  
-  // Vérifie que le bouton existe avant d'ajouter un événement
+
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
       body.classList.toggle('light-mode');
