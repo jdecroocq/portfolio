@@ -28,7 +28,8 @@ const headerHTML = `
 </nav>
 </header>`
 
-`<footer id="footer">
+const headerHTML = `
+<footer id="footer">
   <ul>
     <li><a href="/portfolio/legal_information">Legal Information</a></li>
     <li>
