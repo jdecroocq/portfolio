@@ -44,11 +44,24 @@ const footerHTML = `
 
   const themeBtn = document.querySelector('.theme-switch');
   const body = document.body;
-
+  
+  // 1. Appliquer la préférence enregistrée au chargement
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-mode');
+  } else {
+    body.classList.remove('light-mode');
+  }
+  
+  // 2. Au clic, basculer ET sauvegarder
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
       body.classList.toggle('light-mode');
-      console.log('Le bouton thème fonctionne !');
+      if (body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
     });
   }
 
