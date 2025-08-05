@@ -9,6 +9,7 @@ const headerHTML = `
         </svg>
       </a>
     </div>
+    <button class="theme-toggle-mobile" type="button">o</button>
     <button class="burger">
       <span class="bar bar1"></span>
       <span class="bar bar2"></span>
