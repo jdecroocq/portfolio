@@ -28,7 +28,7 @@ const headerHTML = `
 </nav>
 </header>`;
 
-const headerHTML = `
+const footerHTML = `
 <footer id="footer">
   <ul>
     <li><a href="/portfolio/legal_information">Legal Information</a></li>
