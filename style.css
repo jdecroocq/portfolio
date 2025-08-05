@@ -28,7 +28,6 @@ body {
 
 
 
-
   
   --color-0-rgb: 0, 0, 0;
   --color-1-rgb: 10, 10, 10;
@@ -116,8 +115,6 @@ body {
   --number-nav: 2;
 }
 
-
-
 body.light-mode {
   --color-0-rgb: 255, 255, 255;
   --color-1-rgb: 245, 245, 245;
@@ -130,6 +127,10 @@ body.light-mode {
 }
 
 
+
+* {
+  transition: 0.2s;
+}
 
 
 
