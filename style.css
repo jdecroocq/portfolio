@@ -460,6 +460,47 @@ header nav ul li a:hover {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--color-5);
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 16px;
+  height: var(--size-header);
+  line-height: var(--size-header);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  color: var(--color-6);
+  outline: none;
+}
+
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-5);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+.theme-toggle:hover::after {
+  transform: scaleX(1);
+}
+.theme-toggle:not(:hover)::after {
+  transform-origin: right;
+}
+
 @media (max-width: 768px) {
   .burger {
     display: block;
@@ -504,6 +545,21 @@ header nav ul li a:hover {
 
   header nav ul li a::after {
     bottom: -8px;
+  }
+
+  .theme-list-item {
+    display: none;
+  }
+  .theme-toggle {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 4vw;
+    z-index: 3;
+  }
+  .top-bar {
+    position: relative;
   }
 }
 
