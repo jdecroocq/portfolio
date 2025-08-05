@@ -48,6 +48,7 @@ const footerHTML = `
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
       body.classList.toggle('light-mode');
+      console.log('Le bouton thème fonctionne !');
     });
   }
 
