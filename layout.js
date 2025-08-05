@@ -9,11 +9,12 @@ const headerHTML = `
         </svg>
       </a>
     </div>
-    <button class="burger" aria-label="Toggle menu">
+    <button class="burger">
       <span class="bar bar1"></span>
       <span class="bar bar2"></span>
       <span class="bar bar3"></span>
     </button>
+    <button class="theme-toggle" type="button">Thème</button>
   </div>
   <nav>
     <ul class="nav-links">
