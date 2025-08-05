@@ -269,7 +269,7 @@ a:hover {
   text-decoration: none !important;
   font-weight: bold;
   line-height: 1;
-  border: 1px solid #000; /* === /!\ === */
+  border: 1px solid var(--color-0);
   box-sizing: border-box;
   margin: 16px 0 0 0;
 }
@@ -303,7 +303,6 @@ a:hover {
 }
 
 
-.intro,
 .panel,
 .project-video-container,
 .project-image {
@@ -513,7 +512,7 @@ header nav ul li a:hover {
 
 
 footer {
-  background-color: var(--color-0);
+  background: var(--color-0);
   border-top: var(--border);
   z-index: 500;
   display: flex;
@@ -626,7 +625,7 @@ footer a:hover {
   bottom: 3%;
   left: 5%;
   right: 5%;
-  color: var(--color-5);
+  color: white;
   font-weight: bold;
   opacity: 0;
   transition: opacity 0.2s ease;
