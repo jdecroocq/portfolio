@@ -95,6 +95,17 @@ const footerHTML = `
 })();
 
 (function () {
+  const themeBtn = document.querySelector('.theme-switch');
+  const body = document.body;
+
+  if (!themeBtn) return;
+
+  themeBtn.addEventListener('click', function () {
+    body.classList.toggle('light-mode');
+  });
+})();
+
+(function () {
   const placeholder = document.getElementById('footer-placeholder');
   if (!placeholder) return;
   placeholder.innerHTML = footerHTML;
