@@ -984,7 +984,7 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-  . floating-dock {
+  .floating-dock {
      bottom: 32px;
   }
 }
