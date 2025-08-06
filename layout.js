@@ -1,6 +1,6 @@
 const headerHTML = `
 <header>
-  <div class="top-bar">
+  <div class="header-container">
         <div class="logo">
       <a href="/portfolio/">
         <svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
