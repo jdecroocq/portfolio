@@ -342,7 +342,7 @@ header {
   overflow: clip;
 }
 
-.top-bar {
+.header-container {
   display: flex;
   align-items: center;
   height: var(--size-header);
