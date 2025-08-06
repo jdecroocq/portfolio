@@ -462,7 +462,7 @@ header nav ul li a:hover {
 .theme-switch {
   border: none;
   background: none;
-  padding: 0;
+  padding: 0 0 0 20px;
   cursor: pointer;
   outline: none;
   display: flex;
@@ -471,8 +471,8 @@ header nav ul li a:hover {
 }
 
 .switch-track {
-  width: 40px;
-  height: 18px;
+  width: 30px;
+  height: 15px;
   border-radius: 50px;
   border: 2px solid var(--color-5);
   position: relative;
@@ -483,14 +483,14 @@ header nav ul li a:hover {
 }
 
 .switch-thumb {
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: var(--color-5);
   position: absolute;
   left: 2px;
   top: 2px;
-  transition: left 0.3s cubic-bezier(0.02, 0.5, 0.34, 1.37);
+  transition: left 0.3s cubic-bezier(0.69, 0.38, 0.07, 1.42);
   box-shadow: none;
 }
 
