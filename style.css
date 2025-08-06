@@ -494,13 +494,8 @@ header nav ul li a:hover {
   box-shadow: none;
 }
 
-body.light-mode .switch-track {
-  border-color: var(--color-5);
-}
-
 body.light-mode .switch-thumb {
   left: 17px;
-  background: var(--color-5);
 }
 
 
