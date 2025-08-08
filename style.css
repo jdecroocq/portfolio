@@ -504,7 +504,7 @@ body.light-mode .switch-thumb {
     display: none;
   }
 
-  .action-button[aria-label="Menu"] {
+  .burger {
     display: flex;
   }
 
