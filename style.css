@@ -285,7 +285,7 @@ a:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(0 0 0 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 4;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
