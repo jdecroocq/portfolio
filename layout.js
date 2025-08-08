@@ -1,5 +1,5 @@
 const headerHTML = `
-<header class="site-header">
+<header>
   <div class="header-main">
     <a href="/portfolio/" class="header-logo">
       <svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
