@@ -480,6 +480,8 @@ body.light-mode .switch-thumb {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
+  text-decoration: none !important;
+  color: var(--color-5) !important;
 }
 
 .header-panel {
