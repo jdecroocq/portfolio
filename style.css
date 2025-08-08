@@ -354,10 +354,10 @@ header {
 }
 
 .header-separator {
-  width: 2px;
-  height: 40px;
+  width: 1px;
+  height: 38px;
   background-color: var(--color-5);
-  margin: 0 24px;
+  margin: 0 16px 0 24px;
 }
 
 .header-actions {
@@ -487,7 +487,7 @@ body.light-mode .switch-thumb {
 .header-panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.4s cubic-bezier(0.13, 0.38, 0.46, 0.86);
 }
 
 .nav-mobile {
@@ -495,7 +495,7 @@ body.light-mode .switch-thumb {
   flex-direction: column;
   align-items: flex-end;
   gap: 24px;
-  padding: 16px 4vw 24px;
+  padding: 16px 4vw;
 }
 
 @media (max-width: 768px) {
@@ -521,7 +521,7 @@ body.light-mode .switch-thumb {
   }
 
   header.is-open .header-panel {
-    max-height: 200px;
+    max-height: 120px;
   }
 }
 
