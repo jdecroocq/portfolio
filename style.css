@@ -409,6 +409,10 @@ a:hover {
   transform-origin: right;
 }
 
+.header-interactive.active::after {
+  transform: scaleX(1);
+}
+
 .theme-switch-icon {
   position: relative;
   width: 30px;
