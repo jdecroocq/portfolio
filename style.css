@@ -508,19 +508,19 @@ body.light-mode .switch-thumb {
     display: flex;
   }
 
-  .site-header.is-open .burger-icon .bar2 {
+  header.is-open .burger-icon .bar2 {
     transform: scaleX(0);
   }
 
-  .site-header.is-open .burger-icon .bar1 {
+  header.is-open .burger-icon .bar1 {
     transform: translateY(7px) rotate(45deg);
   }
 
-  .site-header.is-open .burger-icon .bar3 {
+  header.is-open .burger-icon .bar3 {
     transform: translateY(-7px) rotate(-45deg);
   }
 
-  .site-header.is-open .header-panel {
+  header.is-open .header-panel {
     max-height: 200px;
   }
 }
