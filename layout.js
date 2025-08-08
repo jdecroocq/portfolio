@@ -13,12 +13,12 @@ const headerHTML = `
       <a class="nav-link header-interactive" href="/portfolio/about_me">About me</a>
     </nav>
     <div class="header-actions">
-      <button class="action-button header-interactive theme-btn">
+      <button class="action-button header-interactive theme">
         <div class="theme-switch-icon">
           <span class="switch-track"><span class="switch-thumb"></span></span>
         </div>
       </button>
-      <button class="action-button header-interactive burger-btn">
+      <button class="action-button header-interactive burger">
         <div class="burger-icon">
           <span class="bar bar1"></span>
           <span class="bar bar2"></span>
@@ -43,7 +43,7 @@ const headerHTML = `
     placeholder.innerHTML = headerHTML;
   }
   
-  const themeBtn = document.querySelector('.theme-btn');
+  const themeBtn = document.querySelector('.theme');
   const body = document.body;
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
@@ -60,7 +60,7 @@ const headerHTML = `
     });
   }
   const siteHeader = document.querySelector('.site-header');
-  const burgerBtn = document.querySelector('.burger-btn');
+  const burgerBtn = document.querySelector('.burger');
   const darkOverlay = document.getElementById('dark-overlay');
 
   window.addEventListener('resize', () => {
