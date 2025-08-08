@@ -1,7 +1,7 @@
 const headerHTML = `
 <header class="site-header">
   <div class="header-main">
-    <a href="/portfolio/" class="header-logo" aria-label="Retour à l'accueil">
+    <a href="/portfolio/" class="header-logo">
       <svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
         <path fill="currentColor" d="m128 35.624 80 46.188v92.376l-80 46.188-80-46.188v-45.95l12 3.75v35.272l68 39.26 68-39.26V88.74l-68-39.26-68 39.26v24.499l-12-2.062V81.812z"/>
         <path fill="currentColor" d="m0 108 128 22 63-10.828v9.141L128 148zm213 7.391L256 108l-43 13.437z"/>
@@ -13,12 +13,12 @@ const headerHTML = `
       <a class="nav-link header-interactive" href="/portfolio/about_me">About me</a>
     </nav>
     <div class="header-actions">
-      <button class="action-button header-interactive" aria-label="Changer le thème">
+      <button class="action-button header-interactive theme-btn">
         <div class="theme-switch-icon">
           <span class="switch-track"><span class="switch-thumb"></span></span>
         </div>
       </button>
-      <button class="action-button header-interactive" aria-label="Menu">
+      <button class="action-button header-interactive burger-btn">
         <div class="burger-icon">
           <span class="bar bar1"></span>
           <span class="bar bar2"></span>
@@ -42,20 +42,8 @@ const headerHTML = `
   if (placeholder) {
     placeholder.innerHTML = headerHTML;
   }
-
-  const navLinks = document.querySelectorAll('.header-interactive');
-  const path = window.location.pathname.replace(/\/+$/, "");
-  navLinks.forEach(link => {
-    const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/+$/, "");
-    // Vérifie si le lien correspond à la page actuelle
-    if (linkPath === path) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
   
-  const themeBtn = document.querySelector('.action-button[aria-label="Changer le thème"]');
+  const themeBtn = document.querySelector('.theme-btn');
   const body = document.body;
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
@@ -72,7 +60,7 @@ const headerHTML = `
     });
   }
   const siteHeader = document.querySelector('.site-header');
-  const burgerBtn = document.querySelector('.action-button[aria-label="Menu"]');
+  const burgerBtn = document.querySelector('.burger-btn');
   const darkOverlay = document.getElementById('dark-overlay');
 
   window.addEventListener('resize', () => {
