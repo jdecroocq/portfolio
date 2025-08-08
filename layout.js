@@ -75,6 +75,12 @@ const headerHTML = `
   const burgerBtn = document.querySelector('.action-button[aria-label="Menu"]');
   const darkOverlay = document.getElementById('dark-overlay');
 
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      closeMenu();
+    }
+  });
+
   function closeMenu() {
     siteHeader.classList.remove('is-open');
     darkOverlay.classList.remove('active');
