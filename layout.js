@@ -1,30 +1,87 @@
 const headerHTML = `
-<header>
-  <div class="header-container">
-        <div class="logo">
-      <a href="/portfolio/">
-        <svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-          <path fill="currentColor" d="m128 35.624 80 46.188v92.376l-80 46.188-80-46.188v-45.95l12 3.75v35.272l68 39.26 68-39.26V88.74l-68-39.26-68 39.26v24.499l-12-2.062V81.812z"/>
-          <path fill="currentColor" d="m0 108 128 22 63-10.828v9.141L128 148zm213 7.391L256 108l-43 13.437z"/>
-        </svg>
-      </a>
+<header class="site-header">
+  <div class="header-main">
+    <a href="/portfolio/" class="header-logo" aria-label="Retour à l'accueil">
+      <svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+        <path fill="currentColor" d="m128 35.624 80 46.188v92.376l-80 46.188-80-46.188v-45.95l12 3.75v35.272l68 39.26 68-39.26V88.74l-68-39.26-68 39.26v24.499l-12-2.062V81.812z"/>
+        <path fill="currentColor" d="m0 108 128 22 63-10.828v9.141L128 148zm213 7.391L256 108l-43 13.437z"/>
+      </svg>
+    </a>
+    <div class="header-separator"></div>
+    <nav class="nav-desktop">
+      <a class="nav-link header-interactive" href="/portfolio/">Projects</a>
+      <a class="nav-link header-interactive" href="/portfolio/about_me">About me</a>
+    </nav>
+    <div class="header-actions">
+      <button class="action-button header-interactive" aria-label="Changer le thème">
+        <div class="theme-switch-icon">
+          <span class="switch-track"><span class="switch-thumb"></span></span>
+        </div>
+      </button>
+      <button class="action-button header-interactive" aria-label="Menu">
+        <div class="burger-icon">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </div>
+      </button>
     </div>
-    <button class="nav-action theme-switch">
-      <span class="switch-track"><span class="switch-thumb"></span></span>
-    </button>
-    <button class="burger" aria-label="Menu">
-      <span class="bar bar1"></span>
-      <span class="bar bar2"></span>
-      <span class="bar bar3"></span>
-    </button>
   </div>
-  <nav>
-    <ul class="nav-links">
-      <li><a class="nav-action" href="/portfolio/">Projects</a></li>
-      <li><a class="nav-action" href="/portfolio/about_me">About me</a></li>
-    </ul>
-  </nav>
-</header>`;
+  <div class="header-panel">
+    <nav class="nav-mobile">
+      <a class="nav-link" href="/portfolio/">Projects</a>
+      <a class="nav-link" href="/portfolio/about_me">About me</a>
+    </nav>
+  </div>
+</header>
+<div id="dark-overlay"></div>
+`;
+
+(function () {
+  const placeholder = document.getElementById('header-placeholder');
+  if (placeholder) {
+    placeholder.innerHTML = headerHTML;
+  }
+  const themeBtn = document.querySelector('.action-button[aria-label="Changer le thème"]');
+  const body = document.body;
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-mode');
+  }
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
+  const siteHeader = document.querySelector('.site-header');
+  const burgerBtn = document.querySelector('.action-button[aria-label="Menu"]');
+  const darkOverlay = document.getElementById('dark-overlay');
+
+  function closeMenu() {
+    siteHeader.classList.remove('is-open');
+    darkOverlay.classList.remove('active');
+  }
+
+  if (siteHeader && burgerBtn && darkOverlay) {
+    burgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      siteHeader.classList.toggle('is-open');
+      darkOverlay.classList.toggle('active');
+    });
+    darkOverlay.addEventListener('click', () => {
+      if (siteHeader.classList.contains('is-open')) {
+        closeMenu();
+      }
+    });
+  }
+})();
+
+
 
 const footerHTML = `
 <footer id="footer">
@@ -39,80 +96,6 @@ const footerHTML = `
   </ul>
 </footer>`;
 
-(function () {
-  const placeholder = document.getElementById('header-placeholder');
-  if (!placeholder) return;
-  placeholder.innerHTML = headerHTML;
-
-  const themeBtn = document.querySelector('.theme-switch');
-  const body = document.body;
-  
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    body.classList.add('light-mode');
-  } else {
-    body.classList.remove('light-mode');
-  }
-  
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function () {
-      body.classList.toggle('light-mode');
-      if (body.classList.contains('light-mode')) {
-        localStorage.setItem('theme', 'light');
-      } else {
-        localStorage.setItem('theme', 'dark');
-      }
-    });
-  }
-
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('nav ul.nav-links a').forEach(link => {
-    if (link.getAttribute('href') === currentPath) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
-
-  const burger = document.querySelector('.burger');
-  const nav = document.querySelector('header nav');
-  const header = document.querySelector('header');
-  if (!burger || !nav || !header) return;
-
-  let overlay = document.getElementById('dark-overlay');
-  if (!overlay) {
-    overlay = document.createElement('div');
-    overlay.id = 'dark-overlay';
-    document.body.appendChild(overlay);
-  }
-
-  function closeMenu() {
-    nav.classList.remove('show');
-    burger.classList.remove('open');
-    overlay.classList.remove('active');
-    header.classList.remove('open');
-  }
-
-  burger.addEventListener('click', e => {
-    e.stopPropagation();
-    nav.classList.toggle('show');
-    burger.classList.toggle('open');
-    overlay.classList.toggle('active');
-    header.classList.toggle('open');
-  });
-
-  overlay.addEventListener('click', () => {
-    if (header.classList.contains('open')) closeMenu();
-  });
-
-  document.addEventListener('click', e => {
-    if (!header.contains(e.target) && header.classList.contains('open')) closeMenu();
-  });
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 700 && burger.classList.contains('open')) closeMenu();
-  });
-})();
 
 (function () {
   const placeholder = document.getElementById('footer-placeholder');
