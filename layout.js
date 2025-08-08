@@ -59,7 +59,7 @@ const headerHTML = `
       }
     });
   }
-  const siteHeader = document.querySelector('.site-header');
+  const siteHeader = document.querySelector('header');
   const burgerBtn = document.querySelector('.burger');
   const darkOverlay = document.getElementById('dark-overlay');
 
