@@ -381,7 +381,7 @@ a:hover {
 }
 
 .header-interactive:hover {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .action-button[aria-label="Menu"] {
