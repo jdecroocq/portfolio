@@ -321,7 +321,7 @@ a:hover {
 
 
 
-.site-header {
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -384,7 +384,7 @@ a:hover {
   text-decoration: none;
 }
 
-.action-button[aria-label="Menu"] {
+.burger {
   display: none;
 }
 
