@@ -42,6 +42,19 @@ const headerHTML = `
   if (placeholder) {
     placeholder.innerHTML = headerHTML;
   }
+
+  const navLinks = document.querySelectorAll('.header-interactive');
+  const path = window.location.pathname.replace(/\/+$/, "");
+  navLinks.forEach(link => {
+    const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/+$/, "");
+    // Vérifie si le lien correspond à la page actuelle
+    if (linkPath === path) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+  
   const themeBtn = document.querySelector('.action-button[aria-label="Changer le thème"]');
   const body = document.body;
   const savedTheme = localStorage.getItem('theme');
