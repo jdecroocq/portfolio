@@ -86,23 +86,6 @@ const headerHTML = `
       }
     });
   }
-  
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function () {
-      document.documentElement.classList.add('theme-transition');
-  
-      body.classList.toggle('light-mode');
-      if (body.classList.contains('light-mode')) {
-        localStorage.setItem('theme', 'light');
-      } else {
-        localStorage.setItem('theme', 'dark');
-      }
-  
-      setTimeout(() => {
-        document.documentElement.classList.remove('theme-transition');
-      }, 200);
-    });
-  }
 })();
 
 
