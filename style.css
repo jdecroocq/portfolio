@@ -213,6 +213,11 @@ a:hover {
 
 
 
+.theme-transition * {
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, backdrop-filter 0.2s;
+}
+
+
 .page {
   flex: 1;
   position: relative;
