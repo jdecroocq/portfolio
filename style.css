@@ -84,6 +84,7 @@ body {
   
 
   --size-header: 64px;
+  --size-mh-header: 105px;
   --size-illustration: 400px;
   --size-border: 1px;
   --size-viewport-h: calc(75vh - 40px);
@@ -93,6 +94,8 @@ body {
   --color-logo: var(--color-5);
   --color-illustration: var(--color-2);
   --color-border: var(--color-3);
+
+  --animation-header: 0.4s cubic-bezier(0.13, 0.38, 0.46, 0.86);
 
   --blur-1: blur(16px);
   --blur-2: blur(32px);
@@ -287,22 +290,24 @@ a:hover {
 
 #dark-overlay {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - var(--size-header));
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 4;
   opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, height var(--animation-header) ;
   pointer-events: none;
   backdrop-filter: blur(2px);
 }
+
 
 #dark-overlay.active {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  height: calc(100vh - var(--size-header) - var(--size-mh-header));
 }
 
 
@@ -493,7 +498,7 @@ body.light-mode .switch-thumb {
 .header-panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.13, 0.38, 0.46, 0.86);
+  transition: max-height var(--animation-header);
 }
 
 .nav-mobile {
@@ -532,7 +537,7 @@ body.light-mode .switch-thumb {
   }
 
   header.is-open .header-panel {
-    max-height: 120px;
+    max-height: var(--size-mh-header);
   }
 }
 
