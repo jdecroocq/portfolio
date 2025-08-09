@@ -88,7 +88,29 @@ const headerHTML = `
   }
 })();
 
+function enableThemeTransition() {
+  const allElements = document.querySelectorAll('*');
+  allElements.forEach(el => {
+    el.style.transition = '0.2s';
+  });
+  setTimeout(() => {
+    allElements.forEach(el => {
+      el.style.transition = '';
+    });
+  }, 200);
+}
 
+if (themeBtn) {
+  themeBtn.addEventListener('click', function () {
+    enableThemeTransition();
+    body.classList.toggle('light-mode');
+    if (body.classList.contains('light-mode')) {
+      localStorage.setItem('theme', 'light');
+    } else {
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+}
 
 const footerHTML = `
 <footer id="footer">
