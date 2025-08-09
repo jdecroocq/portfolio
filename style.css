@@ -509,6 +509,10 @@ body.light-mode .switch-thumb {
     display: flex;
   }
 
+  .nav-link {
+    font-size: 1.1rem;
+  }
+  
   header.is-open .burger-icon .bar2 {
     transform: scaleX(0);
   }
