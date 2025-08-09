@@ -100,7 +100,7 @@ function enableThemeTransition() {
   }, 200);
 }
 
-if (themeBtn) {
+if (theme) {
   themeBtn.addEventListener('click', function () {
     enableThemeTransition();
     body.classList.toggle('light-mode');
