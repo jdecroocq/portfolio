@@ -553,6 +553,7 @@ footer {
   align-items: center;
   padding: var(--size-padding-layout);
   min-height: 64px;
+  position: relative;
 }
 
 footer ul {
