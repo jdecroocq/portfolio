@@ -455,10 +455,12 @@ header {
   left: 2px;
   top: 2px;
   transform: translateX(0);
+  transform: translateY(0);
 }
 
 body.light-mode .switch-thumb {
   transform: translateX(15px);
+  transform: translateY(0);
 }
 
 .theme-transition body.light-mode .switch-thumb {
