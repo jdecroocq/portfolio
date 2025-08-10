@@ -481,7 +481,7 @@ body.light-mode .switch-thumb {
     width: 26px;
     height: 9px;
     transform: translateX(0);
-    transform: translateY(1);
+    transform: translateY(10);
   }
   
   100% {
@@ -504,7 +504,7 @@ body.light-mode .switch-thumb {
     width: 26px;
     height: 8px;
     transform: translateX(0);
-    transform: translateY(1);
+    transform: translateY(10);
   }
 
   100% {
