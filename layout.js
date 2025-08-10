@@ -54,7 +54,7 @@ const headerHTML = `
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
       // activer les transitions globales uniquement pendant la bascule
-      document.documentElement.classList.add('theme-transition');
+//      document.documentElement.classList.add('theme-transition');
   
       // attendre la frame suivante pour être sûr que la classe est prise en compte
       requestAnimationFrame(() => {
@@ -63,14 +63,14 @@ const headerHTML = `
   
         // retirer la classe au premier transitionend observé, avec fallback
         const clean = () => {
-          document.documentElement.classList.remove('theme-transition');
-          document.documentElement.removeEventListener('transitionend', onEnd);
+//          document.documentElement.classList.remove('theme-transition');
+//          document.documentElement.removeEventListener('transitionend', onEnd);
           clearTimeout(fallback);
         };
         const onEnd = () => clean();
-        document.documentElement.addEventListener('transitionend', onEnd, { once: true });
+//        document.documentElement.addEventListener('transitionend', onEnd, { once: true });
   
-        const fallback = setTimeout(clean, 300); // un poil plus long que la durée CSS
+//        const fallback = setTimeout(clean, 300); // un poil plus long que la durée CSS
       });
     });
   }
