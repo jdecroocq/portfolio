@@ -438,7 +438,7 @@ header {
   height: 100%;
   border: 2px solid currentColor;
   position: absolute;
-  border-radius: 50px;
+  border-radius: 99px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -447,16 +447,50 @@ header {
 .switch-thumb {
   width: 11px;
   height: 11px;
-  border-radius: 50%;
+  border-radius: 99px;
   background: currentColor;
   position: absolute;
   left: 2px;
   top: 2px;
-  transition: left 0.3s cubic-bezier(0.69, 0.38, 0.07, 1.42);
+  animation: squish-to-dark 0.6s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 body.light-mode .switch-thumb {
-  left: 17px;
+  animation: squish-to-light 0.6s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+@keyframes squish-to-light {
+  0% {
+    width: 11px;
+    transform: translateX(0);
+  }
+  
+  50% {
+    width: 26px;
+    transform: translateX(0);
+  }
+  
+  100% {
+    width: 11px;
+    transform: translateX(15px);
+  }
+}
+
+@keyframes squish-to-dark {
+  0% {
+    width: 11px;
+    transform: translateX(15px);
+  }
+  
+  50% {
+    width: 26px;
+    transform: translateX(0);
+  }
+
+  100% {
+    width: 11px;
+    transform: translateX(0);
+  }
 }
 
 .burger-icon .bar {
