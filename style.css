@@ -108,7 +108,7 @@ body {
   --border-shadow: inset 0 -1px 0px var(--color-border);
 
   --shadow-i: var(--alpha-25);
-  --shadow: 0 0 8px rgba(0, 0, 0, var(--shadow-i));
+  --shadow: 0 0 4px rgba(0, 0, 0, var(--shadow-i));
   --glow:
     0 0 5px var(--color-6-25),
     0 0 15px var(--color-6-25),
