@@ -454,11 +454,11 @@ header {
   position: absolute;
   left: 2px;
   top: 2px;
-  animation: squish-to-dark 0.6s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation: squish-to-dark var(--animation-switch);
 }
 
 body.light-mode .switch-thumb {
-  animation: squish-to-light 0.6s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation: squish-to-light var(--animation-switch);
 }
 
 @keyframes squish-to-light {
