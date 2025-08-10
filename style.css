@@ -96,6 +96,7 @@ body {
   --color-border: var(--color-3);
 
   --animation-header: 0.4s cubic-bezier(0.13, 0.38, 0.46, 0.86);
+  --animation-switch: 0.6s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28);
   --duration-theme-transition: 0.4s;
 
   --blur-1: blur(16px);
