@@ -454,11 +454,19 @@ header {
   position: absolute;
   left: 2px;
   top: 2px;
-  animation: squish-to-dark var(--animation-switch);
+  transform: translateX(0);
 }
 
 body.light-mode .switch-thumb {
+  transform: translateX(15px);
+}
+
+.theme-transition body.light-mode .switch-thumb {
   animation: squish-to-light var(--animation-switch);
+}
+
+.theme-transition body:not(.light-mode) .switch-thumb {
+  animation: squish-to-dark var(--animation-switch);
 }
 
 @keyframes squish-to-light {
