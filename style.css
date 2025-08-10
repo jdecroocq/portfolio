@@ -295,7 +295,7 @@ a:hover {
   width: 100vw;
   height: calc(100vh - var(--size-header));
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 4;
+  z-index: 550;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease, height var(--animation-header) ;
   pointer-events: none;
