@@ -67,7 +67,7 @@ const headerHTML = `
         const onEnd = () => clean();
         document.documentElement.addEventListener('transitionend', onEnd, { once: true });
   
-        const fallback = setTimeout(clean, 500);
+        const fallback = setTimeout(clean, 1000);
       });
     });
   }
