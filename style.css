@@ -455,12 +455,10 @@ header {
   left: 2px;
   top: 2px;
   transform: translateX(0);
-  transform: translateY(0);
 }
 
 body.light-mode .switch-thumb {
   transform: translateX(15px);
-  transform: translateY(0);
 }
 
 .theme-transition body.light-mode .switch-thumb {
@@ -474,46 +472,34 @@ body.light-mode .switch-thumb {
 @keyframes squish-to-light {
   0% {
     width: 11px;
-    height: 11px;
     transform: translateX(0);
-    transform: translateY(0);
   }
   
   50% {
     width: 26px;
-    height: 9px;
     transform: translateX(0);
-    transform: translateY(10);
   }
   
   100% {
     width: 11px;
-    height: 11px;
     transform: translateX(15px);
-    transform: translateY(0);
   }
 }
 
 @keyframes squish-to-dark {
   0% {
     width: 11px;
-    height: 11px;
     transform: translateX(15px);
-    transform: translateY(0);
   }
   
   50% {
     width: 26px;
-    height: 8px;
     transform: translateX(0);
-    transform: translateY(10);
   }
 
   100% {
     width: 11px;
-    height: 11px;
     transform: translateX(0);
-    transform: translateY(0);
   }
 }
 
