@@ -474,18 +474,21 @@ body.light-mode .switch-thumb {
     width: 11px;
     height: 11px;
     transform: translateX(0);
+    transform: translateY(0);
   }
   
   50% {
     width: 26px;
-    height: 8px;
+    height: 9px;
     transform: translateX(0);
+    transform: translateY(1);
   }
   
   100% {
     width: 11px;
     height: 11px;
     transform: translateX(15px);
+    transform: translateY(0);
   }
 }
 
@@ -494,18 +497,21 @@ body.light-mode .switch-thumb {
     width: 11px;
     height: 11px;
     transform: translateX(15px);
+    transform: translateY(0);
   }
   
   50% {
     width: 26px;
     height: 8px;
     transform: translateX(0);
+    transform: translateY(1);
   }
 
   100% {
     width: 11px;
     height: 11px;
     transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
