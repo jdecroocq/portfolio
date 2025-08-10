@@ -472,16 +472,19 @@ body.light-mode .switch-thumb {
 @keyframes squish-to-light {
   0% {
     width: 11px;
+    height: 11px;
     transform: translateX(0);
   }
   
   50% {
     width: 26px;
+    height: 8px;
     transform: translateX(0);
   }
   
   100% {
     width: 11px;
+    height: 11px;
     transform: translateX(15px);
   }
 }
@@ -489,16 +492,19 @@ body.light-mode .switch-thumb {
 @keyframes squish-to-dark {
   0% {
     width: 11px;
+    height: 11px;
     transform: translateX(15px);
   }
   
   50% {
     width: 26px;
+    height: 8px;
     transform: translateX(0);
   }
 
   100% {
     width: 11px;
+    height: 11px;
     transform: translateX(0);
   }
 }
