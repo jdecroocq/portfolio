@@ -96,6 +96,7 @@ body {
   --color-border: var(--color-3);
 
   --animation-header: 0.4s cubic-bezier(0.13, 0.38, 0.46, 0.86);
+  --duration-theme-transition: 0.4s;
 
   --blur-1: blur(16px);
   --blur-2: blur(32px);
@@ -216,9 +217,9 @@ a:hover {
 
 
 
-/* .theme-transition * {
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, backdrop-filter 0.2s;
-} */
+.theme-transition * {
+  transition: color var(--duration-theme-transition), background-color var(--duration-theme-transition), border-color var(--duration-theme-transition), box-shadow var(--duration-theme-transition), backdrop-filter var(--duration-theme-transition);
+}
 
 
 .page {
