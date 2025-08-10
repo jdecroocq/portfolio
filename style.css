@@ -412,8 +412,10 @@ header {
   transition: transform 0.2s ease-out;
 }
 
-.header-interactive:hover::after {
-  transform: scaleX(1);
+@media (hover: hover) {
+  .header-interactive:hover::after {
+    transform: scaleX(1);
+  }
 }
 
 .header-interactive:not(:hover)::after {
@@ -577,8 +579,13 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--color-5);
   text-decoration: none;
+}
+
+@media (hover: hover) {
+  footer a:hover {
+    color: var(--color-5);
+  }
 }
 
 
@@ -650,9 +657,11 @@ footer a:hover {
   object-fit: cover;
 }
 
-.image-wrapper:hover img {
-  filter: blur(2px);
-  transform: scale(1.05);
+@media (hover: hover) {
+  .image-wrapper:hover img {
+    filter: blur(2px);
+    transform: scale(1.05);
+  }
 }
 
 .image-label {
@@ -782,8 +791,10 @@ footer a:hover {
   gap: 10px;
 }
 
-.skill:hover {
-  background-color: var(--color-2);
+@media (hover: hover) {
+  .skill:hover {
+    background-color: var(--color-2);
+  }
 }
 
 .software-list {
