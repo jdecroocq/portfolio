@@ -13,7 +13,7 @@ const headerHTML = `
       <a class="nav-link header-interactive" href="/portfolio/about_me">About me</a>
     </nav>
     <div class="header-actions">
-      <button class="action-button header-interactive theme" title="Change mode">
+      <button class="action-button header-interactive theme" title="Switch mode">
         <div class="theme-switch-icon">
           <span class="switch-track"><span class="switch-thumb"></span></span>
         </div>
