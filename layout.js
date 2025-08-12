@@ -77,38 +77,23 @@ const headerHTML = `
   const burgerBtn = document.querySelector('.burger');
   const darkOverlay = document.getElementById('dark-overlay');
 
-  function setTransition(active) {
-    darkOverlay.style.transition = active
-      ? 'height var(--animation-header), opacity var(--animation-header)'
-      : 'height 0s, opacity var(--animation-header)';
-  }
-  
   window.addEventListener('resize', () => {
-    setTransition(false);
     if (window.innerWidth > 768) {
       closeMenu();
     }
   });
-  
+
   function closeMenu() {
-    setTransition(false);
     siteHeader.classList.remove('is-open');
     darkOverlay.classList.remove('active');
   }
-  
+
   if (siteHeader && burgerBtn && darkOverlay) {
     burgerBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isOpen = siteHeader.classList.contains('is-open');
-      if (isOpen) {
-        closeMenu();
-      } else {
-        setTransition(true);
-        siteHeader.classList.add('is-open');
-        darkOverlay.classList.add('active');
-      }
+      siteHeader.classList.toggle('is-open');
+      darkOverlay.classList.toggle('active');
     });
-  
     darkOverlay.addEventListener('click', () => {
       if (siteHeader.classList.contains('is-open')) {
         closeMenu();
