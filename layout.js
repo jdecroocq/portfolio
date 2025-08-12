@@ -60,10 +60,12 @@ const headerHTML = `
         localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
   
         const clean = () => {
-          document.documentElement.classList.remove('theme-transition');
-          document.documentElement.removeEventListener('transitionend', onEnd);
-          clearTimeout(fallback);
-        }, 50);
+          setTimeout(() => {
+            document.documentElement.classList.remove('theme-transition');
+            document.documentElement.removeEventListener('transitionend', onEnd);
+            clearTimeout(fallback);
+          }, 50);
+        };
         
         const onEnd = () => clean();
         document.documentElement.addEventListener('transitionend', onEnd, { once: true });
