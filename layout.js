@@ -49,27 +49,30 @@ const headerHTML = `
   if (savedTheme === 'light') {
     body.classList.add('light-mode');
   }
-
   
-if (themeBtn) {
-  themeBtn.addEventListener('click', function () {
-    document.documentElement.classList.add('theme-transition');
-
-    requestAnimationFrame(() => {
-      body.classList.toggle('light-mode');
-      localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
-
-      // Retire l'écouteur transitionend
-      // Retire uniquement avec timeout, pour garantir la durée
-      setTimeout(() => {
-        document.documentElement.classList.remove('theme-transition');
-      }, 1000); // Durée en ms = durée de transition CSS
+  
+  if (themeBtn) {
+    let timeoutId = null;
+  
+    themeBtn.addEventListener('click', function () {
+      document.documentElement.classList.add('theme-transition');
+  
+      requestAnimationFrame(() => {
+        body.classList.toggle('light-mode');
+        localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
+  
+        if (timeoutId) clearTimeout(timeoutId);
+  
+        timeoutId = setTimeout(() => {
+          document.documentElement.classList.remove('theme-transition');
+          timeoutId = null;
+        }, 1000);
+      });
     });
-  });
-}
-
-
-
+  }
+  
+  
+  
   const siteHeader = document.querySelector('header');
   const burgerBtn = document.querySelector('.burger');
   const darkOverlay = document.getElementById('dark-overlay');
