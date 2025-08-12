@@ -53,14 +53,14 @@ const headerHTML = `
   
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
-      body.classList.add('theme-transition');
+      document.documentElement.classList.add('theme-transition');
   
       requestAnimationFrame(() => {
         body.classList.toggle('light-mode');
         localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
   
         const clean = () => {
-          body.classList.remove('theme-transition');
+          document.documentElement.classList.remove('theme-transition');
           document.documentElement.removeEventListener('transitionend', onEnd);
           clearTimeout(fallback);
         };
