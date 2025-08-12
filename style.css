@@ -300,18 +300,17 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 550;
   opacity: 0;
-  transition: var(--animation-header) ;
   pointer-events: none;
+  transition: height 0s, opacity var(--animation-header);
+  overflow: hidden;
   backdrop-filter: blur(2px);
 }
-
 
 #dark-overlay.active {
   opacity: 1;
   pointer-events: auto;
   height: calc(100vh - var(--size-header) - var(--size-mh-header));
 }
-
 
 .panel,
 .project-video-container,
