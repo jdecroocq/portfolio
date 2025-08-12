@@ -296,14 +296,18 @@ a:hover {
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: calc(100vh - var(--size-header));
+  height: calc(100vh - var(--size-header)); 
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 550;
   opacity: 0;
   pointer-events: none;
-  transition: height 0s, opacity var(--animation-header);
   overflow: hidden;
   backdrop-filter: blur(2px);
+  transition: opacity var(--animation-header), height 0s;
+}
+
+#dark-overlay.is-animating {
+  transition: opacity var(--animation-header), height var(--animation-header);
 }
 
 #dark-overlay.active {
