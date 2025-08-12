@@ -51,27 +51,23 @@ const headerHTML = `
   }
 
   
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function () {
-      document.documentElement.classList.add('theme-transition');
-  
-      requestAnimationFrame(() => {
-        body.classList.toggle('light-mode');
-        localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
-  
-        const clean = () => {
-          document.documentElement.classList.remove('theme-transition');
-          document.documentElement.removeEventListener('transitionend', onEnd);
-          clearTimeout(fallback);
-        };
-        
-        const onEnd = () => clean();
-        document.documentElement.addEventListener('transitionend', onEnd, { once: true });
-  
-        const fallback = setTimeout(clean, 1000);
-      });
+if (themeBtn) {
+  themeBtn.addEventListener('click', function () {
+    document.documentElement.classList.add('theme-transition');
+
+    requestAnimationFrame(() => {
+      body.classList.toggle('light-mode');
+      localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
+
+      // Retire l'écouteur transitionend
+      // Retire uniquement avec timeout, pour garantir la durée
+      setTimeout(() => {
+        document.documentElement.classList.remove('theme-transition');
+      }, 1000); // Durée en ms = durée de transition CSS
     });
-  }
+  });
+}
+
 
 
   const siteHeader = document.querySelector('header');
