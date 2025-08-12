@@ -218,6 +218,14 @@ a:hover {
 
 
 
+.theme-transition * {
+  transition: color var(--duration-theme-transition), background-color var(--duration-theme-transition), border-color var(--duration-theme-transition), box-shadow var(--duration-theme-transition), backdrop-filter var(--duration-theme-transition);
+}
+
+
+
+
+
 .page {
   flex: 1;
   position: relative;
@@ -247,7 +255,6 @@ a:hover {
 .section {
   margin: max(64px, 5vw) 0;
 }
-
 
 
 #loading {
