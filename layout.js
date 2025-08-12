@@ -13,12 +13,12 @@ const headerHTML = `
       <a class="nav-link header-interactive" href="/portfolio/about_me">About me</a>
     </nav>
     <div class="header-actions">
-      <button class="action-button header-interactive theme">
+      <button class="action-button header-interactive theme" title="Change mode">
         <div class="theme-switch-icon">
           <span class="switch-track"><span class="switch-thumb"></span></span>
         </div>
       </button>
-      <button class="action-button header-interactive burger">
+      <button class="action-button header-interactive burger" title="Menu">
         <div class="burger-icon">
           <span class="bar bar1"></span>
           <span class="bar bar2"></span>
@@ -91,7 +91,7 @@ const headerHTML = `
   }
 
   if (siteHeader && burgerBtn && darkOverlay) {
-    
+
     darkOverlay.addEventListener('transitionend', () => {
       darkOverlay.classList.remove('is-animating');
     });
