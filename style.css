@@ -219,7 +219,7 @@ a:hover {
 
 
 .theme-transition * {
-  transition: color var(--duration-theme-transition), background-color var(--duration-theme-transition), border-color var(--duration-theme-transition), box-shadow var(--duration-theme-transition), backdrop-filter var(--duration-theme-transition);
+  transition: var(--duration-theme-transition);
 }
 
 
