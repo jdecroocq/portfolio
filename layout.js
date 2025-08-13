@@ -42,63 +42,26 @@ const headerHTML = `
   if (placeholder) {
     placeholder.innerHTML = headerHTML;
   }
-  
+
   const themeBtn = document.querySelector('.theme');
   const body = document.body;
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
     body.classList.add('light-mode');
   }
-  
-  
+
   if (themeBtn) {
     let timeoutId = null;
-  
+
     themeBtn.addEventListener('click', function () {
       document.documentElement.classList.add('theme-transition');
-  
+
       requestAnimationFrame(() => {
         body.classList.toggle('light-mode');
         localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
-  
+
         if (timeoutId) clearTimeout(timeoutId);
-  
-        timeoutId = setTimeout(() => {
-          document.documentElement.classList.remove('theme-transition');
-          timeoutId = null;
-        }, 1000);
-      });
-    });
-  }
-  
-  
-  
-(function () {
-  const placeholder = document.getElementById('header-placeholder');
-  if (placeholder) {
-    placeholder.innerHTML = headerHTML;
-  }
-  
-  const themeBtn = document.querySelector('.theme');
-  const body = document.body;
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    body.classList.add('light-mode');
-  }
-  
-  
-  if (themeBtn) {
-    let timeoutId = null;
-  
-    themeBtn.addEventListener('click', function () {
-      document.documentElement.classList.add('theme-transition');
-  
-      requestAnimationFrame(() => {
-        body.classList.toggle('light-mode');
-        localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
-  
-        if (timeoutId) clearTimeout(timeoutId);
-  
+
         timeoutId = setTimeout(() => {
           document.documentElement.classList.remove('theme-transition');
           timeoutId = null;
@@ -107,15 +70,13 @@ const headerHTML = `
     });
   }
 
-
-    
   const header = document.querySelector('header');
   const burgerBtn = document.querySelector('.burger');
   const darkOverlay = document.getElementById('dark-overlay');
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
-      darkOverlay.classList.remove('is-animating'); 
+      darkOverlay.classList.remove('is-animating');
       closeMenu();
     }
   });
@@ -123,13 +84,12 @@ const headerHTML = `
   function closeMenu() {
     darkOverlay.classList.add('is-animating');
     if (header) {
-        header.classList.remove('is-open');
+      header.classList.remove('is-open');
     }
     darkOverlay.classList.remove('active');
   }
 
   if (header && burgerBtn && darkOverlay) {
-
     darkOverlay.addEventListener('transitionend', () => {
       darkOverlay.classList.remove('is-animating');
     });
@@ -140,7 +100,7 @@ const headerHTML = `
       header.classList.toggle('is-open');
       darkOverlay.classList.toggle('active');
     });
-    
+
     darkOverlay.addEventListener('click', () => {
       if (header.classList.contains('is-open')) {
         closeMenu();
@@ -150,8 +110,6 @@ const headerHTML = `
 })();
 
 
-
-  
 const footerHTML = `
 <footer id="footer">
   <ul>
@@ -221,6 +179,9 @@ document.addEventListener('click', function (e) {
 
   if (linkPath === currentPath) {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 });
