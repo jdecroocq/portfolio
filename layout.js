@@ -73,7 +73,7 @@ const headerHTML = `
   
   
   
-  (function () {
+(function () {
   const placeholder = document.getElementById('header-placeholder');
   if (placeholder) {
     placeholder.innerHTML = headerHTML;
