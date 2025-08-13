@@ -98,7 +98,7 @@ body {
   --color-illustration: var(--color-2);
   --color-border: var(--color-3);
 
-  --animation-header: 0.4s cubic-bezier(0.13, 0.38, 0.46, 0.86);
+  --animation-header: 0.4s ease-in-out;
   --animation-switch: 0.4s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28);
   --duration-theme-transition: 0.4s;
 
