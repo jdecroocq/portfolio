@@ -73,7 +73,43 @@ const headerHTML = `
   
   
   
-  const siteHeader = document.querySelector('header');
+  (function () {
+  const placeholder = document.getElementById('header-placeholder');
+  if (placeholder) {
+    placeholder.innerHTML = headerHTML;
+  }
+  
+  const themeBtn = document.querySelector('.theme');
+  const body = document.body;
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-mode');
+  }
+  
+  
+  if (themeBtn) {
+    let timeoutId = null;
+  
+    themeBtn.addEventListener('click', function () {
+      document.documentElement.classList.add('theme-transition');
+  
+      requestAnimationFrame(() => {
+        body.classList.toggle('light-mode');
+        localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
+  
+        if (timeoutId) clearTimeout(timeoutId);
+  
+        timeoutId = setTimeout(() => {
+          document.documentElement.classList.remove('theme-transition');
+          timeoutId = null;
+        }, 1000);
+      });
+    });
+  }
+
+
+    
+  const header = document.querySelector('header');
   const burgerBtn = document.querySelector('.burger');
   const darkOverlay = document.getElementById('dark-overlay');
 
@@ -86,11 +122,13 @@ const headerHTML = `
 
   function closeMenu() {
     darkOverlay.classList.add('is-animating');
-    siteHeader.classList.remove('is-open');
+    if (header) {
+        header.classList.remove('is-open');
+    }
     darkOverlay.classList.remove('active');
   }
 
-  if (siteHeader && burgerBtn && darkOverlay) {
+  if (header && burgerBtn && darkOverlay) {
 
     darkOverlay.addEventListener('transitionend', () => {
       darkOverlay.classList.remove('is-animating');
@@ -99,12 +137,12 @@ const headerHTML = `
     burgerBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       darkOverlay.classList.add('is-animating');
-      siteHeader.classList.toggle('is-open');
+      header.classList.toggle('is-open');
       darkOverlay.classList.toggle('active');
     });
     
     darkOverlay.addEventListener('click', () => {
-      if (siteHeader.classList.contains('is-open')) {
+      if (header.classList.contains('is-open')) {
         closeMenu();
       }
     });
@@ -112,6 +150,8 @@ const headerHTML = `
 })();
 
 
+
+  
 const footerHTML = `
 <footer id="footer">
   <ul>
