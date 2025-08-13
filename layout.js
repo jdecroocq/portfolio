@@ -114,13 +114,26 @@ const headerHTML = `
 
 
 
-const loadingHTML = `<div id="loading">Loading...</div>`;
+const loadingHTML = `
+<div id="loading">
+    <div class="loading-container">
+        <span class="loading-main-text">Loading...</span>
+        <p class="loading-timeout-message">If nothing happens, please check your internet connection or refresh the page.</p>
+    </div>
+</div>`;
 
 
 (function () {
   const placeholder = document.getElementById('loading-placeholder');
   if (placeholder) {
     placeholder.innerHTML = loadingHTML;
+    setTimeout(() => {
+      const timeoutMessage = document.querySelector('.loading-timeout-message');
+      const loadingScreen = document.getElementById('loading');
+      if (timeoutMessage && loadingScreen) {
+        timeoutMessage.classList.add('visible');
+      }
+    }, 5000);
   }
 })();
 
