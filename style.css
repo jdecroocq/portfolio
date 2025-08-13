@@ -260,18 +260,6 @@ a:hover {
 }
 
 
-#loading {
-  font-size: 18px;
-  color: var(--color-4);
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  inset: 0; 
-}
-
-
 .green-button {
   font-size: 18px;
   padding: 16px 20px;
@@ -318,6 +306,39 @@ a:hover {
   pointer-events: auto;
   height: calc(100vh - var(--size-header) - var(--size-mh-header));
 }
+
+
+#loading {
+  font-size: 1.1rem;
+  color: var(--color-5);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.loading-timeout-message {
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
+  font-size: 0.9rem;
+  color: var(--color-4);
+  max-width: 300px;
+}
+
+.loading-timeout-message.visible {
+  opacity: 1;
+}
+
 
 .panel,
 .project-video-container,
