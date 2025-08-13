@@ -542,6 +542,7 @@ body.light-mode .switch-thumb {
 
 .nav-link {
   font-size: 0.9rem;
+  line-height: 1;
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none !important;
