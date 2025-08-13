@@ -84,7 +84,7 @@ body {
   
 
   --size-header: 64px;
-  --size-mh-header: calc((var(--number-nav) * var(--size-font-nav-mobile) * 16 + 2 * var(--size-padding-tb-nav-mobile) + var(--size-gab-nav-mobile)) * 1px);
+  --size-mh-header: calc(var(--number-nav) * var(--size-font-nav-mobile) * 16px + 2 * var(--size-padding-tb-nav-mobile) + var(--size-gab-nav-mobile));
   --size-font-nav-mobile: 1.1;
   --size-gab-nav-mobile: 24px;
   --size-padding-tb-nav-mobile: 24px;
