@@ -88,7 +88,7 @@ body {
   --size-illustration: 400px;
   --size-border: 1px;
   --size-viewport-h: calc(75vh - 40px);
-  --size-padding-layout: 0 4vw;
+  --size-padding-layout: 4vw;
 
   --color-icon: var(--color-5);
   --color-logo: var(--color-5);
@@ -352,7 +352,7 @@ header {
   display: flex;
   align-items: center;
   height: var(--size-header);
-  padding: var(--size-padding-layout);
+  padding: 0 calc(var(--size-padding-layout) - 16px) 0 var(--size-padding-layout);
 }
 
 .header-logo {
@@ -604,7 +604,7 @@ footer {
   z-index: 500;
   display: flex;
   align-items: center;
-  padding: var(--size-padding-layout);
+  padding: 0 var(--size-padding-layout);
   min-height: 64px;
   position: relative;
 }
