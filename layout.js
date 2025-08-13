@@ -37,6 +37,7 @@ const headerHTML = `
 <div id="dark-overlay"></div>
 `;
 
+
 (function () {
   const placeholder = document.getElementById('header-placeholder');
   if (placeholder) {
@@ -110,6 +111,23 @@ const headerHTML = `
 })();
 
 
+
+
+
+const loadingHTML = `<div id="loading">Loading...</div>`;
+
+
+(function () {
+  const placeholder = document.getElementById('loading-placeholder');
+  if (placeholder) {
+    placeholder.innerHTML = loadingHTML;
+  }
+})();
+
+
+
+
+
 const footerHTML = `
 <footer id="footer">
   <ul>
@@ -167,6 +185,10 @@ const footerHTML = `
       });
   }
 })();
+
+
+
+
 
 document.addEventListener('click', function (e) {
   const link = e.target.closest('a[href^="/portfolio/"]');
