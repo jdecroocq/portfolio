@@ -1,0 +1,5 @@
+{
+  "date": "08/10/2023",
+  "description": "A small-scale environment project to work on photorealism and learn how to integrate Quixel Bridge into my workflow !\n\nWorkflow\n- Assets modelled with Blender 3.6 or from Quixel Bridge\n- Rendering with Cycles Optix - 1500.2000px\n- Compositing with DaVinci Resolve 18.5\n\nPC specifications\n- 16 GB DDR5 memory\n- Intel Core I7-12700H\n- NVIDIA GeForce RTX 3050\n\nSoftware\n- Blender 3.6\n- DaVinci Resolve 18.5",
+  "imageCount": 8
+}

@@ -1,0 +1,6 @@
+{
+  "date": "31/07/2024",
+  "description": "Here is my latest 3D animation of a Eurocopter MH-65 Dolphin in the Arctic Ocean. This project was created with Blender over 3 months, during my free time. I was able to expand my skills in postproduction, particularly in the Fusion module of DaVinci Resolve.\nAnimation : https://www.youtube.com/watch?v=KPoSGafPwfs\n\nWorkflow\n- Modeling and texturing of assets in Blender 4.1. The helicopter is an approximate reproduction; it resembles the real one but is not exact. Some glaciers were sculpted, while others are rock scans initially from Quixel Megascans, but generally reworked through sculpting, with a complex glacier texture applied to all.\n- Scene setup, animation, and lighting with Blender 4.2.\n- Rendering with Cycles in EXR (2.39:1, 3840x1608px, 512 samples, 2 to 5 minutes per frame).\n- Color grading, compositing, mixing, and final editing with DaVinci Resolve Studio 18.6.\n\nPC Configuration\n- 16 GB DDR5\n- Intel Core i7-12700H\n- NVIDIA GeForce RTX 3050 Laptop GPU\n\nSoftware\n- Blender\n- Fusion\n- DaVinci Resolve",
+  "imageCount": 11,
+  "youtubeId": "KPoSGafPwfs"
+}

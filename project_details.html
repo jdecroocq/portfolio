@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+  <link rel="icon" type="image/png" href="icons/ico.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="layout.js" defer></script>
+  <script type="module" src="project_details.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="page">
+    <div id="mainContent" style="display: none;">
+      <section class="panel" id="projectContent"></section>
+      <section id="videoSection"></section>
+      <section id="imagesSection"></section>
+    </div>
+  </main>
+  <div class="floating-dock">
+    <a id="dockPrevProject" class="dock-btn" href="#" title="Previous project">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" role="img">
+        <path d="M14 2 L4 12 L14 22"/>
+      </svg>
+    </a>
+    <a id="dockGallery" class="dock-btn" href="/portfolio/" title="Return to gallery">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" role="img">
+        <rect x="2"  y="2"  width="4" height="4"/>
+        <rect x="10" y="2"  width="4" height="4"/>
+        <rect x="18" y="2"  width="4" height="4"/>
+        <rect x="2"  y="10" width="4" height="4"/>
+        <rect x="10" y="10" width="4" height="4"/>
+        <rect x="18" y="10" width="4" height="4"/>
+        <rect x="2"  y="18" width="4" height="4"/>
+        <rect x="10" y="18" width="4" height="4"/>
+        <rect x="18" y="18" width="4" height="4"/>
+      </svg>
+    </a>
+    <a id="dockNextProject" class="dock-btn" href="#" title="Next project">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" role="img">
+        <path d="M10 2 L20 12 L10 22"/>
+      </svg>
+    </a>
+  </div>
+  <div id="footer-placeholder"></div>
+</body>
+</html>

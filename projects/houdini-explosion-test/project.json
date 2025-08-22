@@ -1,0 +1,6 @@
+{
+  "date": "14/07/2023",
+  "description": "I did this explosion test on Houdini because I'm trying to learn the software so that I can integrate it into my workflow for future projects.\nThe explosion simulation was created on Houdini 19.5 then exported in VDB. The scene lighting and explosion shader were set up on Blender 3.5, then rendered using Cycles. The final mix was done on Davinci Resolve 18.",
+  "youtubeId": "Frqx2zq3dqs",
+  "imageCount": 4
+}

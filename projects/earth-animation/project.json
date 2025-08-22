@@ -1,0 +1,6 @@
+{
+  "date": "07/05/2023",
+  "description": "After having already created an animation of Mars, here is today a 3D animation of the Earth. I made it as a continuation of my work, for the creation of a short 3D animation of SpaceX's Starship.\nThe creation of Starship and Super Heavy is still in progress.\n\nWorkflow\n- Creation of the assets on Blender 3.4 and SketchUp Pro. (ISS created by NASA)\n- Rendering with Optix Cycles - 24 fps - UW4K 3840.1600px (1-2 minutes per frame with 200 samples)\n- Compositing and post-production with Blender 3.4 and DaVinci Resolve 18.\n\nSoftware\n- Blender 3.4\n- DaVinci Resolve 18\n\nPC configuration\n- 16 GB DDR5\n- Intel Core I7-12700H\n- NVIDIA GeForce RTX 3050",
+  "imageCount": 8,
+  "youtubeId": "IV1BdfnZam0"
+}

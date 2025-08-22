@@ -1,0 +1,6 @@
+{
+  "date": "06/01/2023",
+  "description": "This project is a small 3D animation of the planet Mars made with Blender 3.3 and its Cycles renderer.\nMy goal is to make a short 3D space animation film (which may stay in the back of a file forever...). But although this project may never see the light of day, I wanted to start it by first modeling the planets useful for the animation and make it a small independent project.\n\nWorkflow\nI am responsible for the entire project.\n- Modelling, texturing, lighting with Blender 3.3.\n- Rendering with Cycles Optix in 30fps for a resolution of 2560.1080p (between 10 and 40 seconds per frame depending on the animations, with 100 samples).\n- Compositing and post-production with Blender 3.3 and DaVinci Resolve 18.\n- Final mix with DaVinci Resolve 18.\n\nSoftware\n- Blender 3.4\n- DaVinci Resolve 18\n\nPC specifications\n- 16 GB DDR5 memory\n- Intel Core I7-12700H\n- NVIDIA GeForce RTX 3050",
+  "imageCount": 6,
+  "youtubeId": "MpXafoY5Vwg"
+}

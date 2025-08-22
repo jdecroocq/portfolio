@@ -1,0 +1,6 @@
+{
+  "date": "08/04/2024",
+  "description": "A space animation created with the new version of Blender 4.1.\n\nWorkflow\n- Creation of the moon on Blender 4.1\n- Rendering with Cycles (AgX) - 24 fps - 2.39:1 (3840.1608px)\n- Compositing and post-production with DaVinci Resolve 18\n\nSoftware\n- Blender\n- DaVinci Resolve\n\nPC configuration\n- 16 Go DDR5\n- Intel Core I7-12700H\n- NVIDIA GeForce RTX 3050 Laptop GPU",
+  "imageCount": 9,
+  "youtubeId": "BDnwpZFFTos"
+}
