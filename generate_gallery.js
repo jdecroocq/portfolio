@@ -35,7 +35,7 @@ async function generateGallery() {
 
     for (const project of projects) {
       const tilePath = `/projects/${project.id}/tile.jpg`;
-      const projectUrl = `/portfolio/project_details.html?id=${project.id}`;
+      const projectUrl = `project_details.html?id=${project.id}`;
 
       const item = document.createElement('div');
       item.className = 'gallery-item';
