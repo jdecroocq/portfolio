@@ -1,0 +1,31 @@
+name: Mirror dev to portfolio-dev
+
+on:
+  push:
+    branches: [ dev ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Push dev to portfolio-dev/main
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          repository: jdecroocq/portfolio-dev
+          branch: main
+          github_token: ${{ secrets.DEV_MIRROR_TOKEN }}
+          force: true
