@@ -23,8 +23,12 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Push dev to portfolio-dev/main
+        env:
+          PAT: ${{ secrets.DEV_MIRROR_TOKEN }}
         run: |
           git checkout dev
           git remote remove mirror 2>/dev/null || true
-          git remote add mirror "https://jdecroocq:${{ secrets.DEV_MIRROR_TOKEN }}@github.com/jdecroocq/portfolio-dev.git"
+          git remote add mirror https://github.com/jdecroocq/portfolio-dev.git
+          git config credential.helper store
+          echo "https://jdecroocq:${PAT}@github.com" > ~/.git-credentials
           git push --force mirror dev:main
