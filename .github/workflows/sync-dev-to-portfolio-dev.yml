@@ -1,0 +1,32 @@
+name: Mirror dev to portfolio-dev
+
+on:
+  push:
+    branches: [ dev ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Push dev to portfolio-dev/main
+        env:
+          MIRROR_URL: https://x-access-token:${{ secrets.DEV_MIRROR_TOKEN }}@github.com/jdecroocq/portfolio-dev.git
+        run: |
+          git checkout dev
+          git remote remove mirror 2>/dev/null || true
+          git remote add mirror "$MIRROR_URL"
+          git push --force mirror dev:main
