@@ -22,6 +22,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Debug secret
+        run: |
+          if [ -z "${{ secrets.DEV_MIRROR_TOKEN }}" ]; then
+            echo "❌ Secret DEV_MIRROR_TOKEN is empty or not found"
+            exit 1
+          else
+            echo "✅ Secret DEV_MIRROR_TOKEN is present"
+          fi
+
       - name: Push dev to portfolio-dev/main
         env:
           MIRROR_URL: https://x-access-token:${{ secrets.DEV_MIRROR_TOKEN }}@github.com/jdecroocq/portfolio-dev.git
