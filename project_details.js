@@ -24,13 +24,13 @@ async function loadProjectContent() {
   }
 
   try {
-    const response = await fetch(`/portfolio/projects/${projectId}/project.json`);
+    const response = await fetch(`/projects/${projectId}/project.json`);
     if (!response.ok) {
       throw new Error(`Project not found (HTTP ${response.status})`);
     }
     const projectData = await response.json();
 
-    const listResponse = await fetch('/portfolio/projects/projects-list.json');
+    const listResponse = await fetch('/projects/projects-list.json');
     const projectList = await listResponse.json();
     const projectInfo = projectList.find(p => p.id === projectId);
     const projectTitle = projectInfo ? projectInfo.title : projectId;
@@ -62,8 +62,8 @@ async function loadProjectContent() {
       for (let i = 1; i <= projectData.imageCount; i++) {
         const imageNumber = String(i).padStart(2, '0');
         const imageExtension = 'jpg';
-        const webPath = `/portfolio/projects/${projectId}/web/${imageNumber}.${imageExtension}`;
-        const fullPath = `/portfolio/projects/${projectId}/full/${imageNumber}.${imageExtension}`;
+        const webPath = `/projects/${projectId}/web/${imageNumber}.${imageExtension}`;
+        const fullPath = `/projects/${projectId}/full/${imageNumber}.${imageExtension}`;
 
         imagesHTML += `
           <div class="project-image">
@@ -92,7 +92,7 @@ async function updateDockNavigation() {
   if (!currentProjectId) return;
 
   try {
-    const response = await fetch('/portfolio/projects/projects-list.json');
+    const response = await fetch('/projects/projects-list.json');
     const projects = await response.json();
     
     const currentIndex = projects.findIndex(project => project.id === currentProjectId);
@@ -107,8 +107,8 @@ async function updateDockNavigation() {
     const prevProject = projects[prevIndex];
     const nextProject = projects[nextIndex];
 
-    document.getElementById('dockPrevProject').href = `/portfolio/project_details.html?id=${prevProject.id}`;
-    document.getElementById('dockNextProject').href = `/portfolio/project_details.html?id=${nextProject.id}`;
+    document.getElementById('dockPrevProject').href = `/project_details.html?id=${prevProject.id}`;
+    document.getElementById('dockNextProject').href = `/project_details.html?id=${nextProject.id}`;
 
   } catch (error) {
     console.error("Failed to update dock navigation:", error);

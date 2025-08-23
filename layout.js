@@ -1,7 +1,7 @@
 const headerHTML = `
 <header>
   <div class="header-main">
-    <a href="/portfolio/" class="header-logo">
+    <a href="/" class="header-logo">
       <svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
         <path fill="currentColor" d="m128 35.624 80 46.188v92.376l-80 46.188-80-46.188v-45.95l12 3.75v35.272l68 39.26 68-39.26V88.74l-68-39.26-68 39.26v24.499l-12-2.062V81.812z"/>
         <path fill="currentColor" d="m0 108 128 22 63-10.828v9.141L128 148zm213 7.391L256 108l-43 13.437z"/>
@@ -9,8 +9,8 @@ const headerHTML = `
     </a>
     <div class="header-separator"></div>
     <nav class="nav-desktop">
-      <a class="nav-link header-interactive" href="/portfolio/">Projects</a>
-      <a class="nav-link header-interactive" href="/portfolio/about_me">About me</a>
+      <a class="nav-link header-interactive" href="/">Projects</a>
+      <a class="nav-link header-interactive" href="/about_me">About me</a>
     </nav>
     <div class="header-actions">
       <button class="action-button header-interactive theme" title="Switch mode">
@@ -29,8 +29,8 @@ const headerHTML = `
   </div>
   <div class="header-panel">
     <nav class="nav-mobile">
-      <a class="nav-link" href="/portfolio/">Projects</a>
-      <a class="nav-link" href="/portfolio/about_me">About me</a>
+      <a class="nav-link" href="/">Projects</a>
+      <a class="nav-link" href="/about_me">About me</a>
     </nav>
   </div>
 </header>
@@ -117,7 +117,7 @@ const headerHTML = `
 const footerHTML = `
 <footer id="footer">
   <ul>
-    <li><a href="/portfolio/legal_information">Legal Information</a></li>
+    <li><a href="/legal_information">Legal Information</a></li>
     <li>
       <a href="https://github.com/jdecroocq/portfolio" target="_blank" rel="noopener noreferrer">
         <span id="build-version">Build …</span>
@@ -184,7 +184,6 @@ document.addEventListener('click', function (e) {
     return;
   }
 
-  if (!link.href.includes('/portfolio/')) return;
   if (link.target === "_blank" || link.href.startsWith("mailto:")) return;
 
   const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/+$/, "");

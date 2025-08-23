@@ -24,7 +24,7 @@ async function generateGallery() {
   gallery.style.display = 'grid';
 
   try {
-    const response = await fetch('/portfolio/projects/projects-list.json');
+    const response = await fetch('/projects/projects-list.json');
     if (!response.ok) { throw new Error(`HTTP Error: ${response.status}`); }
     const projects = await response.json();
 
@@ -34,8 +34,8 @@ async function generateGallery() {
     const STAGGER_DELAY_MS = 200;
 
     for (const project of projects) {
-      const tilePath = `/portfolio/projects/${project.id}/tile.jpg`;
-      const projectUrl = `/portfolio/project_details.html?id=${project.id}`;
+      const tilePath = `/projects/${project.id}/tile.jpg`;
+      const projectUrl = `/project_details.html?id=${project.id}`;
 
       const item = document.createElement('div');
       item.className = 'gallery-item';
