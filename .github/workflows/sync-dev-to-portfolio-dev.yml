@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   mirror:
@@ -26,9 +26,5 @@ jobs:
         env:
           PAT: ${{ secrets.DEV_MIRROR_TOKEN }}
         run: |
-          git checkout dev
-          git remote remove mirror 2>/dev/null || true
-          git remote add mirror https://github.com/jdecroocq/portfolio-dev.git
-          git config credential.helper store
-          echo "https://jdecroocq:${PAT}@github.com" > ~/.git-credentials
-          git push --force mirror dev:main
+          git remote add mirror https://jdecroocq:${PAT}@github.com/jdecroocq/portfolio-dev.git
+          git push --force mirror HEAD:main
