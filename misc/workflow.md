@@ -54,3 +54,10 @@
         la forme `vX.Y.Z-R`.
 
 ------------------------------------------------------------------------
+
+## 5. Publication de projet
+*(À rédiger)*  
+- Description des étapes pour publier un projet complet depuis `dev`, `main` ou autre branche à créer pour cette tâche.  
+- Gestion des dépendances, fichiers statiques, mise en ligne, et autres bonnes pratiques.
+
+------------------------------------------------------------------------
