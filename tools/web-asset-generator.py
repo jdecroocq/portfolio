@@ -71,7 +71,7 @@ def resize_images_for_web(full_dir_path):
 
 
 if __name__ == "__main__":
-    print("--- Image Resizing Script for the Web ---")
+    print("--- Image Resizing ---")
     try:
         input_path = input("Please enter the path to the 'full' folder, then press Enter: ").strip()
 
